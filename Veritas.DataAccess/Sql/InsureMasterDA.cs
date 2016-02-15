@@ -180,7 +180,16 @@ namespace Veritas.DataAccess.Sql
         {
             return await WithConnection(async c =>
             {
-                var insurelist = await c.QueryAsync<GiInsureMaster>(SQLConstants.GetAllInsureMasters);
+                var insurelist = await c.QueryAsync<GiInsureMaster>(SQLConstants.GetAllInsureMastersQuery);
+                return insurelist;
+            });
+        }
+
+        public async Task<IEnumerable<GiInsureMasterViewModel>> GetAllInsureMasterForViews()
+        {
+            return await WithConnection(async c =>
+            {
+                var insurelist = await c.QueryAsync<GiInsureMasterViewModel>(SQLConstants.GetInsureMasterViewModelQuery);
                 return insurelist;
             });
         }

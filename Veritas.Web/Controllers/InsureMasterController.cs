@@ -11,9 +11,9 @@ namespace Veritas.Web.Controllers
         public async Task<ActionResult> Index()
         {
             IInsureMasterDA test = new InsureMasterDA();
-            var result = await test.GetAll();
+            var result = await test.GetAllInsureMasterForViews();
 
-            return View();
+            return View(result);
         }
     }
 }
