@@ -44,8 +44,11 @@
     <Compile Include="AgentTypeMaster.cs" />
     <Compile Include="AreaMaster.cs" />
     <Compile Include="AsmMaster.cs" />
+    <Compile Include="BaseTextValue.cs" />
     <Compile Include="BranchMaster.cs" />
+    <Compile Include="BusinessStatus.cs" />
     <Compile Include="CityMaster.cs" />
+    <Compile Include="ClaimProcessTypes.cs" />
     <Compile Include="CountryMaster.cs" />
     <Compile Include="DivisionMaster.cs" />
     <Compile Include="GiAgencyMaster.cs" />
@@ -55,6 +58,9 @@
     <Compile Include="GiProductTypeMaster.cs" />
     <Compile Include="InClientleMaster.cs" />
     <Compile Include="MainAgentMaster.cs" />
+    <Compile Include="PaymentTypes.cs" />
+    <Compile Include="PolicyStatus.cs" />
+    <Compile Include="ProductSubTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SeMaster.cs" />
     <Compile Include="StateMaster.cs" />

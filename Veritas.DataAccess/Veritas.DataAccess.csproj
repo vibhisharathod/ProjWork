@@ -55,9 +55,11 @@
   <ItemGroup>
     <Compile Include="Constants\SQLConstants.cs" />
     <Compile Include="IInsureMasterDA.cs" />
+    <Compile Include="ILookUpTables.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sql\BaseRepository.cs" />
     <Compile Include="Sql\InsureMasterDA.cs" />
+    <Compile Include="Sql\LookUpTables.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

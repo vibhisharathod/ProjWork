@@ -11,7 +11,7 @@ namespace Veritas.DataAccess
     {
         Task<IEnumerable<GiInsureMaster>> GetAll();
         Task<IEnumerable<GiInsureMasterViewModel>> GetAllInsureMasterForViews();
-        Task<GiInsureMaster> Find(int? id);
+        Task<GiInsureMaster> Find(int id);
         //GiInsureMaster Add(GiInsureMaster employee);
         //GiInsureMaster Update(GiInsureMaster employee);
         //void Remove(int id);

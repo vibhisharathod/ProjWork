@@ -15,5 +15,10 @@ namespace Veritas.Web.Controllers
 
             return View(result);
         }
+
+        public ActionResult ViewDetails(string Id)
+        {
+            return View();
+        }
     }
 }

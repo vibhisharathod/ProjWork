@@ -9,7 +9,7 @@ namespace Veritas.DataAccess.Sql
 {
     public class InsureMasterDA : BaseRepository, IInsureMasterDA
     {
-        public Task<GiInsureMaster> Find(int? id)
+        public Task<GiInsureMaster> Find(int id)
         {
             throw new NotImplementedException();
         }

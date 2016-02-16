@@ -2,6 +2,20 @@
 {
     public class SQLConstants
     {
+        #region LookUps
+                
+        public static readonly string GICompanyMasterLookUp = "SELECT GICompanyIndex,GICompanyName from GI_CompanyMaster;";
+        public static readonly string GIProductTypeMasterLookUp = "SELECT GITypeIndex,GITypeName from GI_ProductTypeMaster;";
+        public static readonly string TMMasterLookUp = "SELECT TM_ID,TM_Name from TMMaster;";
+        public static readonly string SEMasterLookUp = "SELECT SE_ID,SE_Name from SEMaster;";
+        public static readonly string INClientleMasterLookUp = "SELECT ClientleIndex,Full_NM_LA from IN_ClientleMaster;";
+        public static readonly string GIAgencyMasterLookUp = "SELECT AgencyIndex,AgencyName from GI_AgencyMaster;";
+        public static readonly string MainAgentMasterLookUp = "SELECT MainAgent_ID,MainAgentName from MainAgentMaster;";
+        public static readonly string BranchMasterLookUp = "SELECT Branch_ID,FullName from BranchMaster;";
+        public static readonly string GIProductMasterLookUp = "SELECT GIProductIndex,GIProductName from GI_ProductMaster;";
+
+        #endregion
+
         #region InsureMaster
         /// <summary>
         /// Gets All Insure Master table records
