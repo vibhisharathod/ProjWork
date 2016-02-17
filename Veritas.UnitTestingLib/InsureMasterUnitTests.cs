@@ -1,11 +1,8 @@
-﻿using System;
+﻿using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Threading.Tasks;
 using Veritas.DataAccess;
 using Veritas.DataAccess.Sql;
-using FluentAssertions;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-using Veritas.Entities;
 
 namespace Veritas.UnitTestingLib
 {
@@ -13,7 +10,7 @@ namespace Veritas.UnitTestingLib
     public class InsureMasterUnitTests
     {
         [TestMethod]
-        public async Task GetAllInsureMasterRecords()
+        public async Task TestGetAllInsureMasterRecords()
         {
             IInsureMasterDA test = new InsureMasterDA();
 
