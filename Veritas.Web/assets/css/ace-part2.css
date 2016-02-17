@@ -2601,12 +2601,13 @@ img.editable-click:hover {
 }
 .ui-autocomplete-category {
   padding: 6px;
-  position: relative;
+  position: absolute;
   background-color: #eef4f9;
   color: #478fca;
   font-weight: bolder;
   border: 1px solid #DAE6ED;
   border-width: 1px 0;
+  z-index: 1000;
 }
 .ui-spinner-button {
   border-width: 0 !important;

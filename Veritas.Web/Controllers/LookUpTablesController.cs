@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using Veritas.DataAccess;
+using System.Linq;
 
 namespace Veritas.Web.Controllers
 {
@@ -13,7 +14,7 @@ namespace Veritas.Web.Controllers
         }
         
         public JsonResult PolicyStatus()
-        {   
+        {
             return Json(lookUpsDA.GetPolicyStatus(), JsonRequestBehavior.AllowGet);
         }
 
