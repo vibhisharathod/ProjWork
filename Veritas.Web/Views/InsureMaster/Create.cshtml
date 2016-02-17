@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+<div class="row">
+<div class="col-xs-12">
+    <h3 class="header smaller lighter blue">Create Insure Masters</h3>    
+    <div class="tabbable">
+        <ul class="nav nav-tabs padding-12 tab-color-blue background-blue" id="myTab4">
+            <li class="active">
+                <a data-toggle="tab" href="#home4">Home</a>
+            </li>
+
+            <li>
+                <a data-toggle="tab" href="#PremiumDetails">Premium Details</a>
+            </li>
+
+            <li>
+                <a data-toggle="tab" href="#VehicleDetails">Vehicle Details</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#PaymentDetails">Payment Details</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home4" class="tab-pane in active">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Status</label>
+                        <div class="col-sm-9">
+                            <input type="text" id="form-field-1" placeholder="Select Status" class="col-xs-10 col-sm-5">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Text Field </label>
+                        <div class="col-sm-9">
+                            <input type="text" id="form-field-1" placeholder="Username" class="col-xs-10 col-sm-5">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Text Field </label>
+                        <div class="col-sm-9">
+                            <input type="text" id="form-field-1" placeholder="Username" class="col-xs-10 col-sm-5">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div id="PremiumDetails" class="tab-pane">
+                <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+            </div>
+
+            <div id="VehicleDetails" class="tab-pane">
+                <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+            </div>
+            <div id="PaymentDetails" class="tab-pane">
+                <p>This is Payment Details</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="hr hr-double hr-dotted hr18"></div>
+<div class="clearfix">
+    <div class="col-md-offset-3 col-md-9">
+        <button class="btn btn-info" type="button">
+            <i class="ace-icon fa fa-check bigger-110"></i>
+            Submit
+        </button>
+        &nbsp; &nbsp; &nbsp;
+        <button class="btn" type="reset">
+            <i class="ace-icon fa fa-undo bigger-110"></i>
+            Reset
+        </button>
+    </div>
+</div>

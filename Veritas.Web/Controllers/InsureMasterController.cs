@@ -1,22 +1,31 @@
 ﻿using System.Threading.Tasks;
 using System.Web.Mvc;
 using Veritas.DataAccess;
-using Veritas.DataAccess.Sql;
 
 namespace Veritas.Web.Controllers
 {
     public class InsureMasterController : Controller
     {
-        // GET: InsureMaster
-        public async Task<ActionResult> Index()
+        private readonly IInsureMasterDA insureDA;
+
+        public InsureMasterController(IInsureMasterDA insureMasterDA)
         {
-            IInsureMasterDA test = new InsureMasterDA();
-            var result = await test.GetAllInsureMasterForViews();
+            insureDA = insureMasterDA;
+        }
+        
+        public async Task<ActionResult> Index()
+        {            
+            var result = await insureDA.GetAllInsureMasterForViews();
 
             return View(result);
         }
 
         public ActionResult ViewDetails(string Id)
+        {
+            return View();
+        }
+
+        public ActionResult Create()
         {
             return View();
         }
