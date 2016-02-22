@@ -3,6 +3,7 @@ using Microsoft.Practices.Unity;
 using Unity.Mvc5;
 using Veritas.DataAccess;
 using Veritas.DataAccess.Sql;
+using System;
 
 namespace Veritas.Web
 {
@@ -10,12 +11,42 @@ namespace Veritas.Web
     {
         public static void RegisterComponents()
         {
-			var container = new UnityContainer();
+            var container = new UnityContainer();
 
-            container.RegisterType<IInsureMasterDA, InsureMasterDA>();
-            container.RegisterType<IProductMasterDA, GiProductMasterDA>();
-            container.RegisterType<ILookUpTables, LookUpTables>();
+            container.RegisterType<IInsureMasterDA, InsureMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<IProductMasterDA, GiProductMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<ILookUpTables, LookUpTables>((new HierarchicalLifetimeManager()));
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
+
+        #region Unity Container
+
+        private static readonly Lazy<IUnityContainer> Container = new Lazy<IUnityContainer>(() =>
+        {
+            var container = new UnityContainer();
+            RegisterTypes(container);
+            return container;
+        });
+
+        /// <summary>
+        ///     Registers the types.
+        /// </summary>
+        /// <param name="container">The container.</param>
+        private static void RegisterTypes(UnityContainer container)
+        {
+            container.RegisterType<IInsureMasterDA, InsureMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<IProductMasterDA, GiProductMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<ILookUpTables, LookUpTables>((new HierarchicalLifetimeManager()));
+        }
+
+        /// <summary>
+        ///     Gets the configured Unity container.
+        /// </summary>
+        public static IUnityContainer GetConfiguredContainer()
+        {
+            return Container.Value;
+        }
+
+        #endregion
     }
 }

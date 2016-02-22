@@ -154,6 +154,7 @@
         }
 
         var requestObj = {
+
             "GICompanyIndex": companyIndex,
             "GITypeIndex": productTypeIndex,
             "GIProductName": $("#txtproductName").val(),
@@ -161,9 +162,10 @@
             "GIProductEndDate": $("#prodEndDate").val(),
             "Remarks": $("#txtremarks").val(),
             "Discontinue": $("#prodDiscontinue").is(":checked")
+
         }
 
-        var result = Common_AjaxPOST("/ProductMaster/Create", requestObj);
+        var result = Common_AjaxPOST("http://localhost:54510/api/ProductMasterApi/Create", JSON.stringify(requestObj));
 
     });
     

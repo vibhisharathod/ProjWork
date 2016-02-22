@@ -1,4 +1,5 @@
-﻿function Common_AjaxGET(url, paramObj) {
+﻿
+function Common_AjaxGET(url, paramObj) {
     var resultData;
     $.ajax({
         url: url,
@@ -20,6 +21,7 @@ function Common_AjaxPOST(url, obj) {
         url: url,
         data: obj,
         async: false,
+        contentType: "application/json; charset=utf-8",
         datatype: "json",
         success: function (result) {
             data = result;

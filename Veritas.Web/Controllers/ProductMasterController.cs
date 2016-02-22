@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Net;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using Veritas.DataAccess;
 using Veritas.DataAccess.Sql;
@@ -33,15 +34,15 @@ namespace Veritas.Web.Controllers
             return View();
         }
 
-        [HttpPost]
-        public async Task<ActionResult> Create(GiProductMaster prodData)
-        {
-            if (prodData != null)
-            {
-                await giProductMasterDA.AddProductMaster(prodData);
-                //Testing
-            }
-            return RedirectToAction("Index", "ProductMaster");
-        }
+        //[HttpPost]
+        //public async Task<ActionResult> Create(GiProductMaster prodData)
+        //{
+        //    if (prodData != null)
+        //    {
+        //        await giProductMasterDA.AddProductMaster(prodData);
+        //        return new HttpStatusCodeResult(HttpStatusCode.OK);
+        //    }
+        //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //}
     }
 }
