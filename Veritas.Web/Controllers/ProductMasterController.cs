@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using Veritas.DataAccess;
 using Veritas.DataAccess.Sql;
+using Veritas.Entities;
 
 namespace Veritas.Web.Controllers
 {
@@ -22,6 +23,12 @@ namespace Veritas.Web.Controllers
         }
 
         public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(GiProductMaster prodData)
         {
             return View();
         }

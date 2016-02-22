@@ -9,11 +9,18 @@ namespace Veritas.Entities
         [Key]
         [Required]
         public int GIProductIndex { get; set; } // int, not null
+        [Display(Name ="Company")]
         public int? GICompanyIndex { get; set; } // int, null
+        [Display(Name = "Product Name")]
         [MaxLength(250)]
         public string GIProductName { get; set; } // varchar(250), null
+
+        [Display(Name = "Product Type")]
         public int? GITypeIndex { get; set; } // int, null
+
+        [Display(Name = "Product Start Date")]
         public DateTime? GIProductStartDate { get; set; } // datetime, null
+        [Display(Name = "Product End Date")]
         public DateTime? GIProductEndDate { get; set; } // datetime, null
         [MaxLength(50)]
         public string Remarks { get; set; } // varchar(50), null
