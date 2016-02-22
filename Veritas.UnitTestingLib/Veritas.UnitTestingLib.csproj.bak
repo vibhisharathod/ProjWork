@@ -62,21 +62,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="AgentTypeMasterUnitTests.cs" />
-    <Compile Include="AsmMasterUnitTests.cs" />
-    <Compile Include="BranchMasterUnitTests.cs" />
-    <Compile Include="CityMasterUnitTest.cs" />
-    <Compile Include="CompanyMasterUnitTests.cs" />
-    <Compile Include="InClientMasterUnitTests.cs" />
     <Compile Include="InsureMasterUnitTests.cs" />
-    <Compile Include="ProductMasterUnitTests.cs" />
-    <Compile Include="ProductTypeMasterUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LookUpsUnitTests.cs" />
-    <Compile Include="SeMasterUnitTests.cs" />
-    <Compile Include="SubAgentMasterUnitTests.cs" />
-    <Compile Include="TmMasterUnitTests.cs" />
-    <Compile Include="MainAgentMasterUnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

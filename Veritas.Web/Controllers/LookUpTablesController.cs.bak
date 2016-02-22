@@ -37,9 +37,5 @@ namespace Veritas.Web.Controllers
         {
             return Json(lookUpsDA.ClaimProcessTypes(), JsonRequestBehavior.AllowGet);
         }
-        public JsonResult Client()
-        {
-            return Json(lookUpsDA.GetClientLookUp(), JsonRequestBehavior.AllowGet);
-        }
     }
 }

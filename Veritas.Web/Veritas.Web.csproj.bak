@@ -353,27 +353,10 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
-    <Compile Include="Controllers\AgencyMasterController.cs" />
-    <Compile Include="Controllers\AgentTypeMasterController.cs" />
-    <Compile Include="Controllers\AreaMasterController.cs" />
-    <Compile Include="Controllers\AsmMasterController.cs" />
-    <Compile Include="Controllers\BranchMasterController.cs" />
-    <Compile Include="Controllers\CityMasterController.cs" />
-    <Compile Include="Controllers\ClientMasterController.cs" />
-    <Compile Include="Controllers\CompanyMasterController.cs" />
-    <Compile Include="Controllers\CountryMasterController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
-    <Compile Include="Controllers\DivisionMasterController.cs" />
     <Compile Include="Controllers\InsureMasterController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\LookUpTablesController.cs" />
-    <Compile Include="Controllers\MainAgentMasterController.cs" />
-    <Compile Include="Controllers\ProductMasterController.cs" />
-    <Compile Include="Controllers\ProductTypeMasterController.cs" />
-    <Compile Include="Controllers\SEMasterController.cs" />
-    <Compile Include="Controllers\StateMasterController.cs" />
-    <Compile Include="Controllers\SubAgentMasterController.cs" />
-    <Compile Include="Controllers\TmMasterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -566,23 +549,6 @@
     <Content Include="Views\InsureMaster\Index.cshtml" />
     <Content Include="Views\InsureMaster\ViewDetails.cshtml" />
     <Content Include="Views\InsureMaster\Create.cshtml" />
-    <Content Include="Views\CompanyMaster\Index.cshtml" />
-    <Content Include="Views\AreaMaster\Index.cshtml" />
-    <Content Include="Views\CountryMaster\Index.cshtml" />
-    <Content Include="Views\StateMaster\Index.cshtml" />
-    <Content Include="Views\ProductMaster\Index.cshtml" />
-    <Content Include="Views\ProductTypeMaster\Index.cshtml" />
-    <Content Include="Views\SEMaster\Index.cshtml" />
-    <Content Include="Views\AsmMaster\Index.cshtml" />
-    <Content Include="Views\SubAgentMaster\Index.cshtml" />
-    <Content Include="Views\MainAgentMaster\Index.cshtml" />
-    <Content Include="Views\ClientMaster\Index.cshtml" />
-    <Content Include="Views\DivisionMaster\Index.cshtml" />
-    <Content Include="Views\BranchMaster\Index.cshtml" />
-    <Content Include="Views\TmMaster\Index.cshtml" />
-    <Content Include="Views\CityMaster\Index.cshtml" />
-    <Content Include="Views\AgencyMaster\Index.cshtml" />
-    <Content Include="Views\AgentTypeMaster\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

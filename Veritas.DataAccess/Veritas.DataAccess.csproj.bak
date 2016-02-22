@@ -54,46 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\SQLConstants.cs" />
-    <Compile Include="IAgentTypeMasterDA.cs" />
-    <Compile Include="IAreaMasterDA.cs" />
-    <Compile Include="IAsmMasterDA.cs" />
-    <Compile Include="IBranchMasterDA.cs" />
-    <Compile Include="ICityMasterDA.cs" />
-    <Compile Include="IClientMasterDA.cs" />
-    <Compile Include="ICompanyMasterDA.cs" />
-    <Compile Include="ICountryMasterDA.cs" />
-    <Compile Include="IDivisionMasterDA.cs" />
-    <Compile Include="IGiAgencyMasterDA.cs" />
-    <Compile Include="IGiProductTypeMasterDA.cs" />
     <Compile Include="IInsureMasterDA.cs" />
     <Compile Include="ILookUpTables.cs" />
-    <Compile Include="IMainAgentMasterDA.cs" />
-    <Compile Include="IProductMasterDA.cs" />
-    <Compile Include="ISeMasterDA.cs" />
-    <Compile Include="IStateMasterDA.cs" />
-    <Compile Include="ISubAgentMasterDA.cs" />
-    <Compile Include="ITmMasterDA.cs" />
-    <Compile Include="Sql\AreaMasterDA.cs" />
-    <Compile Include="Sql\CityMasterDA.cs" />
-    <Compile Include="Sql\ClientMasterDA.cs" />
-    <Compile Include="Sql\CompanyMasterDA.cs" />
-    <Compile Include="Sql\CountryMasterDA.cs" />
-    <Compile Include="Sql\GiProductMasterDA.cs" />
-    <Compile Include="Sql\GiProductTypeMasterDA.cs" />
-    <Compile Include="Sql\MainAgentMasterDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sql\AgentTypeMasterDA.cs" />
-    <Compile Include="Sql\AsmMasterDA.cs" />
     <Compile Include="Sql\BaseRepository.cs" />
-    <Compile Include="Sql\BranchMasterDA.cs" />
-    <Compile Include="Sql\DivisionMasterDA.cs" />
-    <Compile Include="Sql\GiAgencyMasterDA.cs" />
     <Compile Include="Sql\InsureMasterDA.cs" />
     <Compile Include="Sql\LookUpTables.cs" />
-    <Compile Include="Sql\SeMasterDA.cs" />
-    <Compile Include="Sql\StateMasterDA.cs" />
-    <Compile Include="Sql\SubAgentMasterDA.cs" />
-    <Compile Include="Sql\TmMasterDA.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

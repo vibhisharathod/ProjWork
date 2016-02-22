@@ -66,24 +66,7 @@
     <Compile Include="StateMaster.cs" />
     <Compile Include="SubAgentMaster.cs" />
     <Compile Include="TmMaster.cs" />
-    <Compile Include="ViewModels\AgentTypeMasterViewModel.cs" />
-    <Compile Include="ViewModels\AreaMasterViewModel.cs" />
-    <Compile Include="ViewModels\AsmMasterViewModel.cs" />
-    <Compile Include="ViewModels\BranchMasterViewModel.cs" />
-    <Compile Include="ViewModels\CityMasterViewModel.cs" />
-    <Compile Include="ViewModels\CountryMasterViewModel.cs" />
-    <Compile Include="ViewModels\DivisionMasterViewModel.cs" />
-    <Compile Include="ViewModels\GiAgencyMasterViewModel.cs" />
-    <Compile Include="ViewModels\GiCompanyMasterViewModel.cs" />
     <Compile Include="ViewModels\GiInsureMasterViewModel.cs" />
-    <Compile Include="ViewModels\GiProductMasterViewModel.cs" />
-    <Compile Include="ViewModels\GiProductTypeMasterViewModel.cs" />
-    <Compile Include="ViewModels\InClientleMasterViewModel.cs" />
-    <Compile Include="ViewModels\MainAgentMasterViewModel.cs" />
-    <Compile Include="ViewModels\SeMasterViewModel.cs" />
-    <Compile Include="ViewModels\StateMasterViewModel.cs" />
-    <Compile Include="ViewModels\SubAgentMasterViewModel.cs" />
-    <Compile Include="ViewModels\TmMasterViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
