@@ -13,6 +13,7 @@ namespace Veritas.Web
 			var container = new UnityContainer();
 
             container.RegisterType<IInsureMasterDA, InsureMasterDA>();
+            container.RegisterType<IProductMasterDA, GiProductMasterDA>();
             container.RegisterType<ILookUpTables, LookUpTables>();
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
