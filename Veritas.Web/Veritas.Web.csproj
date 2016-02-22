@@ -583,6 +583,7 @@
     <Content Include="Views\CityMaster\Index.cshtml" />
     <Content Include="Views\AgencyMaster\Index.cshtml" />
     <Content Include="Views\AgentTypeMaster\Index.cshtml" />
+    <Content Include="Views\ProductMaster\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

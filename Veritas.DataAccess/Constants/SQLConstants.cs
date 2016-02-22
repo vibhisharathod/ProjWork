@@ -147,6 +147,8 @@
 
         public static readonly string GetProductMasterViewModelQuery = "SELECT pm.GIProductIndex,cm.GICompanyName,pm.GIProductName,ptm.GITypeName FROM GI_ProductMaster pm left outer join GI_CompanyMaster cm on pm.GICompanyIndex = cm.GICompanyIndex left outer join GI_ProductTypeMaster ptm on pm.GITypeIndex = ptm.GITypeIndex";
 
+        public static readonly string InsertProductMaster = "INSERT INTO GI_ProductMaster (GIProductIndex,GICompanyIndex,GIProductName,GITypeIndex,GIProductStartDate,GIProductEndDate,Remarks,CreateUserIndex,CreateDateTime,Discontinue) VALUES(@GIProductIndex,@GICompanyIndex, @GIProductName,@GITypeIndex,@GIProductStartDate,@GIProductEndDate,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue);SELECT GIProductIndex FROM GI_ProductMaster WHERE GIProductIndex = @GIProductIndex";
+
         #endregion
 
         #region ProductType Master

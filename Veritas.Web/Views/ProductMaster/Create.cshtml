@@ -1,0 +1,172 @@
+﻿@model Veritas.Entities.GiProductMaster
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        
+            <h3 class="header smaller lighter blue">Create Product Masters</h3>
+
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">Company</label>
+                    <div class="col-xs-10 col-sm-5">
+                        <input type="text" id="ddCompany" placeholder="Select Company">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">Product Name</label>
+                    <div class="col-xs-10 col-sm-5">
+                        <input type="text" id="txtproductName" placeholder="Enter Product Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">Product Type</label>
+                    <div class="col-xs-10 col-sm-5">
+                        <input type="text" id="ddProductType" placeholder="Select Product Type">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">Product Start Date</label>
+                    <div class="col-xs-6 col-sm-5">
+                        <div class="input-group">
+                            <input type="text" id="prodStartDate" class="form-control" />
+                            <span class="input-group-addon">
+                                <i class="ace-icon fa fa-calendar"></i>
+                            </span>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">Product End Date</label>
+                    <div class="col-xs-6 col-sm-5">
+                        <div class="input-group">
+                            <input type="text" id="prodEndDate" class="form-control" />
+                            <span class="input-group-addon">
+                                <i class="ace-icon fa fa-calendar"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">Remarks</label>
+                    <div class="col-xs-10 col-sm-5">
+                        <textarea class="form-control limited" id="txtremarks" maxlength="50"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">Discontinue</label>
+                    <div class="col-xs-10 col-sm-5">
+                        <label>
+                            <input id="prodDiscontinue" class="ace ace-switch ace-switch-3" type="checkbox" />
+                            <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
+                        </label>
+                    </div>
+                </div>
+            </form>
+            <div class="clearfix">
+                <div class="col-md-offset-3 col-md-9">
+                    <button class="btn btn-info" type="button" id="btnSubmit">
+                        <i class="ace-icon fa fa-check bigger-110"></i>
+                        Submit
+                    </button>
+                    &nbsp; &nbsp; &nbsp;
+                    <button class="btn" type="reset">
+                        <i class="ace-icon fa fa-undo bigger-110"></i>
+                        Reset
+                    </button>
+                </div>
+            </div>
+        
+</div>
+    </div>
+
+@section Myscripts {
+    <!-- page specific plugin styles -->
+
+    <link rel="stylesheet" href="~/assets/css/jquery-ui.css" />
+    <link href="~/assets/css/magicsuggest.css" rel="stylesheet" />    
+    <script src="~/assets/js/jquery-ui.js"></script>
+    <script src="~/assets/js/jquery.ui.touch-punch.js"></script>
+    <script src="~/assets/js/magicsuggest.js"></script>
+    <script type="text/javascript">
+
+    //Loading Date Picker
+        $("#prodStartDate").datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: false            
+        });
+
+        $("#prodEndDate").datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: false
+        });
+    //Loading Company Data
+        var CompaniesDatalist = Common_AjaxGET("/LookUpTables/Companies");
+        if (CompaniesDatalist.length > 0) {
+
+        var _elmTxtCompanies = $('#ddCompany').magicSuggest({
+            allowFreeEntries: false,
+            maxSelection: 1,
+            valueField: 'GICompanyIndex',
+            displayField: 'GICompanyName',
+            data: CompaniesDatalist
+        });
+
+        $(_elmTxtCompanies).on('selectionchange', function () {
+            _arrCompanies = this.getValue();
+        });
+    }
+
+    //Loading Product Type Data
+    var ProductTypeDatalist = Common_AjaxGET("/LookUpTables/ProductType");
+    if (ProductTypeDatalist.length > 0) {
+
+        var _elmTxtProductType = $('#ddProductType').magicSuggest({
+            allowFreeEntries: false,
+            maxSelection: 1,
+            valueField: 'GITypeIndex',
+            displayField: 'GITypeName',
+            data: ProductTypeDatalist
+        });
+
+        $(_elmTxtProductType).on('selectionchange', function () {
+            _arrProductTypes = this.getValue();
+        });
+    }
+
+
+    var _arrCompanies = new Array();
+    var _arrProductTypes = new Array();
+
+
+    //SUBMIT form
+    $("#btnSubmit").click(function () {
+        var companyIndex;
+        if (_arrCompanies.length > 0) {
+            companyIndex = _arrCompanies[0];
+        }
+        var productTypeIndex;
+        if (_arrProductTypes.length > 0) {
+            productTypeIndex = _arrProductTypes[0];
+        }
+
+        var requestObj = {
+            "GICompanyIndex": companyIndex,
+            "GITypeIndex": productTypeIndex,
+            "GIProductName": $("#txtproductName").val(),
+            "GIProductStartDate": $("#prodStartDate").val(),
+            "GIProductEndDate": $("#prodEndDate").val(),
+            "Remarks": $("#txtremarks").val(),
+            "Discontinue": $("#prodDiscontinue").is(":checked")
+        }
+
+        var result = Common_AjaxPOST("/ProductMaster/Create", requestObj);
+
+    });
+    
+
+    </script>
+}

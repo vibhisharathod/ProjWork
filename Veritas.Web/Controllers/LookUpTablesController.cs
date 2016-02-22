@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
 using Veritas.DataAccess;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Veritas.Web.Controllers
 {
@@ -41,13 +42,13 @@ namespace Veritas.Web.Controllers
         {
             return Json(lookUpsDA.GetClientLookUp(), JsonRequestBehavior.AllowGet);
         }
-        public JsonResult Agency()
+        public async Task<JsonResult> Companies()
         {
-            return Json(lookUpsDA.GetAgencyLookUp(), JsonRequestBehavior.AllowGet);
+            return Json( await lookUpsDA.GetCompanyLookUp(), JsonRequestBehavior.AllowGet);
         }
-        public JsonResult SE()
+        public async Task<JsonResult> ProductType()
         {
-            return Json(lookUpsDA.GetSELookUp(), JsonRequestBehavior.AllowGet);
+            return Json(await lookUpsDA.GetTypeLookUp(), JsonRequestBehavior.AllowGet);
         }
     }
 }
