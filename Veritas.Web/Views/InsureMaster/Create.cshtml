@@ -41,15 +41,69 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Client</label>
                         <div class="col-xs-10 col-sm-5">
-                            <input type="text" id="ddClient" placeholder="Select Client">
+                            <input type="text" id="ddSelectClient" placeholder="Select Client">
                         </div>
                     </div>
-
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">SE Name</label>
+                        <div class="col-xs-10 col-sm-5">
+                            <input type="text" id="ddSelectSE" placeholder="Select SE">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Agency</label>
+                        <div class="col-xs-10 col-sm-5">
+                            <input type="text" id="ddSelectAgency" placeholder="Select Agency">
+                        </div>
+                    </div>
                 </form>
             </div>
 
             <div id="PremiumDetails" class="tab-pane">
-                <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Basic Premium</label>
+                        <div class="col-xs-10 col-sm-2">
+                            <input type="text" id="txtBasicPremium" placeholder="Enter Basic Premium">
+                        </div>
+                    @*</div>
+                    <div class="form-group">*@
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">TP Premium</label>
+                        <div class="col-xs-10 col-sm-2">
+                            <input type="text" id="txtThirdPartyPrem" placeholder="Enter TP Premium">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">PA to Car Owner</label>
+                        <div class="col-xs-10 col-sm-2">
+                            <input type="text" id="txtPAtoCarOwner" placeholder="Enter PA to Car Owner">
+                        </div>
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">PA to Unnamed</label>
+                        <div class="col-xs-10 col-sm-2">
+                            <input type="text" id="txtPAtoUnnamed" placeholder="Enter PA to Unnamed">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Loading Amt</label>
+                        <div class="col-xs-10 col-sm-2">
+                            <input type="text" id="txtLoadingAmt" placeholder="Enter Loading Amt">
+                        </div>
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Premium After Loading</label>
+                        <div class="col-xs-10 col-sm-2">
+                            <input type="text" id="txtPremiumAfterLoading">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Add On Cover</label>
+                        <div class="col-xs-10 col-sm-2">
+                            <input type="text" id="txtAddOnCover" placeholder="Enter Add On Cover">
+                        </div>
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Terrisiom Premium</label>
+                        <div class="col-xs-10 col-sm-2">
+                            <input type="text" id="txtTerrisiomPremium" placeholder="Enter Terrisiom Premium">
+                        </div>
+                    </div>
+                </form>
             </div>
 
             <div id="VehicleDetails" class="tab-pane">
@@ -112,5 +166,43 @@
         });
     }
     
+    //Loading Client
+    var clientData = Common_AjaxGET("/LookUpTables/Client");
+    if (clientData.length > 0) {
+
+        var _elmTxtApprover = $('#ddSelectClient').magicSuggest({
+            allowFreeEntries: false,
+            maxSelection: 1,
+            valueField: 'Value',
+            displayField: 'Text',
+            data: clientData
+        });
+    }
+
+    //Loading SE
+    var SEData = Common_AjaxGET("/LookUpTables/SE");
+    if (SEData.length > 0) {
+
+        var _elmTxtApprover = $('#ddSelectSE').magicSuggest({
+            allowFreeEntries: false,
+            maxSelection: 1,
+            valueField: 'Value',
+            displayField: 'Text',
+            data: SEData
+        });
+    }
+
+    //Loading Agency
+    var AgencyData = Common_AjaxGET("/LookUpTables/Agency");
+    if (AgencyData.length > 0) {
+
+        var _elmTxtApprover = $('#ddSelectAgency').magicSuggest({
+            allowFreeEntries: false,
+            maxSelection: 1,
+            valueField: 'Value',
+            displayField: 'Text',
+            data: AgencyData
+        });
+    }
     </script>
 }

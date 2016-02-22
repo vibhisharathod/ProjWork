@@ -40,10 +40,12 @@
                                     </td>
                                     <td>@item.value.GICompanyName</td>
                                     <td class="hidden-480">@item.value.Full_NM_LA</td>
-                                    <td>@item.value.PolicyStartDate</td>
+                                    <td>
+                                        @string.Format("{0:dd/MMM/yyyy}", item.value.PolicyStartDate)
+                                    </td>
 
                                     <td class="hidden-480">
-                                        @item.value.LoginDate
+                                        @string.Format("{0:dd/MMM/yyyy}", item.value.LoginDate)
                                     </td>
 
                                     <td>

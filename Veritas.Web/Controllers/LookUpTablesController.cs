@@ -41,5 +41,13 @@ namespace Veritas.Web.Controllers
         {
             return Json(lookUpsDA.GetClientLookUp(), JsonRequestBehavior.AllowGet);
         }
+        public JsonResult Agency()
+        {
+            return Json(lookUpsDA.GetAgencyLookUp(), JsonRequestBehavior.AllowGet);
+        }
+        public JsonResult SE()
+        {
+            return Json(lookUpsDA.GetSELookUp(), JsonRequestBehavior.AllowGet);
+        }
     }
 }
