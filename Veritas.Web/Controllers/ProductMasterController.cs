@@ -17,32 +17,21 @@ namespace Veritas.Web.Controllers
 
         // GET: ProductMaster
         public async Task<ActionResult> Index()
-        {
-            
+        {   
             var result = await giProductMasterDA.GetAllProductMasterForViews();
 
             return View(result);
         }
 
-        public ActionResult ViewDetails(string Id)
+        public async Task<ActionResult> ViewDetails(int Id)
         {
-            return View();
+            var selectProd = await giProductMasterDA.Find(Id);
+            return View(selectProd);
         }
 
         public ActionResult Create()
         {
             return View();
-        }
-
-        //[HttpPost]
-        //public async Task<ActionResult> Create(GiProductMaster prodData)
-        //{
-        //    if (prodData != null)
-        //    {
-        //        await giProductMasterDA.AddProductMaster(prodData);
-        //        return new HttpStatusCodeResult(HttpStatusCode.OK);
-        //    }
-        //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //}
+        }        
     }
 }

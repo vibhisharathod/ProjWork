@@ -38,9 +38,17 @@ namespace Veritas.DataAccess.Sql
             });
         }
 
-        public Task<GiProductMaster> Find(int? id)
+        public async Task<GiProductMaster> Find(int id)
         {
-            throw new NotImplementedException();
+            var prodList = await WithConnection(async c =>
+            {
+                var companylist = await c.QueryAsync<GiProductMaster>(SQLConstants.GetAllProductMasterQuery);
+                return companylist;
+            });
+
+            //Get ProductMaster based on ID
+            var prodFound = prodList.Where(e => e.GIProductIndex == id).FirstOrDefault<GiProductMaster>();
+            return prodFound;
         }
         public async Task<IEnumerable<GiProductMaster>> GetAll()
         {

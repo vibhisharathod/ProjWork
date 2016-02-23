@@ -609,6 +609,7 @@
     <Content Include="Views\AgencyMaster\Index.cshtml" />
     <Content Include="Views\AgentTypeMaster\Index.cshtml" />
     <Content Include="Views\ProductMaster\Create.cshtml" />
+    <Content Include="Views\ProductMaster\ViewDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

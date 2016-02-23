@@ -29,5 +29,9 @@ namespace Veritas.Entities
         public int? UpdateUserIndex { get; set; } // int, null
         public DateTime? UpdateDateTime { get; set; } // datetime, null
         public bool? Discontinue { get; set; } // bit, null
+
+        //Adding FK Name property
+        public string GICompanyName { get; set; }
+        public string GITypeName { get; set; }
     }
 }

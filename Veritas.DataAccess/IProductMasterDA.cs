@@ -11,7 +11,7 @@ namespace Veritas.DataAccess
     {
         Task<IEnumerable<GiProductMaster>> GetAll();
         Task<IEnumerable<GiProductMasterViewModel>> GetAllProductMasterForViews();
-        Task<GiProductMaster> Find(int? id);
+        Task<GiProductMaster> Find(int id);
         Task AddProductMaster(GiProductMaster prodData);
     }
 }
