@@ -8,16 +8,24 @@ namespace Veritas.Web.Controllers
     public class DivisionMasterController : Controller
     {
         // GET: DivisionMaster
+        private readonly IDivisionMasterDA DivisionDA;
+
+        public DivisionMasterController(IDivisionMasterDA DivisionMasterDA)
+        {
+            DivisionDA = DivisionMasterDA;
+        }
+
         public async Task<ActionResult> Index()
         {
-            IDivisionMasterDA test = new DivisionMasterDA();
-            var result = await test.GetAllDivisionMasterForViews();
+            var result = await DivisionDA.GetAllDivisionMasterForViews();
 
             return View(result);
         }
-        public ActionResult ViewDetails(string Id)
+
+        public async Task<ActionResult> ViewDetails(int Id)
         {
-            return View();
+            var selectProd = await DivisionDA.Find(Id);
+            return View(selectProd);
         }
 
         public ActionResult Create()

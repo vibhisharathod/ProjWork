@@ -169,7 +169,15 @@ namespace Veritas.DataAccess.Sql
                 var lookUpLists = await c.QueryAsync<GiProductTypeMaster>(SQLConstants.GIProductTypeMasterLookUp);
                 return lookUpLists;
             });
-        }        
-        
+        }
+
+        public IEnumerable<VerticalTypes> GetVerticalTypes()
+        {
+            var VerticalTypes = new List<VerticalTypes>();
+            VerticalTypes.Add(new VerticalTypes() { Text = "Direct", Value = "Direct" });
+            VerticalTypes.Add(new VerticalTypes() { Text = "In-Direct", Value = "In-Direct" });
+
+            return VerticalTypes;
+        }
     }
 }

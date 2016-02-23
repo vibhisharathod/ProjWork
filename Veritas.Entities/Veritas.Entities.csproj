@@ -51,6 +51,7 @@
     <Compile Include="ClaimProcessTypes.cs" />
     <Compile Include="CountryMaster.cs" />
     <Compile Include="DivisionMaster.cs" />
+    <Compile Include="VerticalTypes.cs" />
     <Compile Include="GiAgencyMaster.cs" />
     <Compile Include="GiCompanyMaster.cs" />
     <Compile Include="GiInsureMaster.cs" />

@@ -36,7 +36,7 @@
                 <div class="profile-info-name"> Start Date </div>
 
                 <div class="profile-info-value">
-                    <span id="startDate">@Model.GIProductStartDate</span>
+                    <span id="startDate">@string.Format("{0:dd/MMM/yyyy}", Model.GIProductStartDate)</span>
                 </div>
             </div>
 
@@ -44,7 +44,7 @@
                 <div class="profile-info-name"> End Date </div>
 
                 <div class="profile-info-value">
-                    <span id="endDate">@Model.GIProductEndDate</span>
+                    <span id="endDate">@string.Format("{0:dd/MMM/yyyy}", Model.GIProductEndDate)</span>
                 </div>
             </div>
 

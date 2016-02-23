@@ -9,5 +9,6 @@ namespace Veritas.DataAccess
         Task<IEnumerable<DivisionMaster>> GetAll();
         Task<IEnumerable<DivisionMasterViewModel>> GetAllDivisionMasterForViews();
         Task<DivisionMaster> Find(int id);
+        Task AddDivisionMaster(DivisionMaster DivData);
     }
 }

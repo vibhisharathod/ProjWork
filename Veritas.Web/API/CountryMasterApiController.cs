@@ -5,18 +5,19 @@ using Veritas.Entities;
 
 namespace Veritas.Web.API
 {
-    public class ProductMasterApiController : ApiController
-    {   
-        private readonly IProductMasterDA giProductMasterDA;
+    public class CountryMasterApiController : ApiController
+    {
+        // GET: CountryMasterApi
+        private readonly ICountryMasterDA CountryMasterDA;
 
-        public ProductMasterApiController()
+        public CountryMasterApiController()
         {
 
         }
 
-        public ProductMasterApiController(IProductMasterDA GiProductMaster)
+        public CountryMasterApiController(ICountryMasterDA CountryMaster)
         {
-            giProductMasterDA = GiProductMaster;
+            CountryMasterDA = CountryMaster;
         }
 
         [HttpGet]
@@ -26,11 +27,11 @@ namespace Veritas.Web.API
         }
 
         [HttpPost]
-        public async Task<IHttpActionResult> Create(GiProductMaster prodData)
+        public async Task<IHttpActionResult> Create(CountryMaster prodData)
         {
             if (prodData != null)
             {
-                await giProductMasterDA.AddProductMaster(prodData);
+                await CountryMasterDA.AddCountryMaster(prodData);
                 return Ok();
             }
             return BadRequest("Request cannot be NULL");

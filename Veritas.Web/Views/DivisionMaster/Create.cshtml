@@ -1,0 +1,110 @@
+﻿@model Veritas.Entities.DivisionMaster
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <h3 class="header smaller lighter blue">Create Division Masters</h3>
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Division</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtDivision" placeholder="Enter Division">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Vertical</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddSelectVertical" placeholder="Select Vertical">
+                </div>
+            </div>
+           
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Remarks</label>
+                <div class="col-xs-10 col-sm-5">
+                    <textarea class="form-control limited" id="txtremarks" maxlength="50"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Discontinue</label>
+                <div class="col-xs-10 col-sm-5">
+                    <label>
+                        <input id="prodDiscontinue" class="ace ace-switch ace-switch-3" type="checkbox" />
+                        <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
+                    </label>
+                </div>
+            </div>
+        </form>
+        <div class="clearfix">
+            <div class="col-md-offset-3 col-md-9">
+                <button class="btn btn-info" type="button" id="btnSubmit">
+                    <i class="ace-icon fa fa-check bigger-110"></i>
+                    Submit
+                </button>
+                &nbsp; &nbsp; &nbsp;
+                <button class="btn" type="reset">
+                    <i class="ace-icon fa fa-undo bigger-110"></i>
+                    Reset
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Myscripts {
+    <!-- page specific plugin styles -->
+
+    <link rel="stylesheet" href="~/assets/css/jquery-ui.css" />
+    <link href="~/assets/css/magicsuggest.css" rel="stylesheet" />
+    <script src="~/assets/js/jquery-ui.js"></script>
+    <script src="~/assets/js/jquery.ui.touch-punch.js"></script>
+    <script src="~/assets/js/magicsuggest.js"></script>
+    <script type="text/javascript">
+ 
+        //Loading Vertical Data
+        var VerticalDatalist = Common_AjaxGET("/LookUpTables/Vertical");
+        if (VerticalDatalist.length > 0) {
+
+            var _elmTxtVertical = $('#ddSelectVertical').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'Value',
+                displayField: 'Text',
+                data: VerticalDatalist
+            });
+
+            $(_elmTxtVertical).on('selectionchange', function () {
+                _arrVerticalTypes = this.getValue();
+            });
+        }
+
+        var _arrVerticalTypes = new Array();
+
+    //SUBMIT form
+    $("#btnSubmit").click(function () {
+        var Vertical;
+        if (_arrVerticalTypes.length > 0) {
+            Vertical = _arrVerticalTypes[0];
+        }
+
+        var requestObj = {
+                       
+            "Division": $("#txtDivision").val(),
+            "Vertical": Vertical,
+            "Remarks": $("#txtremarks").val(),
+            "Discontinue": $("#prodDiscontinue").is(":checked")
+
+        }
+
+        var result = Common_AjaxPOST("http://localhost:54510/api/DivisionMasterApi/Create", JSON.stringify(requestObj));
+
+    });
+
+
+    </script>
+}

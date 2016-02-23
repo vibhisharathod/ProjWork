@@ -373,6 +373,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\CountryMasterApiController.cs" />
+    <Compile Include="API\DivisionMasterApiController.cs" />
     <Compile Include="API\ProductMasterApiController.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
@@ -610,6 +612,10 @@
     <Content Include="Views\AgentTypeMaster\Index.cshtml" />
     <Content Include="Views\ProductMaster\Create.cshtml" />
     <Content Include="Views\ProductMaster\ViewDetails.cshtml" />
+    <Content Include="Views\CountryMaster\Create.cshtml" />
+    <Content Include="Views\CountryMaster\ViewDetails.cshtml" />
+    <Content Include="Views\DivisionMaster\Create.cshtml" />
+    <Content Include="Views\DivisionMaster\ViewDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -619,6 +625,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\CountryMasterApi\" />
     <Folder Include="Views\LookUpTables\" />
   </ItemGroup>
   <ItemGroup>
@@ -642,7 +649,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54510</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

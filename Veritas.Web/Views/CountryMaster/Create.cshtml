@@ -1,0 +1,92 @@
+﻿@model Veritas.Entities.CountryMaster
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <h3 class="header smaller lighter blue">Create Country Masters</h3>
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Country</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtCountry" placeholder="Enter Country">
+                </div>
+            </div>
+            @*<div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Product Name</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtproductName" placeholder="Enter Product Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Product Type</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddProductType" placeholder="Select Product Type">
+                </div>
+            </div>*@
+           
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Remarks</label>
+                <div class="col-xs-10 col-sm-5">
+                    <textarea class="form-control limited" id="txtremarks" maxlength="50"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Discontinue</label>
+                <div class="col-xs-10 col-sm-5">
+                    <label>
+                        <input id="prodDiscontinue" class="ace ace-switch ace-switch-3" type="checkbox" />
+                        <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
+                    </label>
+                </div>
+            </div>
+        </form>
+        <div class="clearfix">
+            <div class="col-md-offset-3 col-md-9">
+                <button class="btn btn-info" type="button" id="btnSubmit">
+                    <i class="ace-icon fa fa-check bigger-110"></i>
+                    Submit
+                </button>
+                &nbsp; &nbsp; &nbsp;
+                <button class="btn" type="reset">
+                    <i class="ace-icon fa fa-undo bigger-110"></i>
+                    Reset
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Myscripts {
+    <!-- page specific plugin styles -->
+
+    <link rel="stylesheet" href="~/assets/css/jquery-ui.css" />
+    <link href="~/assets/css/magicsuggest.css" rel="stylesheet" />    
+    <script src="~/assets/js/jquery-ui.js"></script>
+    <script src="~/assets/js/jquery.ui.touch-punch.js"></script>
+    <script src="~/assets/js/magicsuggest.js"></script>
+    <script type="text/javascript">
+
+    //SUBMIT form
+    $("#btnSubmit").click(function () {
+       
+        var requestObj = {
+                     
+            "CountryName": $("#txtCountry").val(),
+            "Remarks": $("#txtremarks").val(),
+            "Discontinue": $("#prodDiscontinue").is(":checked")
+
+        }
+
+        var result = Common_AjaxPOST("http://localhost:54510/api/CountryMasterApi/Create", JSON.stringify(requestObj));
+
+    });
+    
+
+    </script>
+}

@@ -54,6 +54,8 @@
 
         public static readonly string GetDivisionMasterViewModelQuery = "SELECT DivisionIndex,Division,Vertical FROM DivisionMaster";
 
+        public static readonly string InsertDivisionMaster = "INSERT INTO DivisionMaster (DivisionIndex,Division,Vertical,Remarks,CreateUserIndex,CreateDateTime,Discontinue) VALUES(@DivisionIndex,@Division,@Vertical,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue);" + "SELECT DivisionIndex from DivisionMaster where DivisionIndex = @DivisionIndex";
+
         #endregion
 
         #region Branch Master
@@ -133,6 +135,8 @@
         public static readonly string GetAllCountryMastersQuery = "SELECT CountryIndex,CountryName,Remarks,CreateUserIndex,CreateDateTime,UpdateUserIndex,UpdateDateTime,Discontinue FROM CountryMaster";
 
         public static readonly string GetCountryMasterViewModelQuery = "SELECT CountryIndex,CountryName FROM CountryMaster";
+
+        public static readonly string InsertCountryMaster = "INSERT INTO CountryMaster (CountryIndex,CountryName,Remarks,CreateUserIndex,CreateDateTime,Discontinue) VALUES(@CountryIndex,@CountryName,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue);" + "SELECT CountryIndex from CountryMaster where CountryIndex = @CountryIndex";
 
         #endregion
 

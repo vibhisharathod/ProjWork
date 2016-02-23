@@ -18,7 +18,7 @@ namespace Veritas.Web.Controllers
         {
             return Json(lookUpsDA.GetPolicyStatus(), JsonRequestBehavior.AllowGet);
         }
-
+        
         public JsonResult BusinessStatus()
         {
             return Json(lookUpsDA.GetBusinessStatus(), JsonRequestBehavior.AllowGet);
@@ -49,6 +49,10 @@ namespace Veritas.Web.Controllers
         public async Task<JsonResult> ProductType()
         {
             return Json(await lookUpsDA.GetTypeLookUp(), JsonRequestBehavior.AllowGet);
+        }
+        public JsonResult Vertical()
+        {
+            return Json(lookUpsDA.GetVerticalTypes(), JsonRequestBehavior.AllowGet);
         }
     }
 }

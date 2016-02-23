@@ -11,6 +11,7 @@ namespace Veritas.Entities
         [Required]
         public int CountryIndex { get; set; } // int, not null
         [MaxLength(50)]
+        [Display(Name = "Country Name")]
         public string CountryName { get; set; } // varchar(50), null
         [MaxLength(50)]
         public string Remarks { get; set; } // varchar(50), null

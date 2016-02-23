@@ -10,5 +10,6 @@ namespace Veritas.DataAccess
         Task<IEnumerable<CountryMaster>> GetAll();
         Task<IEnumerable<CountryMasterViewModel>> GetAllCountryMasterForViews();
         Task<CountryMaster> Find(int id);
+        Task AddCountryMaster(CountryMaster countData);
     }
 }
