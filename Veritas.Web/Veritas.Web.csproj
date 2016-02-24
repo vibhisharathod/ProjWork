@@ -373,6 +373,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\AgentTypeMasterApiController.cs" />
+    <Compile Include="API\AreaMasterApiController.cs" />
     <Compile Include="API\CountryMasterApiController.cs" />
     <Compile Include="API\DivisionMasterApiController.cs" />
     <Compile Include="API\ProductMasterApiController.cs" />
@@ -616,6 +618,10 @@
     <Content Include="Views\CountryMaster\ViewDetails.cshtml" />
     <Content Include="Views\DivisionMaster\Create.cshtml" />
     <Content Include="Views\DivisionMaster\ViewDetails.cshtml" />
+    <Content Include="Views\AgentTypeMaster\Create.cshtml" />
+    <Content Include="Views\AgentTypeMaster\ViewDetails.cshtml" />
+    <Content Include="Views\AreaMaster\Create.cshtml" />
+    <Content Include="Views\AreaMaster\ViewDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

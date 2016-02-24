@@ -179,5 +179,14 @@ namespace Veritas.DataAccess.Sql
 
             return VerticalTypes;
         }
+
+        public async Task<IEnumerable<CityMaster>> GetCityLookUp()
+        {
+            return await WithConnection(async c =>
+            {
+                var lookUpLists = await c.QueryAsync<CityMaster>(SQLConstants.CityMasterLookUp);
+                return lookUpLists;
+            });
+        }
     }
 }

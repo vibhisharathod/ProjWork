@@ -15,6 +15,7 @@ namespace Veritas.DataAccess
         Task<IEnumerable<MainAgentMaster>> GetMALookUp();
         Task<IEnumerable<BranchMaster>> GetBranchLookUp();
         Task<IEnumerable<GiProductMaster>> GetProductLookUp();
+        Task<IEnumerable<CityMaster>> GetCityLookUp();
 
         IEnumerable<PolicyStatus> GetPolicyStatus();
         IEnumerable<BusinessStatus> GetBusinessStatus();

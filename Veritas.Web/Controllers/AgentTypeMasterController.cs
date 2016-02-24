@@ -8,16 +8,24 @@ namespace Veritas.Web.Controllers
     public class AgentTypeMasterController : Controller
     {
         // GET: AgentTypeMaster
+        private readonly IAgentTypeMasterDA AgentTypeMasterDA;
+
+        public AgentTypeMasterController(IAgentTypeMasterDA DivisionMasterDA)
+        {
+            AgentTypeMasterDA = DivisionMasterDA;
+        }
+
         public async Task<ActionResult> Index()
         {
-            IAgentTypeMasterDA test = new AgentTypeMasterDA();
-            var result = await test.GetAllAgentTypeMasterForViews();
+            var result = await AgentTypeMasterDA.GetAllAgentTypeMasterForViews();
 
             return View(result);
         }
-        public ActionResult ViewDetails(string Id)
+
+        public async Task<ActionResult> ViewDetails(int Id)
         {
-            return View();
+            var selectProd = await AgentTypeMasterDA.Find(Id);
+            return View(selectProd);
         }
 
         public ActionResult Create()

@@ -13,6 +13,7 @@
         public static readonly string MainAgentMasterLookUp = "SELECT MainAgent_ID,MainAgentName from MainAgentMaster;";
         public static readonly string BranchMasterLookUp = "SELECT Branch_ID,FullName from BranchMaster;";
         public static readonly string GIProductMasterLookUp = "SELECT GIProductIndex,GIProductName from GI_ProductMaster;";
+        public static readonly string CityMasterLookUp = "SELECT CityIndex,CityName from CityMaster;";
 
         #endregion
 
@@ -34,6 +35,7 @@
 
         public static readonly string GetAgentTypeViewModelQuery = "SELECT AgentTypeID,Name,Businesstype FROM AgentTypeMaster";
 
+        public static readonly string InsertAgentTypeMaster = "INSERT INTO AgentTypeMaster (AgentTypeID,Name,Businesstype,Remarks,CreateUserIndex,CreateDateTime,Discontinue) VALUES(@AgentTypeID,@Name,@Businesstype,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue);" + "SELECT AgentTypeID from AgentTypeMaster where AgentTypeID = @AgentTypeID";
         #endregion
 
         #region GiAgency Master
@@ -167,6 +169,7 @@
 
         public static readonly string GetAreaMasterViewModelQuery = "SELECT am.AreaIndex,am.AreaName,am.PinCode,cm.CityName FROM AreaMaster am left outer join CityMaster cm on am.CityIndex = cm.CityIndex";
 
+        public static readonly string InsertAreaMaster = "INSERT INTO AreaMaster (AreaIndex,AreaName,CityIndex,PinCode,Remarks,CreateUserIndex,CreateDateTime,Discontinue) VALUES(@AreaIndex,@AreaName,@CityIndex,@PinCode,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue);" + "SELECT AreaIndex from AreaMaster where AreaIndex = @AreaIndex";
         #endregion
 
         #region State Master
@@ -182,6 +185,7 @@
 
         public static readonly string GetCityMasterViewModelQuery = "SELECT cm.CityIndex,cm.CityName,sm.StateName FROM CityMaster cm left outer join StateMaster sm on cm.StateIndex = sm.StateIndex";
 
+        public static readonly string InsertCityMaster = "INSERT INTO CityMaster (CityIndex,CityName,StateIndex,STDCode,Remarks,CreateUserIndex,CreateDateTime,Discontinue) VALUES(@CityIndex,@CityName,@StateIndex,@STDCode,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue);" + "SELECT CityIndex from CityMaster where CityIndex = @CityIndex";
         #endregion
     }
 }

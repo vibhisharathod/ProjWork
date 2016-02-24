@@ -15,8 +15,10 @@ namespace Veritas.Web
 
             container.RegisterType<IInsureMasterDA, InsureMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IProductMasterDA, GiProductMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<IAreaMasterDA, AreaMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<ICountryMasterDA, CountryMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IDivisionMasterDA, DivisionMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<IAgentTypeMasterDA, AgentTypeMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<ILookUpTables, LookUpTables>((new HierarchicalLifetimeManager()));
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
@@ -38,8 +40,10 @@ namespace Veritas.Web
         {
             container.RegisterType<IInsureMasterDA, InsureMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IProductMasterDA, GiProductMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<IAreaMasterDA, AreaMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<ICountryMasterDA, CountryMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IDivisionMasterDA, DivisionMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<IAgentTypeMasterDA, AgentTypeMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<ILookUpTables, LookUpTables>((new HierarchicalLifetimeManager()));
         }
 

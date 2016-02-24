@@ -11,5 +11,6 @@ namespace Veritas.DataAccess
         Task<IEnumerable<CityMaster>> GetAll();
         Task<IEnumerable<CityMasterViewModel>> GetAllCityMasterForViews();
         Task<CityMaster> Find(int id);
+        Task AddCityMaster(CityMaster countData);
     }
 }

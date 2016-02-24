@@ -54,5 +54,9 @@ namespace Veritas.Web.Controllers
         {
             return Json(lookUpsDA.GetVerticalTypes(), JsonRequestBehavior.AllowGet);
         }
+        public async Task<JsonResult> City()
+        {
+            return Json(await lookUpsDA.GetCityLookUp(), JsonRequestBehavior.AllowGet);
+        }
     }
 }

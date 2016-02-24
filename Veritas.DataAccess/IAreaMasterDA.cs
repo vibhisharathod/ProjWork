@@ -8,6 +8,7 @@ namespace Veritas.DataAccess
     {
         Task<IEnumerable<AreaMaster>> GetAll();
         Task<IEnumerable<AreaMasterViewModel>> GetAllAreaMasterForViews();
-        Task<AreaMaster> Find(int? id);
+        Task<AreaMaster> Find(int id);
+        Task AddAreaMaster(AreaMaster AreaData);
     }
 }

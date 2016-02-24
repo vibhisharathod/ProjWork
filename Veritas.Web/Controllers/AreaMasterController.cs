@@ -8,17 +8,26 @@ namespace Veritas.Web.Controllers
     public class AreaMasterController : Controller
     {
         // GET: AreaMaster
+        private readonly IAreaMasterDA AreaDA;
+
+        public AreaMasterController(IAreaMasterDA AreaMasterDA)
+        {
+            AreaDA = AreaMasterDA;
+        }
+
         public async Task<ActionResult> Index()
         {
-            IAreaMasterDA test = new AreaMasterDA();
-            var result = await test.GetAllAreaMasterForViews();
+            var result = await AreaDA.GetAllAreaMasterForViews();
 
             return View(result);
         }
-        public ActionResult ViewDetails(string Id)
+
+        public async Task<ActionResult> ViewDetails(int Id)
         {
-            return View();
+            var selectProd = await AreaDA.Find(Id);
+            return View(selectProd);
         }
+
 
         public ActionResult Create()
         {
