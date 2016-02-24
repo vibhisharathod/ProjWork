@@ -8,6 +8,7 @@ namespace Veritas.DataAccess
     {
         Task<IEnumerable<GiCompanyMaster>> GetAll();
         Task<IEnumerable<GiCompanyMasterViewModel>> GetAllCompanyMasterForViews();
-        Task<GiCompanyMaster> Find(int? id);
+        Task<GiCompanyMaster> Find(int id);
+        Task AddCompanyMaster(GiCompanyMaster DivData);
     }
 }

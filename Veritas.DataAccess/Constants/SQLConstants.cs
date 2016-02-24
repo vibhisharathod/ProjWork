@@ -148,6 +148,9 @@
         public static readonly string GetAllCompanyMasterQuery = "SELECT GICompanyIndex,GICompanyName,Address1,Address2,City,PinCode,Contact1,Contact2,Fax,Email,Website,Remarks,CreateUserIndex,CreateDateTime,UpdateUserIndex,UpdateDateTime,Discontinue FROM GI_CompanyMaster";
 
         public static readonly string GetCompanyMasterViewModelQuery = "SELECT GICompanyIndex,GICompanyName,Website,Discontinue FROM GI_CompanyMaster";
+
+        public static readonly string InsertGiCompanyMaster = "INSERT INTO GI_CompanyMaster (GICompanyIndex,GICompanyName,Address1,Address2,City,PinCode,Contact1,Contact2,Fax,Email,Website,Remarks,CreateUserIndex,CreateDateTime,Discontinue) VALUES(@GICompanyIndex,@GICompanyName, @Address1,@Address2,@City,@PinCode,@Contact1,@Contact2,@Fax,@Email,@Website,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue);" + "SELECT GICompanyIndex from GI_CompanyMaster where GICompanyIndex = @GICompanyIndex";
+
         #endregion
 
         #region Product Master

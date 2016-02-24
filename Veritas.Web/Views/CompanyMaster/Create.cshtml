@@ -1,0 +1,237 @@
+﻿@model Veritas.Entities.GiAgencyMaster
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <h3 class="header smaller lighter blue">Create Agency Master</h3>
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Company</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddCompany" placeholder="Select Company">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Agency Name</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtAgencyName" placeholder="Enter Agency Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Agency Code</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtAgencyCode" placeholder="Enter Agency Code">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Date Of Enrollment</label>
+                <div class="col-xs-6 col-sm-5">
+                    <div class="input-group">
+                        <input type="text" id="DateOfEnrollment" class="form-control" />
+                        <span class="input-group-addon">
+                            <i class="ace-icon fa fa-calendar"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Date Of Expiration</label>
+                <div class="col-xs-6 col-sm-5">
+                    <div class="input-group">
+                        <input type="text" id="DateOfExpiration" class="form-control" />
+                        <span class="input-group-addon">
+                            <i class="ace-icon fa fa-calendar"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">PAN No</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtPANNo" placeholder="Enter PAN No">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Bank Name</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtBankName" placeholder="Enter Bank Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Branch Name</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtBranchName" placeholder="Enter Branch Name">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Account Type</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddAccountType" placeholder="Select Account Type">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Account No</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtAccountNo" placeholder="Enter Account No">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">MICR Code</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtMICRCode" placeholder="Enter MICR Code">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">IFSC Code</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtIFSCCode" placeholder="Enter IFSC Code">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Address1</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtAddress1" placeholder="Enter Address1">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Address2</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtAddress2" placeholder="Enter Address2">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Pin Code</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtPincode" placeholder="Enter Pin Code">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">City</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddSelectCity" placeholder="Select City">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">State</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddSelectState" placeholder="Select State">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Email</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtEmail" placeholder="Enter Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">PhoneNo1</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtPhoneNo1" placeholder="Enter PhoneNo1">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">PhoneNo2</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtPhoneNo2" placeholder="Enter PhoneNo2">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">MobileNo</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtMobileNo" placeholder="Enter MobileNo">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Remarks</label>
+                <div class="col-xs-10 col-sm-5">
+                    <textarea class="form-control limited" id="txtremarks" maxlength="50"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Discontinue</label>
+                <div class="col-xs-10 col-sm-5">
+                    <label>
+                        <input id="prodDiscontinue" class="ace ace-switch ace-switch-3" type="checkbox" />
+                        <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
+                    </label>
+                </div>
+            </div>
+        </form>
+        <div class="clearfix">
+            <div class="col-md-offset-3 col-md-9">
+                <button class="btn btn-info" type="button" id="btnSubmit">
+                    <i class="ace-icon fa fa-check bigger-110"></i>
+                    Submit
+                </button>
+                &nbsp; &nbsp; &nbsp;
+                <button class="btn" type="reset">
+                    <i class="ace-icon fa fa-undo bigger-110"></i>
+                    Reset
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Myscripts {
+    <!-- page specific plugin styles -->
+
+    <link rel="stylesheet" href="~/assets/css/jquery-ui.css" />
+    <link href="~/assets/css/magicsuggest.css" rel="stylesheet" />
+    <script src="~/assets/js/jquery-ui.js"></script>
+    <script src="~/assets/js/jquery.ui.touch-punch.js"></script>
+    <script src="~/assets/js/magicsuggest.js"></script>
+    <script type="text/javascript">
+
+       
+
+        //SUBMIT form
+        $("#btnSubmit").click(function () {
+           
+
+            var requestObj = {
+
+                "AgencyName": $("#txtAgencyName").val(),
+                "AgencyCode": $("#txtAgencyCode").val(),
+                "CompanyIndex": companyIndex,
+                "DateOfEnrollment": $("#DateOfEnrollment").val(),
+                "DateOfExpiration": $("#DateOfExpiration").val(),
+                "PAN_No": $("#txtPANNo").val(),
+                "BankName": $("#txtBankName").val(),
+                "BranchName": $("#txtBranchName").val(),
+                "AccountType": ACType,
+                "AccountNo": $("#txtAccountNo").val(),
+                "MICRCode": $("#txtMICRCode").val(),
+                "IFSCCode": $("#txtIFSCCode").val(),
+                "Address1": $("#txtAddress1").val(),
+                "Address2": $("#txtAddress2").val(),
+                "Pincode": $("#txtPincode").val(),
+                "CityIndex": CityIndex,
+                "StateIndex": StateIndex,
+                "Email": $("#txtEmail").val(),
+                "PhoneNo1": $("#txtPhoneNo1").val(),
+                "PhoneNo2": $("#txtPhoneNo2").val(),
+                "MobileNo": $("#txtMobileNo").val(),
+                "Remarks": $("#txtremarks").val(),
+                "Discontinue": $("#prodDiscontinue").is(":checked")
+
+            }
+
+            var result = Common_AjaxPOST("http://localhost:54510/api/GiCompanyMasterApi/Create", JSON.stringify(requestObj));
+
+        });
+
+
+    </script>
+}
