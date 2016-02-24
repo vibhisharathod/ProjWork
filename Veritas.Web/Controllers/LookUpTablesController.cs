@@ -71,5 +71,9 @@ namespace Veritas.Web.Controllers
         {
             return Json(lookUpsDA.GetACTypes(), JsonRequestBehavior.AllowGet);
         }
+        public JsonResult BranchTypes()
+        {
+            return Json(lookUpsDA.GetBranchTypes(), JsonRequestBehavior.AllowGet);
+        }
     }
 }

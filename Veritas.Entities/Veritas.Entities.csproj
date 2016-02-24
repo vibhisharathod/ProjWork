@@ -47,6 +47,7 @@
     <Compile Include="AsmMaster.cs" />
     <Compile Include="BaseTextValue.cs" />
     <Compile Include="BranchMaster.cs" />
+    <Compile Include="BranchType.cs" />
     <Compile Include="BusinessStatus.cs" />
     <Compile Include="CityMaster.cs" />
     <Compile Include="ClaimProcessTypes.cs" />

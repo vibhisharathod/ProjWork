@@ -70,6 +70,7 @@
 
         public static readonly string GetBranchMasterViewModelQuery = "SELECT Branch_ID,FullName,UserName,Password,Type FROM BranchMaster";
 
+        public static readonly string InsertBranchMaster = "INSERT INTO BranchMaster (Branch_ID,FullName,UserName,Password,Type,House_FlatNo,Street,Landmark,CityIndex,StateIndex,Pincode,Cont_MobileNo,Cont1,Cont2,Cont_Email,LoginStatus,Remarks,CreateUserIndex,CreateDateTime,Discontinue) VALUES(@Branch_ID,@FullName,@UserName,@Password,@Type,@House_FlatNo,@Street,@Landmark,@CityIndex,@StateIndex,@Pincode,@Cont_MobileNo,@Cont1,@Cont2,@Cont_Email,@LoginStatus,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue);" + "SELECT Branch_ID from BranchMaster where Branch_ID = @Branch_ID";
         #endregion
 
         #region ASM Master

@@ -8,18 +8,25 @@ namespace Veritas.Web.Controllers
     public class BranchMasterController : Controller
     {
         // GET: BranchMaster
+        private readonly IBranchMasterDA BranchDA;
+
+        public BranchMasterController(IBranchMasterDA BranchMasterDA)
+        {
+            BranchDA = BranchMasterDA;
+        }
+
         public async Task<ActionResult> Index()
         {
-            IBranchMasterDA test = new BranchMasterDA();
-            var result = await test.GetAllBranchMasterForViews();
+            var result = await BranchDA.GetAllBranchMasterForViews();
 
             return View(result);
         }
-        public ActionResult ViewDetails(string Id)
-        {
-            return View();
-        }
 
+        public async Task<ActionResult> ViewDetails(int Id)
+        {
+            var selectProd = await BranchDA.Find(Id);
+            return View(selectProd);
+        }
         public ActionResult Create()
         {
             return View();

@@ -1,0 +1,258 @@
+﻿@model Veritas.Entities.BranchMaster
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <h3 class="header smaller lighter blue">Create Branch Master</h3>
+
+        <form class="form-horizontal">
+            
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Branch Name</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtBranchName" placeholder="Enter Branch Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Type</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddType" placeholder="Select Type">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">User Name</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtUserName" placeholder="Enter User Name">
+                </div>
+            </div>            
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Password</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtPassword" placeholder="Enter Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">House FlatNo</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtHouse_FlatNo" placeholder="Enter House_FlatNo">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Street</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtStreet" placeholder="Enter Street">
+                </div>
+            </div>
+
+           
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Landmark</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtLandmark" placeholder="Enter Landmark">
+                </div>
+            </div>
+          
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Pin Code</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtPincode" placeholder="Enter Pin Code">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">City</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddSelectCity" placeholder="Select City">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">State</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddSelectState" placeholder="Select State">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Email</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtEmail" placeholder="Enter Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Phone No1</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtPhoneNo1" placeholder="Enter PhoneNo1">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Phone No2</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtPhoneNo2" placeholder="Enter PhoneNo2">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">MobileNo</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtMobileNo" placeholder="Enter MobileNo">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Login Status</label>
+                <div class="col-xs-10 col-sm-5">
+                    <label>
+                        <input id="LoginStatus" class="ace ace-switch ace-switch-3" type="checkbox" />
+                        <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Remarks</label>
+                <div class="col-xs-10 col-sm-5">
+                    <textarea class="form-control limited" id="txtremarks" maxlength="50"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Discontinue</label>
+                <div class="col-xs-10 col-sm-5">
+                    <label>
+                        <input id="prodDiscontinue" class="ace ace-switch ace-switch-3" type="checkbox" />
+                        <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
+                    </label>
+                </div>
+            </div>
+        </form>
+        <div class="clearfix">
+            <div class="col-md-offset-3 col-md-9">
+                <button class="btn btn-info" type="button" id="btnSubmit">
+                    <i class="ace-icon fa fa-check bigger-110"></i>
+                    Submit
+                </button>
+                &nbsp; &nbsp; &nbsp;
+                <button class="btn" type="reset">
+                    <i class="ace-icon fa fa-undo bigger-110"></i>
+                    Reset
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Myscripts {
+    <!-- page specific plugin styles -->
+
+    <link rel="stylesheet" href="~/assets/css/jquery-ui.css" />
+    <link href="~/assets/css/magicsuggest.css" rel="stylesheet" />
+    <script src="~/assets/js/jquery-ui.js"></script>
+    <script src="~/assets/js/jquery.ui.touch-punch.js"></script>
+    <script src="~/assets/js/magicsuggest.js"></script>
+    <script type="text/javascript">
+
+       
+      
+
+        //Loading City Data
+        var CityDatalist = Common_AjaxGET("/LookUpTables/City");
+        if (CityDatalist.length > 0) {
+
+            var _elmTxtVertical = $('#ddSelectCity').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'CityIndex',
+                displayField: 'CityName',
+                data: CityDatalist
+            });
+
+            $(_elmTxtVertical).on('selectionchange', function () {
+                _arrCityTypes = this.getValue();
+            });
+        }
+
+        //Loading State Data
+        var StateDatalist = Common_AjaxGET("/LookUpTables/State");
+        if (StateDatalist.length > 0) {
+
+            var _elmTxtState = $('#ddSelectState').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'StateIndex',
+                displayField: 'StateName',
+                data: StateDatalist
+            });
+
+            $(_elmTxtState).on('selectionchange', function () {
+                _arrStateTypes = this.getValue();
+            });
+        }
+
+        //Loading ACTypes Data
+        var VerticalDatalist = Common_AjaxGET("/LookUpTables/BranchTypes");
+        if (VerticalDatalist.length > 0) {
+
+            var _elmTxtVertical = $('#ddType').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'Value',
+                displayField: 'Text',
+                data: VerticalDatalist
+            });
+
+            $(_elmTxtVertical).on('selectionchange', function () {
+                _arrACTypes = this.getValue();
+            });
+        }
+
+        var _arrACTypes = new Array();
+        var _arrCityTypes = new Array();
+       
+        var _arrStateTypes = new Array();
+
+
+        //SUBMIT form
+        $("#btnSubmit").click(function () {
+          
+            var ACType;
+            if (_arrACTypes.length > 0) {
+                ACType = _arrACTypes[0];
+            }
+            var CityIndex;
+            if (_arrCityTypes.length > 0) {
+                CityIndex = _arrCityTypes[0];
+            }
+            var StateIndex;
+            if (_arrStateTypes.length > 0) {
+                StateIndex = _arrStateTypes[0];
+            }
+
+            var requestObj = {
+
+                "FullName": $("#txtBranchName").val(),
+                "Type": ACType,
+                "UserName": $("#txtUserName").val(),
+                "Password": $("#txtPassword").val(),
+                "House_FlatNo": $("#txtHouse_FlatNo").val(),
+                "Street": $("#txtStreet").val(),
+                "Landmark": $("#txtLandmark").val(),
+                "Pincode": $("#txtPincode").val(),
+                "CityIndex": CityIndex,
+                "StateIndex": StateIndex,
+                "Cont_Email": $("#txtEmail").val(),
+                "Cont1": $("#txtPhoneNo1").val(),
+                "Cont2": $("#txtPhoneNo2").val(),
+                "Cont_MobileNo": $("#txtMobileNo").val(),
+                "LoginStatus": $("#LoginStatus").is(":checked"),
+                "Remarks": $("#txtremarks").val(),
+                "Discontinue": $("#prodDiscontinue").is(":checked")
+
+            }
+
+            var result = Common_AjaxPOST("http://localhost:54510/api/BranchMasterApi/Create", JSON.stringify(requestObj));
+
+        });
+
+
+    </script>
+}

@@ -26,5 +26,6 @@ namespace Veritas.DataAccess
         IEnumerable<ClaimProcessTypes> ClaimProcessTypes();
         IEnumerable<VerticalTypes> GetVerticalTypes();
         IEnumerable<ACType> GetACTypes();
+        IEnumerable<BranchType> GetBranchTypes();
     }
 }

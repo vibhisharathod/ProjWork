@@ -215,5 +215,13 @@ namespace Veritas.DataAccess.Sql
 
             return ACType;
         }
+        public IEnumerable<BranchType> GetBranchTypes()
+        {
+            var BranchType = new List<BranchType>();
+            BranchType.Add(new BranchType() { Text = "Branch", Value = "Branch" });
+            BranchType.Add(new BranchType() { Text = "BP", Value = "BP" });
+
+            return BranchType;
+        }
     }
 }
