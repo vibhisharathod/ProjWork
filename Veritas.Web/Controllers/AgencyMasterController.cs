@@ -8,16 +8,24 @@ namespace Veritas.Web.Controllers
     public class AgencyMasterController : Controller
     {
         // GET: AgencyMaster
+        private readonly IGiAgencyMasterDA GiAgencyMasterDA;
+
+        public AgencyMasterController(IGiAgencyMasterDA AgencyMasterDA)
+        {
+            GiAgencyMasterDA = AgencyMasterDA;
+        }
+
         public async Task<ActionResult> Index()
         {
-            IGiAgencyMasterDA test = new GiAgencyMasterDA();
-            var result = await test.GetAllGiAgencyMasterForViews();
+            var result = await GiAgencyMasterDA.GetAllGiAgencyMasterForViews();
 
             return View(result);
         }
-        public ActionResult ViewDetails(string Id)
+
+        public async Task<ActionResult> ViewDetails(int Id)
         {
-            return View();
+            var selectProd = await GiAgencyMasterDA.Find(Id);
+            return View(selectProd);
         }
 
         public ActionResult Create()

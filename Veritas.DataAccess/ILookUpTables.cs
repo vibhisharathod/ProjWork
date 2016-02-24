@@ -25,6 +25,6 @@ namespace Veritas.DataAccess
         IEnumerable<PaymentTypes> GetPaymentTypes();
         IEnumerable<ClaimProcessTypes> ClaimProcessTypes();
         IEnumerable<VerticalTypes> GetVerticalTypes();
-
+        IEnumerable<ACType> GetACTypes();
     }
 }

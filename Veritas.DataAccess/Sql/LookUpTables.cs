@@ -206,5 +206,14 @@ namespace Veritas.DataAccess.Sql
                 return lookUpLists;
             });
         }
+
+        public IEnumerable<ACType> GetACTypes()
+        {
+            var ACType = new List<ACType>();
+            ACType.Add(new ACType() { Text = "Current", Value = "Current" });
+            ACType.Add(new ACType() { Text = "Savings", Value = "Savings" });
+
+            return ACType;
+        }
     }
 }

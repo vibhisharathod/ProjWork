@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ACType.cs" />
     <Compile Include="AgentTypeMaster.cs" />
     <Compile Include="AreaMaster.cs" />
     <Compile Include="AsmMaster.cs" />

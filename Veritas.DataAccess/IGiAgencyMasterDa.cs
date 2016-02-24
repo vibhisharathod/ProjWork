@@ -11,5 +11,6 @@ namespace Veritas.DataAccess
         Task<IEnumerable<GiAgencyMaster>> GetAll();
         Task<IEnumerable<GiAgencyMasterViewModel>> GetAllGiAgencyMasterForViews();
         Task<GiAgencyMaster> Find(int id);
+        Task AddGiAgencyMaster(GiAgencyMaster DivData);
     }
 }

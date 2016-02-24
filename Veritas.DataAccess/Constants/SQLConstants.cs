@@ -47,6 +47,7 @@
 
         public static readonly string GetGiAgencyMasterViewModelQuery = "SELECT AgencyIndex,AgencyName,COM.GICompanyName as CompanyName FROM GI_AgencyMaster AM left outer join GI_CompanyMaster COM on AM.CompanyIndex = COM.GICompanyIndex";
 
+        public static readonly string InsertGiAgencyMaster = "INSERT INTO GI_AgencyMaster (AgencyIndex,AgencyName,AgencyCode,CompanyIndex,DateOfEnrollment,DateOfExpiration,PAN_No,BankName,BranchName,AccountType,AccountNo,MICRCode,IFSCCode,Address1,Address2,Pincode,CityIndex,StateIndex,Email,PhoneNo1,PhoneNo2,MobileNo,Remarks,CreateUserIndex,CreateDateTime,Discontinue) VALUES(@AgencyIndex,@AgencyName,@AgencyCode,@CompanyIndex,@DateOfEnrollment,@DateOfExpiration,@PAN_No,@BankName,@BranchName,@AccountType,@AccountNo,@MICRCode,@IFSCCode,@Address1,@Address2,@Pincode,@CityIndex,@StateIndex,@Email,@PhoneNo1,@PhoneNo2,@MobileNo,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue);" + "SELECT AgencyIndex from GI_AgencyMaster where AgencyIndex = @AgencyIndex";
         #endregion
 
         #region Division Master

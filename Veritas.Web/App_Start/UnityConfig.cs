@@ -16,6 +16,7 @@ namespace Veritas.Web
             container.RegisterType<IInsureMasterDA, InsureMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IProductMasterDA, GiProductMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IGiProductTypeMasterDA, GiProductTypeMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<IGiAgencyMasterDA, GiAgencyMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IAreaMasterDA, AreaMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<ICityMasterDA, CityMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IStateMasterDA, StateMasterDA>((new HierarchicalLifetimeManager()));
@@ -43,6 +44,7 @@ namespace Veritas.Web
         {
             container.RegisterType<IInsureMasterDA, InsureMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IProductMasterDA, GiProductMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<IGiAgencyMasterDA, GiAgencyMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IGiProductTypeMasterDA, GiProductTypeMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IAreaMasterDA, AreaMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<ICityMasterDA, CityMasterDA>((new HierarchicalLifetimeManager()));

@@ -66,5 +66,10 @@ namespace Veritas.Web.Controllers
         {
             return Json(await lookUpsDA.GetCountryLookUp(), JsonRequestBehavior.AllowGet);
         }
+
+        public JsonResult ACTypes()
+        {
+            return Json(lookUpsDA.GetACTypes(), JsonRequestBehavior.AllowGet);
+        }
     }
 }
