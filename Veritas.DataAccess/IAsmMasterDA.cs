@@ -10,5 +10,6 @@ namespace Veritas.DataAccess
         Task<IEnumerable<AsmMaster>> GetAll();
         Task<IEnumerable<AsmMasterViewModel>> GetAllAsmMasterForViews();
         Task<AsmMaster> Find(int id);
+        Task AddASMMaster(AsmMaster ASMData);
     }
 }

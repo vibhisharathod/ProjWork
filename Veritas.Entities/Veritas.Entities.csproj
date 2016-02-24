@@ -45,6 +45,7 @@
     <Compile Include="AgentTypeMaster.cs" />
     <Compile Include="AreaMaster.cs" />
     <Compile Include="AsmMaster.cs" />
+    <Compile Include="ASMTypes.cs" />
     <Compile Include="BaseTextValue.cs" />
     <Compile Include="BranchMaster.cs" />
     <Compile Include="BranchType.cs" />

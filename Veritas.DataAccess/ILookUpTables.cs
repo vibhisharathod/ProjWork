@@ -27,5 +27,6 @@ namespace Veritas.DataAccess
         IEnumerable<VerticalTypes> GetVerticalTypes();
         IEnumerable<ACType> GetACTypes();
         IEnumerable<BranchType> GetBranchTypes();
+        IEnumerable<ASMTypes> GetASMTypes();
     }
 }

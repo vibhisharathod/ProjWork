@@ -223,5 +223,14 @@ namespace Veritas.DataAccess.Sql
 
             return BranchType;
         }
+
+        public IEnumerable<ASMTypes> GetASMTypes()
+        {
+            var ASMTypes = new List<ASMTypes>();
+            ASMTypes.Add(new ASMTypes() { Text = "ASM", Value = "ASM" });
+            ASMTypes.Add(new ASMTypes() { Text = "BP", Value = "BP" });
+
+            return ASMTypes;
+        }
     }
 }

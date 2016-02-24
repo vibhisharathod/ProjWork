@@ -81,6 +81,7 @@
 
         public static readonly string GetAsmMasterViewModelQuery = "SELECT ASMIndex,ASM_Name,Type,UserName,Password FROM ASMMaster";
 
+        public static readonly string InsertASMMaster = "INSERT INTO ASMMaster (ASMIndex,ASM_Name,Type,UserName,Password,House_FlatNo,Street,Landmark,AreaIndex,CityIndex,StateIndex,Pincode,MobileNo,Cont1,Cont2,Email,LoginStatus,Remarks,CreateUserIndex,CreateDateTime,Discontinue) VALUES(@ASMIndex,@ASM_Name,@Type,@UserName,@Password,@House_FlatNo,@Street,@Landmark,@AreaIndex,@CityIndex,@StateIndex,@Pincode,@MobileNo,@Cont1,@Cont2,@Email,@LoginStatus,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue);" + "SELECT ASMIndex from ASMMaster where ASMIndex = @ASMIndex";
         #endregion
 
         #region Main Agent Master

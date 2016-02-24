@@ -9,17 +9,26 @@ namespace Veritas.Web.Controllers
     public class AsmMasterController : Controller
     {
         // GET: AsmMaster
+        private readonly IAsmMasterDA ASMDA;
+
+        public AsmMasterController(IAsmMasterDA ASMMasterDA)
+        {
+            ASMDA = ASMMasterDA;
+        }
+
         public async Task<ActionResult> Index()
         {
-            IAsmMasterDA test = new AsmMasterDA();
-            var result = await test.GetAllAsmMasterForViews();
+            var result = await ASMDA.GetAllAsmMasterForViews();
 
             return View(result);
         }
-        public ActionResult ViewDetails(string Id)
+
+        public async Task<ActionResult> ViewDetails(int Id)
         {
-            return View();
+            var selectProd = await ASMDA.Find(Id);
+            return View(selectProd);
         }
+
 
         public ActionResult Create()
         {
