@@ -10,6 +10,7 @@ namespace Veritas.DataAccess
         Task<IEnumerable<GiProductTypeMaster>> GetTypeLookUp();
         Task<IEnumerable<TmMaster>> GetTMLookUp();
         Task<IEnumerable<SeMaster>> GetSELookUp();
+        Task<IEnumerable<AsmMaster>> GetASMLookUp();
         Task<IEnumerable<InClientleMaster>> GetClientLookUp();
         Task<IEnumerable<GiAgencyMaster>> GetAgencyLookUp();
         Task<IEnumerable<MainAgentMaster>> GetMALookUp();

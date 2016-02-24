@@ -382,6 +382,7 @@
     <Compile Include="API\DivisionMasterApiController.cs" />
     <Compile Include="API\GiAgencyMasterApiController.cs" />
     <Compile Include="API\GiCompanyMasterApiController.cs" />
+    <Compile Include="API\MainAgentMasterApiController.cs" />
     <Compile Include="API\ProductMasterApiController.cs" />
     <Compile Include="API\ProductTypeMasterApiController.cs" />
     <Compile Include="API\StateMasterApiController.cs" />
@@ -641,6 +642,8 @@
     <Content Include="Views\BranchMaster\Create.cshtml" />
     <Content Include="Views\AsmMaster\Create.cshtml" />
     <Content Include="Views\AsmMaster\ViewDetails.cshtml" />
+    <Content Include="Views\MainAgentMaster\Create.cshtml" />
+    <Content Include="Views\MainAgentMaster\ViewDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

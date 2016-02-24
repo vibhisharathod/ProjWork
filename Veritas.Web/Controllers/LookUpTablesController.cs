@@ -79,5 +79,17 @@ namespace Veritas.Web.Controllers
         {
             return Json(lookUpsDA.GetASMTypes(), JsonRequestBehavior.AllowGet);
         }
+        public async Task<JsonResult> SE()
+        {
+            return Json(await lookUpsDA.GetSELookUp(), JsonRequestBehavior.AllowGet);
+        }
+        public async Task<JsonResult> Branch()
+        {
+            return Json(await lookUpsDA.GetBranchLookUp(), JsonRequestBehavior.AllowGet);
+        }
+        public async Task<JsonResult> ASM()
+        {
+            return Json(await lookUpsDA.GetASMLookUp(), JsonRequestBehavior.AllowGet);
+        }
     }
 }

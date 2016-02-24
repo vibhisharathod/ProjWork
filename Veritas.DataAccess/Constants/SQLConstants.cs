@@ -16,6 +16,7 @@
         public static readonly string CityMasterLookUp = "SELECT CityIndex,CityName from CityMaster;";
         public static readonly string StateMasterLookUp = "SELECT StateIndex,StateName from StateMaster;";
         public static readonly string CountryMasterLookUp = "SELECT CountryIndex,CountryName from CountryMaster;";
+        public static readonly string ASMMasterLookUp = "SELECT ASMIndex,ASMName from ASMMaster;";
         #endregion
 
         #region InsureMaster
@@ -92,6 +93,7 @@
 
         public static readonly string GetMainAgentMasterViewModelQuery = "SELECT MainAgent_ID,MainAgentName,MA.UserName,MA.Password FROM MainAgentMaster MA";
 
+        public static readonly string InsertMainAgentMaster = "INSERT INTO MainAgentMaster (MainAgent_ID,MainAgentName,SE_ID,BranchID,ASMIndex,UserName,Password,House_FlatNo,Street,Landmark,AreaIndex,CityIndex,StateIndex,Pincode,MobileNo,Cont1,Cont2,Cont_Email,AllowCommision,WatchFlag,LoginStatus,Remarks,CreateUserIndex,CreateDateTime,Discontinue) VALUES(@MainAgent_ID,@MainAgentName,@SE_ID,@BranchID,@ASMIndex,@UserName,@Password,@House_FlatNo,@Street,@Landmark,@AreaIndex,@CityIndex,@StateIndex,@Pincode,@MobileNo,@Cont1,@Cont2,@Cont_Email,@AllowCommision,@WatchFlag,@LoginStatus,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue);" + "SELECT MainAgent_ID from MainAgentMaster where MainAgent_ID = @MainAgent_ID";
         #endregion
 
         #region SE Master

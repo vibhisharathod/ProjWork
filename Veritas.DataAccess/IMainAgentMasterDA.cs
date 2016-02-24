@@ -9,5 +9,6 @@ namespace Veritas.DataAccess.Sql
         Task<IEnumerable<MainAgentMaster>> GetAll();
         Task<IEnumerable<MainAgentMasterViewModel>> GetAllMainAgentMasterForViews();
         Task<MainAgentMaster> Find(int id);
+        Task AddMainAgentMaster(MainAgentMaster AreaData);
     }
 }

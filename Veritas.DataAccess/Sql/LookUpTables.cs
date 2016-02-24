@@ -232,5 +232,14 @@ namespace Veritas.DataAccess.Sql
 
             return ASMTypes;
         }
+
+        public async Task<IEnumerable<AsmMaster>> GetASMLookUp()
+        {
+            return await WithConnection(async c =>
+            {
+                var lookUpLists = await c.QueryAsync<AsmMaster>(SQLConstants.ASMMasterLookUp);
+                return lookUpLists;
+            });
+        }
     }
 }

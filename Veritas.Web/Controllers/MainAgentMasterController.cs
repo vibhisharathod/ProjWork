@@ -8,16 +8,24 @@ namespace Veritas.Web.Controllers
     public class MainAgentMasterController : Controller
     {
         // GET: MainAgentMaster
+        private readonly IMainAgentMasterDA MainAgentMasterDA;
+
+        public MainAgentMasterController(IMainAgentMasterDA MainAgent)
+        {
+            MainAgentMasterDA = MainAgent;
+        }
+
         public async Task<ActionResult> Index()
         {
-            IMainAgentMasterDA test = new MainAgentMasterDA();
-            var result = await test.GetAllMainAgentMasterForViews();
+            var result = await MainAgentMasterDA.GetAllMainAgentMasterForViews();
 
             return View(result);
         }
-        public ActionResult ViewDetails(string Id)
+
+        public async Task<ActionResult> ViewDetails(int Id)
         {
-            return View();
+            var selectProd = await MainAgentMasterDA.Find(Id);
+            return View(selectProd);
         }
 
         public ActionResult Create()
