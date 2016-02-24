@@ -15,7 +15,10 @@ namespace Veritas.Web
 
             container.RegisterType<IInsureMasterDA, InsureMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IProductMasterDA, GiProductMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<IGiProductTypeMasterDA, GiProductTypeMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IAreaMasterDA, AreaMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<ICityMasterDA, CityMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<IStateMasterDA, StateMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<ICountryMasterDA, CountryMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IDivisionMasterDA, DivisionMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IAgentTypeMasterDA, AgentTypeMasterDA>((new HierarchicalLifetimeManager()));
@@ -40,7 +43,10 @@ namespace Veritas.Web
         {
             container.RegisterType<IInsureMasterDA, InsureMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IProductMasterDA, GiProductMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<IGiProductTypeMasterDA, GiProductTypeMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IAreaMasterDA, AreaMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<ICityMasterDA, CityMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<IStateMasterDA, StateMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<ICountryMasterDA, CountryMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IDivisionMasterDA, DivisionMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IAgentTypeMasterDA, AgentTypeMasterDA>((new HierarchicalLifetimeManager()));

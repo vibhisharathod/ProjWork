@@ -375,9 +375,12 @@
   <ItemGroup>
     <Compile Include="API\AgentTypeMasterApiController.cs" />
     <Compile Include="API\AreaMasterApiController.cs" />
+    <Compile Include="API\CityMasterApiController.cs" />
     <Compile Include="API\CountryMasterApiController.cs" />
     <Compile Include="API\DivisionMasterApiController.cs" />
     <Compile Include="API\ProductMasterApiController.cs" />
+    <Compile Include="API\ProductTypeMasterApiController.cs" />
+    <Compile Include="API\StateMasterApiController.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityResolver.cs" />
@@ -622,6 +625,12 @@
     <Content Include="Views\AgentTypeMaster\ViewDetails.cshtml" />
     <Content Include="Views\AreaMaster\Create.cshtml" />
     <Content Include="Views\AreaMaster\ViewDetails.cshtml" />
+    <Content Include="Views\CityMaster\Create.cshtml" />
+    <Content Include="Views\CityMaster\ViewDetails.cshtml" />
+    <Content Include="Views\StateMaster\Create.cshtml" />
+    <Content Include="Views\StateMaster\ViewDetails.cshtml" />
+    <Content Include="Views\ProductTypeMaster\Create.cshtml" />
+    <Content Include="Views\ProductTypeMaster\ViewDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -631,7 +640,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\CountryMasterApi\" />
     <Folder Include="Views\LookUpTables\" />
   </ItemGroup>
   <ItemGroup>

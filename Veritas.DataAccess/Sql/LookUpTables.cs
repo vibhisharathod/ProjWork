@@ -188,5 +188,23 @@ namespace Veritas.DataAccess.Sql
                 return lookUpLists;
             });
         }
+
+        public async Task<IEnumerable<StateMaster>> GetStateLookUp()
+        {
+            return await WithConnection(async c =>
+            {
+                var lookUpLists = await c.QueryAsync<StateMaster>(SQLConstants.StateMasterLookUp);
+                return lookUpLists;
+            });
+        }
+
+        public async Task<IEnumerable<CountryMaster>> GetCountryLookUp()
+        {
+            return await WithConnection(async c =>
+            {
+                var lookUpLists = await c.QueryAsync<CountryMaster>(SQLConstants.CountryMasterLookUp);
+                return lookUpLists;
+            });
+        }
     }
 }

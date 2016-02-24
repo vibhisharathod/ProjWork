@@ -1,0 +1,116 @@
+﻿@model Veritas.Entities.CityMaster
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <h3 class="header smaller lighter blue">Create City Master</h3>
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">City</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtCity" placeholder="Enter City">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">State</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddSelectState" placeholder="Select State">
+                </div>
+            </div>
+            <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">STDCode</label>
+                    <div class="col-xs-10 col-sm-5">
+                        <input type="text" id="txtSTDCode" placeholder="Enter STDCode">
+                    </div>
+                </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Remarks</label>
+                <div class="col-xs-10 col-sm-5">
+                    <textarea class="form-control limited" id="txtremarks" maxlength="50"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Discontinue</label>
+                <div class="col-xs-10 col-sm-5">
+                    <label>
+                        <input id="prodDiscontinue" class="ace ace-switch ace-switch-3" type="checkbox" />
+                        <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
+                    </label>
+                </div>
+            </div>
+        </form>
+        <div class="clearfix">
+            <div class="col-md-offset-3 col-md-9">
+                <button class="btn btn-info" type="button" id="btnSubmit">
+                    <i class="ace-icon fa fa-check bigger-110"></i>
+                    Submit
+                </button>
+                &nbsp; &nbsp; &nbsp;
+                <button class="btn" type="reset">
+                    <i class="ace-icon fa fa-undo bigger-110"></i>
+                    Reset
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Myscripts {
+    <!-- page specific plugin styles -->
+
+    <link rel="stylesheet" href="~/assets/css/jquery-ui.css" />
+    <link href="~/assets/css/magicsuggest.css" rel="stylesheet" />
+    <script src="~/assets/js/jquery-ui.js"></script>
+    <script src="~/assets/js/jquery.ui.touch-punch.js"></script>
+    <script src="~/assets/js/magicsuggest.js"></script>
+    <script type="text/javascript">
+
+        //Loading City Data
+        var CityDatalist = Common_AjaxGET("/LookUpTables/State");
+        if (CityDatalist.length > 0) {
+
+            var _elmTxtVertical = $('#ddSelectState').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'StateIndex',
+                displayField: 'StateName',
+                data: CityDatalist
+            });
+
+            $(_elmTxtVertical).on('selectionchange', function () {
+                _arrCityTypes = this.getValue();
+            });
+        }
+
+        var _arrCityTypes = new Array();
+
+    //SUBMIT form
+    $("#btnSubmit").click(function () {
+        var CityIndex;
+        if (_arrCityTypes.length > 0) {
+            CityIndex = _arrCityTypes[0];
+        }
+
+        var requestObj = {
+
+            "CityName": $("#txtCity").val(),
+            "StateIndex": CityIndex,
+            "STDCode": $("#txtSTDCode").val(),
+            "Remarks": $("#txtremarks").val(),
+            "Discontinue": $("#prodDiscontinue").is(":checked")
+
+        }
+
+        var result = Common_AjaxPOST("http://localhost:54510/api/CityMasterApi/Create", JSON.stringify(requestObj));
+
+    });
+
+
+    </script>
+}

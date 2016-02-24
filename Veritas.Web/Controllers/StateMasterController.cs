@@ -8,17 +8,26 @@ namespace Veritas.Web.Controllers
     public class StateMasterController : Controller
     {
         // GET: State
+        private readonly IStateMasterDA stateDA;
+
+        public StateMasterController(IStateMasterDA stateMasterDA)
+        {
+            stateDA = stateMasterDA;
+        }
+
         public async Task<ActionResult> Index()
         {
-            IStateMasterDA test = new StateMasterDA();
-            var result = await test.GetAllStateMasterForViews();
+            var result = await stateDA.GetAllStateMasterForViews();
 
             return View(result);
         }
-        public ActionResult ViewDetails(string Id)
+
+        public async Task<ActionResult> ViewDetails(int Id)
         {
-            return View();
+            var selectProd = await stateDA.Find(Id);
+            return View(selectProd);
         }
+
 
         public ActionResult Create()
         {

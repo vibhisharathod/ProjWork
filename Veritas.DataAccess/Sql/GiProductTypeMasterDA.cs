@@ -10,9 +10,46 @@ namespace Veritas.DataAccess.Sql
 {
    public class GiProductTypeMasterDA :BaseRepository, IGiProductTypeMasterDA
     {
-        public Task<GiProductTypeMaster> Find(int? id)
+        public async Task AddProductTypeMaster(GiProductTypeMaster prodData)
         {
-            throw new NotImplementedException();
+            var maxId = await WithConnection(async c =>
+            {
+                return await c.QueryAsync<int>("SELECT max(GITypeIndex) FROM GI_ProductTypeMaster");
+            });
+
+            //Setting Primary Key
+            if (maxId.SingleOrDefault() == 0)
+            {
+                prodData.GITypeIndex = 1;
+            }
+            else
+            {
+                prodData.GITypeIndex = maxId.SingleOrDefault() + 1;
+            }
+
+            //Filling Other Records like User Id, Creation & Update Date
+            prodData.CreateUserIndex = 1; //Later Logged in User
+            prodData.UpdateUserIndex = 1; //Later Logged in User
+            prodData.CreateDateTime = DateTime.Now;
+            prodData.UpdateDateTime = DateTime.Now;
+
+            await WithConnection(async c =>
+            {
+                return await c.QueryAsync<int>(SQLConstants.InsertProductTypeMaster, prodData);
+            });
+        }
+
+        public async Task<GiProductTypeMaster> Find(int id)
+        {
+            var prodList = await WithConnection(async c =>
+            {
+                var companylist = await c.QueryAsync<GiProductTypeMaster>(SQLConstants.GetAllProductTypeMasterQuery);
+                return companylist;
+            });
+
+            //Get ProductMaster based on ID
+            var prodFound = prodList.Where(e => e.GITypeIndex == id).FirstOrDefault<GiProductTypeMaster>();
+            return prodFound;
         }
         public async Task<IEnumerable<GiProductTypeMaster>> GetAll()
         {

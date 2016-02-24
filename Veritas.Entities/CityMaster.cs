@@ -22,5 +22,7 @@ namespace Veritas.Entities
         public DateTime? CreateDateTime { get; set; } // datetime, null
         public int? UpdateUserIndex { get; set; } // int, null
         public DateTime? UpdateDateTime { get; set; } // datetime, null
+
+        public string StateName { get; set; }
     }
 }

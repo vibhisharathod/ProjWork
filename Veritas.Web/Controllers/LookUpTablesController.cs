@@ -58,5 +58,13 @@ namespace Veritas.Web.Controllers
         {
             return Json(await lookUpsDA.GetCityLookUp(), JsonRequestBehavior.AllowGet);
         }
+        public async Task<JsonResult> State()
+        {
+            return Json(await lookUpsDA.GetStateLookUp(), JsonRequestBehavior.AllowGet);
+        }
+        public async Task<JsonResult> Country()
+        {
+            return Json(await lookUpsDA.GetCountryLookUp(), JsonRequestBehavior.AllowGet);
+        }
     }
 }

@@ -8,17 +8,25 @@ namespace Veritas.Web.Controllers
     public class CityMasterController : Controller
     {
         // GET: CityMaster
+       
+        private readonly ICityMasterDA CityDA;
+
+        public CityMasterController(ICityMasterDA cityMasterDA)
+        {
+            CityDA = cityMasterDA;
+        }
+
         public async Task<ActionResult> Index()
         {
-            ICityMasterDA CountryDA = new CityMasterDA();
-            var result = await CountryDA.GetAllCityMasterForViews();
+            var result = await CityDA.GetAllCityMasterForViews();
 
             return View(result);
         }
 
-        public ActionResult ViewDetails(string Id)
+        public async Task<ActionResult> ViewDetails(int Id)
         {
-            return View();
+            var selectProd = await CityDA.Find(Id);
+            return View(selectProd);
         }
 
         public ActionResult Create()

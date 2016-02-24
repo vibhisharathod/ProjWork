@@ -14,7 +14,8 @@
         public static readonly string BranchMasterLookUp = "SELECT Branch_ID,FullName from BranchMaster;";
         public static readonly string GIProductMasterLookUp = "SELECT GIProductIndex,GIProductName from GI_ProductMaster;";
         public static readonly string CityMasterLookUp = "SELECT CityIndex,CityName from CityMaster;";
-
+        public static readonly string StateMasterLookUp = "SELECT StateIndex,StateName from StateMaster;";
+        public static readonly string CountryMasterLookUp = "SELECT CountryIndex,CountryName from CountryMaster;";
         #endregion
 
         #region InsureMaster
@@ -162,6 +163,7 @@
 
         public static readonly string GetProductTypeMasterViewModelQuery = "SELECT GITypeIndex,GITypeName FROM GI_ProductTypeMaster";
 
+        public static readonly string InsertProductTypeMaster = "INSERT INTO GI_ProductTypeMaster (GITypeIndex,GITypeName,Remarks,CreateUserIndex,CreateDateTime,Discontinue) VALUES(@GITypeIndex,@GITypeName,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue);" + "SELECT GITypeIndex from GI_ProductTypeMaster where GITypeIndex = @GITypeIndex";
         #endregion
 
         #region Area Master
@@ -177,6 +179,7 @@
 
         public static readonly string GetStateMasterViewModelQuery = "SELECT sm.StateIndex,sm.StateName,cm.CountryName FROM StateMaster sm left outer join CountryMaster cm on sm.CountryIndex = cm.CountryIndex";
 
+        public static readonly string InsertStateMaster = "INSERT INTO StateMaster (StateIndex,StateName,CountryIndex,Remarks,CreateUserIndex,CreateDateTime,Discontinue) VALUES(@StateIndex,@StateName,@CountryIndex,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue);" + "SELECT StateIndex from StateMaster where StateIndex = @StateIndex";
         #endregion
 
 

@@ -9,5 +9,6 @@ namespace Veritas.DataAccess
         Task<IEnumerable<StateMaster>> GetAll();
         Task<IEnumerable<StateMasterViewModel>> GetAllStateMasterForViews();
         Task<StateMaster> Find(int id);
+        Task AddStateMaster(StateMaster StateData);
     }
 }
