@@ -1,62 +1,50 @@
-﻿@model Veritas.Entities.MainAgentMaster
+﻿@model Veritas.Entities.BranchMaster
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Edit";
 }
 
 <div class="row">
     <div class="col-xs-12">
 
-        <h3 class="header smaller lighter blue">Create Main Agent Master</h3>
+        <h3 class="header smaller lighter blue">Edit Branch Master</h3>
 
         <form class="form-horizontal">
 
             <div class="form-group">
-                <label class="col-sm-3 control-label no-padding-right">Main Agent Name</label>
+                <label class="col-sm-3 control-label no-padding-right">Branch Name</label>
                 <div class="col-xs-10 col-sm-5">
-                    <input type="text" id="txtMainAgentName" placeholder="Enter Main Agent Name">
+                    <input type="text" id="txtBranchName" placeholder="Enter Branch Name" value="@Model.FullName">
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-3 control-label no-padding-right">SE</label>
+                <label class="col-sm-3 control-label no-padding-right">Type</label>
                 <div class="col-xs-10 col-sm-5">
-                    <input type="text" id="ddSE" placeholder="Select SE">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-3 control-label no-padding-right">Branch</label>
-                <div class="col-xs-10 col-sm-5">
-                    <input type="text" id="ddBranch" placeholder="Select Branch">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-3 control-label no-padding-right">ASM</label>
-                <div class="col-xs-10 col-sm-5">
-                    <input type="text" id="ddASM" placeholder="Select ASM">
+                    <input type="text" id="ddType"  placeholder="Select Type">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-3 control-label no-padding-right">User Name</label>
                 <div class="col-xs-10 col-sm-5">
-                    <input type="text" id="txtUserName" placeholder="Enter User Name">
+                    <input type="text" id="txtUserName" value="@Model.UserName" placeholder="Enter User Name">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-3 control-label no-padding-right">Password</label>
                 <div class="col-xs-10 col-sm-5">
-                    <input type="text" id="txtPassword" placeholder="Enter Password">
+                    <input type="text" id="txtPassword" value="@Model.Password" placeholder="Enter Password">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-3 control-label no-padding-right">House FlatNo</label>
                 <div class="col-xs-10 col-sm-5">
-                    <input type="text" id="txtHouse_FlatNo" placeholder="Enter House_FlatNo">
+                    <input type="text" id="txtHouse_FlatNo" value="@Model.House_FlatNo" placeholder="Enter House_FlatNo">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-3 control-label no-padding-right">Street</label>
                 <div class="col-xs-10 col-sm-5">
-                    <input type="text" id="txtStreet" placeholder="Enter Street">
+                    <input type="text" id="txtStreet" value="@Model.Street" placeholder="Enter Street">
                 </div>
             </div>
 
@@ -64,7 +52,7 @@
             <div class="form-group">
                 <label class="col-sm-3 control-label no-padding-right">Landmark</label>
                 <div class="col-xs-10 col-sm-5">
-                    <input type="text" id="txtLandmark" placeholder="Enter Landmark">
+                    <input type="text" id="txtLandmark" value="@Model.Landmark" placeholder="Enter Landmark">
                 </div>
             </div>
 
@@ -72,7 +60,7 @@
             <div class="form-group">
                 <label class="col-sm-3 control-label no-padding-right">Pin Code</label>
                 <div class="col-xs-10 col-sm-5">
-                    <input type="text" id="txtPincode" placeholder="Enter Pin Code">
+                    <input type="text" id="txtPincode" value="@Model.Pincode" placeholder="Enter Pin Code">
                 </div>
             </div>
             <div class="form-group">
@@ -90,50 +78,32 @@
             <div class="form-group">
                 <label class="col-sm-3 control-label no-padding-right">Email</label>
                 <div class="col-xs-10 col-sm-5">
-                    <input type="text" id="txtEmail" placeholder="Enter Email">
+                    <input type="text" id="txtEmail" value="@Model.Cont_Email" placeholder="Enter Email">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-3 control-label no-padding-right">Phone No1</label>
                 <div class="col-xs-10 col-sm-5">
-                    <input type="text" id="txtPhoneNo1" placeholder="Enter PhoneNo1">
+                    <input type="text" id="txtPhoneNo1" value="@Model.Cont1" placeholder="Enter PhoneNo1">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-3 control-label no-padding-right">Phone No2</label>
                 <div class="col-xs-10 col-sm-5">
-                    <input type="text" id="txtPhoneNo2" placeholder="Enter PhoneNo2">
+                    <input type="text" id="txtPhoneNo2" value="@Model.Cont2" placeholder="Enter PhoneNo2">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-3 control-label no-padding-right">MobileNo</label>
                 <div class="col-xs-10 col-sm-5">
-                    <input type="text" id="txtMobileNo" placeholder="Enter MobileNo">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-3 control-label no-padding-right">Allow Commision</label>
-                <div class="col-xs-10 col-sm-5">
-                    <label>
-                        <input id="AllowCommision" class="ace ace-switch ace-switch-3" type="checkbox" />
-                        <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
-                    </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-3 control-label no-padding-right">Watch Flag</label>
-                <div class="col-xs-10 col-sm-5">
-                    <label>
-                        <input id="WatchFlag" class="ace ace-switch ace-switch-3" type="checkbox" />
-                        <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
-                    </label>
+                    <input type="text" id="txtMobileNo" value="@Model.Cont_MobileNo" placeholder="Enter MobileNo">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-3 control-label no-padding-right">Login Status</label>
                 <div class="col-xs-10 col-sm-5">
                     <label>
-                        <input id="LoginStatus" class="ace ace-switch ace-switch-3" type="checkbox" />
+                        <input id="LoginStatus" value="@Model.LoginStatus" class="ace ace-switch ace-switch-3" type="checkbox" />
                         <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
                     </label>
                 </div>
@@ -141,14 +111,14 @@
             <div class="form-group">
                 <label class="col-sm-3 control-label no-padding-right">Remarks</label>
                 <div class="col-xs-10 col-sm-5">
-                    <textarea class="form-control limited" id="txtremarks" maxlength="50"></textarea>
+                    <textarea class="form-control limited" id="txtremarks" value="@Model.Remarks"  maxlength="50"></textarea>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-3 control-label no-padding-right">Discontinue</label>
                 <div class="col-xs-10 col-sm-5">
                     <label>
-                        <input id="prodDiscontinue" class="ace ace-switch ace-switch-3" type="checkbox" />
+                        <input id="prodDiscontinue" value="@Model.Discontinue" class="ace ace-switch ace-switch-3" type="checkbox" />
                         <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
                     </label>
                 </div>
@@ -158,7 +128,7 @@
             <div class="col-md-offset-3 col-md-9">
                 <button class="btn btn-info" type="button" id="btnSubmit">
                     <i class="ace-icon fa fa-check bigger-110"></i>
-                    Submit
+                    Edit
                 </button>
                 &nbsp; &nbsp; &nbsp;
                 <button class="btn" type="reset">
@@ -193,6 +163,7 @@
                 maxSelection: 1,
                 valueField: 'CityIndex',
                 displayField: 'CityName',
+              
                 data: CityDatalist
             });
 
@@ -210,6 +181,7 @@
                 maxSelection: 1,
                 valueField: 'StateIndex',
                 displayField: 'StateName',
+               
                 data: StateDatalist
             });
 
@@ -218,76 +190,36 @@
             });
         }
 
-       // Loading ASM Data
-        var ASMDatalist = Common_AjaxGET("/LookUpTables/ASM");
-        if (ASMDatalist.length > 0) {
+        //Loading ACTypes Data
+        var VerticalDatalist = Common_AjaxGET("/LookUpTables/BranchTypes");
+        if (VerticalDatalist.length > 0) {
 
-            var _elmTxtASM = $('#ddASM').magicSuggest({
+            var _elmTxtVertical = $('#ddType').magicSuggest({
                 allowFreeEntries: false,
                 maxSelection: 1,
-                valueField: 'ASMIndex',
-                displayField: 'ASM_Name',
-                data: ASMDatalist
+                valueField: 'Value',
+                displayField: 'Text',
+               
+                data: VerticalDatalist
             });
 
-            $(_elmTxtASM).on('selectionchange', function () {
-                _arrASM = this.getValue();
+            $(_elmTxtVertical).on('selectionchange', function () {
+                _arrACTypes = this.getValue();
             });
         }
 
-        // Loading SE Data
-        var SEDatalist = Common_AjaxGET("/LookUpTables/SE");
-        if (SEDatalist.length > 0) {
-
-            var _elmTxtSE = $('#ddSE').magicSuggest({
-                allowFreeEntries: false,
-                maxSelection: 1,
-                valueField: 'SE_ID',
-                displayField: 'SE_Name',
-                data: SEDatalist
-            });
-
-            $(_elmTxtSE).on('selectionchange', function () {
-                _arrSE = this.getValue();
-            });
-        }
-        // Loading Branch Data
-        var BranchDatalist = Common_AjaxGET("/LookUpTables/Branch");
-        if (BranchDatalist.length > 0) {
-
-            var _elmTxtBranch = $('#ddBranch').magicSuggest({
-                allowFreeEntries: false,
-                maxSelection: 1,
-                valueField: 'Branch_ID',
-                displayField: 'FullName',
-                data: BranchDatalist
-            });
-
-            $(_elmTxtBranch).on('selectionchange', function () {
-                _arrBranch = this.getValue();
-            });
-        }
-        var _arrASM = new Array();
-        var _arrSE = new Array();
-        var _arrBranch = new Array();
+        var _arrACTypes = new Array();
         var _arrCityTypes = new Array();
+
         var _arrStateTypes = new Array();
 
 
         //SUBMIT form
         $("#btnSubmit").click(function () {
 
-            var ASMIndex;
-            if (_arrASM.length > 0) {
-                ASMIndex = _arrASM[0];
-            }
-            var SE_ID;
-            if (_arrSE.length > 0) {
-                SE_ID = _arrSE[0];
-            }
-            var Branch_ID;
-            if (_arrBranch.length > 0) {
-                Branch_ID = _arrBranch[0];
+            var ACType;
+            if (_arrACTypes.length > 0) {
+                ACType = _arrACTypes[0];
             }
             var CityIndex;
             if (_arrCityTypes.length > 0) {
@@ -299,11 +231,9 @@
             }
 
             var requestObj = {
-
-                "MainAgentName": $("#txtMainAgentName").val(),
-                "SE_ID": SE_ID,
-                "BranchID": Branch_ID,
-                "ASMIndex" : ASMIndex,
+                "Branch_ID" : @Model.Branch_ID,
+                "FullName": $("#txtBranchName").val(),
+                "Type": ACType,
                 "UserName": $("#txtUserName").val(),
                 "Password": $("#txtPassword").val(),
                 "House_FlatNo": $("#txtHouse_FlatNo").val(),
@@ -315,16 +245,14 @@
                 "Cont_Email": $("#txtEmail").val(),
                 "Cont1": $("#txtPhoneNo1").val(),
                 "Cont2": $("#txtPhoneNo2").val(),
-                "MobileNo": $("#txtMobileNo").val(),
-                "AllowCommision": $("#AllowCommision").is(":checked"),
-                "WatchFlag": $("#WatchFlag").is(":checked"),
+                "Cont_MobileNo": $("#txtMobileNo").val(),
                 "LoginStatus": $("#LoginStatus").is(":checked"),
                 "Remarks": $("#txtremarks").val(),
                 "Discontinue": $("#prodDiscontinue").is(":checked")
 
             }
 
-            var result = Common_AjaxPOST("http://localhost:54510/api/MainAgentMasterApi/Create", JSON.stringify(requestObj));
+            var result = Common_AjaxPOST("http://localhost:54510/api/BranchMasterApi/Edit", JSON.stringify(requestObj));
 
         });
 

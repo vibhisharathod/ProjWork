@@ -1,0 +1,90 @@
+﻿@model Veritas.Entities.BranchMaster
+
+@{
+    ViewBag.Title = "ViewDetails";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3 class="header smaller lighter blue">Are you sure you want to delete this?</h3>
+
+        <div class="profile-user-info profile-user-info-striped">
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Branch Name </div>
+
+                <div class="profile-info-value">
+                    <span id="BranchName">@Model.FullName</span>
+                </div>
+            </div>
+            @*<div class="profile-info-row">
+                <div class="profile-info-name"> State </div>
+
+                <div class="profile-info-value">
+                    <span id="remarks">@Model.StateName</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> STDcode </div>
+
+                <div class="profile-info-value">
+                    <span id="remarks">@Model.STDCode</span>
+                </div>
+            </div>
+
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Remarks </div>
+
+                <div class="profile-info-value">
+                    <span id="remarks">@Model.Remarks</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Discontinue </div>
+
+                <div class="profile-info-value">
+                    <input id="prodDiscontinue" class="ace ace-switch ace-switch-3" type="checkbox" checked="@Model.Discontinue" disabled="disabled" />
+                    <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
+                </div>
+            </div>*@
+        </div>
+        <br />
+
+        <div class="clearfix">
+            <div class="col-md-offset-3 col-md-9">
+                <a class="btn btn-info2" id="btnDelete">
+                    <i class="ace-icon fa fa-pencil bigger-110"></i>
+                    Yes
+                </a>
+                &nbsp; &nbsp; &nbsp;
+                <a class="btn" href="/BranchMaster/Index">
+                    <i class="ace-icon fa fa-backward bigger-110"></i>
+                    Back
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@section Myscripts {
+    <!-- page specific plugin styles -->
+
+    <script type="text/javascript">
+
+
+        //SUBMIT form
+        $("#btnDelete").click(function () {
+            
+
+            var requestObj = {
+                "Branch_ID" : @Model.Branch_ID
+                }
+
+            var result = Common_AjaxPOST("http://localhost:54510/api/BranchMasterApi/Delete", JSON.stringify(requestObj));
+
+        });
+
+
+    </script>
+}

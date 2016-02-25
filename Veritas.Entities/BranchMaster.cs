@@ -43,5 +43,9 @@ namespace Veritas.Entities
         public DateTime? UpdateDateTime { get; set; } // datetime, null
         [MaxLength(10)]
         public string Type { get; set; } // nchar(10), null
+
+        //FK
+        public string CityName { get; set; }
+        public string StateName { get; set; }
     }
 }

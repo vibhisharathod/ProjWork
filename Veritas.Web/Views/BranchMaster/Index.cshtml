@@ -31,10 +31,10 @@
                             foreach (var item in Model.Select((value, i) => new { i, value }))
                             {
                                 <tr>
-                                    @*<td>
-                                            <a href="/InsureMaster/ViewDetails/@item.value.GIMastIndex">@item.value.PolicyNo</a>
-                                        </td>*@
-                                    <td>@item.value.FullName</td>
+                                    <td>
+                                            <a href="/BranchMaster/ViewDetails/@item.value.Branch_ID">@item.value.FullName</a>
+                                        </td>
+                                    @*<td>@item.value.FullName</td>*@
                                     <td class="hidden-480">@item.value.Type</td>
                                     <td>@item.value.UserName</td>
 
@@ -48,11 +48,11 @@
                                                 <i class="ace-icon fa fa-search-plus bigger-130"></i>
                                             </a>
 
-                                            <a class="green" href="#">
+                                            <a class="green" href="/BranchMaster/Edit/@item.value.Branch_ID">
                                                 <i class="ace-icon fa fa-pencil bigger-130"></i>
                                             </a>
 
-                                            <a class="red" href="#">
+                                            <a class="red" href="/BranchMaster/Delete/@item.value.Branch_ID">
                                                 <i class="ace-icon fa fa-trash-o bigger-130"></i>
                                             </a>
                                         </div>

@@ -38,6 +38,32 @@ namespace Veritas.DataAccess.Sql
             });
         }
 
+        public async Task EditBranchMaster(BranchMaster prodData)
+        {
+          
+            //Filling Other Records like User Id, Creation & Update Date
+        
+            prodData.UpdateUserIndex = 1; //Later Logged in User           
+            prodData.UpdateDateTime = DateTime.Now;
+
+            await WithConnection(async c =>
+            {
+                return await c.QueryAsync<int>(SQLConstants.UpdateBranchMaster, prodData);
+            });
+        }
+        public async Task DeleteBranchMaster(BranchMaster prodData)
+        {
+
+            //Filling Other Records like User Id, Creation & Update Date
+
+            prodData.UpdateUserIndex = 1; //Later Logged in User           
+            prodData.UpdateDateTime = DateTime.Now;
+
+            await WithConnection(async c =>
+            {
+                return await c.QueryAsync<int>(SQLConstants.DeleteBranchMaster, prodData);
+            });
+        }
         public async Task<BranchMaster> Find(int id)
         {
             var prodList = await WithConnection(async c =>

@@ -10,5 +10,7 @@ namespace Veritas.DataAccess
         Task<IEnumerable<BranchMasterViewModel>> GetAllBranchMasterForViews();
         Task<BranchMaster> Find(int id);
         Task AddBranchMaster(BranchMaster AgentTypeData);
+        Task EditBranchMaster(BranchMaster AgentTypeData);
+        Task DeleteBranchMaster(BranchMaster AgentTypeData);
     }
 }

@@ -644,6 +644,8 @@
     <Content Include="Views\AsmMaster\ViewDetails.cshtml" />
     <Content Include="Views\MainAgentMaster\Create.cshtml" />
     <Content Include="Views\MainAgentMaster\ViewDetails.cshtml" />
+    <Content Include="Views\BranchMaster\Edit.cshtml" />
+    <Content Include="Views\BranchMaster\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

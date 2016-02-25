@@ -16,7 +16,7 @@
         public static readonly string CityMasterLookUp = "SELECT CityIndex,CityName from CityMaster;";
         public static readonly string StateMasterLookUp = "SELECT StateIndex,StateName from StateMaster;";
         public static readonly string CountryMasterLookUp = "SELECT CountryIndex,CountryName from CountryMaster;";
-        public static readonly string ASMMasterLookUp = "SELECT ASMIndex,ASMName from ASMMaster;";
+        public static readonly string ASMMasterLookUp = "SELECT ASMIndex,ASM_Name from ASMMaster;";
         #endregion
 
         #region InsureMaster
@@ -67,11 +67,35 @@
         /// <summary>
         /// Gets All Branch Master table records
         /// </summary>
-        public static readonly string GetAllBranchMastersQuery = "SELECT Branch_ID,FullName,UserName,Password,Type,House_FlatNo,Street,Landmark,BM.CityIndex,CM.CityName,BM.StateIndex,SM.StateName,Pincode,Cont_MobileNo,Cont1,Cont2,Cont_Email,LoginStatus,BM.Remarks,BM.Discontinue FROM BranchMaster";
+        public static readonly string GetAllBranchMastersQuery = "SELECT Branch_ID,FullName,UserName,Password,Type,House_FlatNo,Street,Landmark,BM.CityIndex,CM.CityName,BM.StateIndex,SM.StateName,Pincode,Cont_MobileNo,Cont1,Cont2,Cont_Email,LoginStatus,BM.Remarks,BM.Discontinue FROM BranchMaster BM left outer join CityMaster CM on CM.CityIndex = BM.CityIndex left outer join StateMaster SM on SM.StateIndex = BM.StateIndex";
 
         public static readonly string GetBranchMasterViewModelQuery = "SELECT Branch_ID,FullName,UserName,Password,Type FROM BranchMaster";
 
         public static readonly string InsertBranchMaster = "INSERT INTO BranchMaster (Branch_ID,FullName,UserName,Password,Type,House_FlatNo,Street,Landmark,CityIndex,StateIndex,Pincode,Cont_MobileNo,Cont1,Cont2,Cont_Email,LoginStatus,Remarks,CreateUserIndex,CreateDateTime,Discontinue) VALUES(@Branch_ID,@FullName,@UserName,@Password,@Type,@House_FlatNo,@Street,@Landmark,@CityIndex,@StateIndex,@Pincode,@Cont_MobileNo,@Cont1,@Cont2,@Cont_Email,@LoginStatus,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue);" + "SELECT Branch_ID from BranchMaster where Branch_ID = @Branch_ID";
+
+        public static readonly string UpdateBranchMaster = "UPDATE BranchMaster " +
+          "SET FullName = @FullName, " +
+           " UserName = @UserName, " +
+          " Password = @Password, " +
+           " Type = @Type, " +
+           " House_FlatNo = @House_FlatNo, " +
+          " Street = @Street, " +
+           " Landmark = @Landmark, " +
+          "CityIndex = @CityIndex, " +
+          "StateIndex = @StateIndex, " +
+          " PinCode = @PinCode, " +
+           " Cont_MobileNo = @Cont_MobileNo, " +
+           " Cont1 = @Cont1, " +
+            " Cont2 = @Cont2, " +
+           " Cont_Email = @Cont_Email, " +
+           " LoginStatus = @LoginStatus, " +
+          " Remarks = @Remarks, " +
+          "UpdateUserIndex = @UpdateUserIndex, " +
+          " UpdateDateTime = getDate(), " +
+          "Discontinue = @Discontinue " +
+          "WHERE Branch_ID = @Branch_ID";
+
+        public static readonly string DeleteBranchMaster = "Delete From BranchMaster Where Branch_ID = @Branch_ID";
         #endregion
 
         #region ASM Master
