@@ -12,7 +12,8 @@ namespace Veritas.Web
         public static void RegisterComponents()
         {
             var container = new UnityContainer();
-
+            container.RegisterType<ISeMasterDA, SeMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<IClientMasterDA, ClientMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IInsureMasterDA, InsureMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IProductMasterDA, GiProductMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IGiProductTypeMasterDA, GiProductTypeMasterDA>((new HierarchicalLifetimeManager()));
@@ -46,6 +47,8 @@ namespace Veritas.Web
         /// <param name="container">The container.</param>
         private static void RegisterTypes(UnityContainer container)
         {
+            container.RegisterType<ISeMasterDA, SeMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<IClientMasterDA, ClientMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IInsureMasterDA, InsureMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IProductMasterDA, GiProductMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IGiAgencyMasterDA, GiAgencyMasterDA>((new HierarchicalLifetimeManager()));

@@ -9,5 +9,6 @@ namespace Veritas.DataAccess
         Task<IEnumerable<InClientleMaster>> GetAll();
         Task<IEnumerable<InClientleMasterViewModel>> GetAllInClientleMasterForViews();
         Task<InClientleMaster> Find(int id);
+        Task AddClientMaster(InClientleMaster ClientData);
     }
 }

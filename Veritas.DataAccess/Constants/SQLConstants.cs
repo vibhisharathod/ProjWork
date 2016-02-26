@@ -13,10 +13,12 @@
         public static readonly string MainAgentMasterLookUp = "SELECT MainAgent_ID,MainAgentName from MainAgentMaster;";
         public static readonly string BranchMasterLookUp = "SELECT Branch_ID,FullName from BranchMaster;";
         public static readonly string GIProductMasterLookUp = "SELECT GIProductIndex,GIProductName from GI_ProductMaster;";
+        public static readonly string AreaMasterLookUp = "SELECT AreaIndex,AreaName from AreaMaster;";
         public static readonly string CityMasterLookUp = "SELECT CityIndex,CityName from CityMaster;";
         public static readonly string StateMasterLookUp = "SELECT StateIndex,StateName from StateMaster;";
         public static readonly string CountryMasterLookUp = "SELECT CountryIndex,CountryName from CountryMaster;";
         public static readonly string ASMMasterLookUp = "SELECT ASMIndex,ASM_Name from ASMMaster;";
+        public static readonly string DivisionMasterLookUp = "SELECT DivisionIndex,Division from DivisionMaster;";
         #endregion
 
         #region InsureMaster
@@ -128,6 +130,7 @@
 
         public static readonly string GetSEMasterViewModelQuery = "SELECT SE_ID,SE_Name,SECode,UserName,Password FROM SEMaster ASM ";
 
+        public static readonly string InsertSEMaster = "INSERT INTO SEMaster (SE_ID,SE_Name,SECode,Branch_ID,TM_ID,Gender,JoinDate,RegDate,DivisionID,UserName,Password,House_FlatNo,Street,Landmark,AreaIndex,CityIndex,StateIndex,Pincode,MobileNo,Cont1,Cont2,Email,LoginStatus,Remarks,CreateUserIndex,CreateDateTime,Discontinue) VALUES(@SE_ID,@SE_Name,@SECode,@Branch_ID,@TM_ID,@Gender,@JoinDate,@RegDate,@DivisionID,@UserName,@Password,@House_FlatNo,@Street,@Landmark,@AreaIndex,@CityIndex,@StateIndex,@Pincode,@MobileNo,@Cont1,@Cont2,@Email,@LoginStatus,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue);" + "SELECT SE_ID from SEMaster where SE_ID = @SE_ID";
         #endregion
 
         #region TM Master
@@ -158,6 +161,7 @@
 
         public static readonly string GetInClientleMasterViewModelQuery = "SELECT CLM.ClientleIndex,CLM.GroupIndex,GRP.Full_NM_LA as GroupHead,CLM.Full_NM_LA,CLM.FatherName,CLM.DOB_LA FROM IN_ClientleMaster clm left outer join IN_ClientleMaster GRP on CLM.GroupIndex = GRP.ClientleIndex ";
 
+        public static readonly string InsertInClientleMaster = "";
         #endregion
 
         #region Country Master

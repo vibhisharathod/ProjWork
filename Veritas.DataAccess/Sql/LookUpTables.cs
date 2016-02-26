@@ -171,6 +171,19 @@ namespace Veritas.DataAccess.Sql
             });
         }
 
+        /// <summary>
+        /// DivisionMaster
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IEnumerable<DivisionMaster>> GetDivisionLookUp()
+        {
+            return await WithConnection(async c =>
+            {
+                var lookUpLists = await c.QueryAsync<DivisionMaster>(SQLConstants.DivisionMasterLookUp);
+                return lookUpLists;
+            });
+        }
+
         public IEnumerable<VerticalTypes> GetVerticalTypes()
         {
             var VerticalTypes = new List<VerticalTypes>();
@@ -179,7 +192,22 @@ namespace Veritas.DataAccess.Sql
 
             return VerticalTypes;
         }
-
+        /// <summary>
+        /// AreaMaster
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IEnumerable<AreaMaster>> GetAreaLookUp()
+        {
+            return await WithConnection(async c =>
+            {
+                var lookUpLists = await c.QueryAsync<AreaMaster>(SQLConstants.AreaMasterLookUp);
+                return lookUpLists;
+            });
+        }
+        /// <summary>
+        /// CityMaster
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<CityMaster>> GetCityLookUp()
         {
             return await WithConnection(async c =>
@@ -188,7 +216,10 @@ namespace Veritas.DataAccess.Sql
                 return lookUpLists;
             });
         }
-
+        /// <summary>
+        /// StateMaster
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<StateMaster>> GetStateLookUp()
         {
             return await WithConnection(async c =>
@@ -197,7 +228,10 @@ namespace Veritas.DataAccess.Sql
                 return lookUpLists;
             });
         }
-
+        /// <summary>
+        /// CountryMaster
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<CountryMaster>> GetCountryLookUp()
         {
             return await WithConnection(async c =>
@@ -232,7 +266,10 @@ namespace Veritas.DataAccess.Sql
 
             return ASMTypes;
         }
-
+        /// <summary>
+        /// ASMMaster
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<AsmMaster>> GetASMLookUp()
         {
             return await WithConnection(async c =>
@@ -240,6 +277,14 @@ namespace Veritas.DataAccess.Sql
                 var lookUpLists = await c.QueryAsync<AsmMaster>(SQLConstants.ASMMasterLookUp);
                 return lookUpLists;
             });
+        }
+        public IEnumerable<Gender> GetGenderTypes()
+        {
+            var Gender = new List<Gender>();
+            Gender.Add(new Gender() { Text = "Male", Value = "Male" });
+            Gender.Add(new Gender() { Text = "Female", Value = "Female" });
+
+            return Gender;
         }
     }
 }

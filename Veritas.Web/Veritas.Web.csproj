@@ -378,6 +378,7 @@
     <Compile Include="API\ASMMasterapiController.cs" />
     <Compile Include="API\BranchMasterApiController.cs" />
     <Compile Include="API\CityMasterApiController.cs" />
+    <Compile Include="API\ClientMasterApiController.cs" />
     <Compile Include="API\CountryMasterApiController.cs" />
     <Compile Include="API\DivisionMasterApiController.cs" />
     <Compile Include="API\GiAgencyMasterApiController.cs" />
@@ -385,6 +386,7 @@
     <Compile Include="API\MainAgentMasterApiController.cs" />
     <Compile Include="API\ProductMasterApiController.cs" />
     <Compile Include="API\ProductTypeMasterApiController.cs" />
+    <Compile Include="API\SEMasterApiController.cs" />
     <Compile Include="API\StateMasterApiController.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
@@ -646,6 +648,8 @@
     <Content Include="Views\MainAgentMaster\ViewDetails.cshtml" />
     <Content Include="Views\BranchMaster\Edit.cshtml" />
     <Content Include="Views\BranchMaster\Delete.cshtml" />
+    <Content Include="Views\ClientMaster\Create.cshtml" />
+    <Content Include="Views\SEMaster\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

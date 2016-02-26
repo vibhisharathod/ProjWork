@@ -8,17 +8,24 @@ namespace Veritas.Web.Controllers
     public class SEMasterController : Controller
     {
         // GET: SEMaster
+        private readonly ISeMasterDA SEDA;
+
+        public SEMasterController(ISeMasterDA SEMasterDA)
+        {
+            SEDA = SEMasterDA;
+        }
+
         public async Task<ActionResult> Index()
         {
-            ISeMasterDA CountryDA = new SeMasterDA();
-            var result = await CountryDA.GetAllSeMasterForViews();
+            var result = await SEDA.GetAllSeMasterForViews();
 
             return View(result);
         }
 
-        public ActionResult ViewDetails(string Id)
+        public async Task<ActionResult> ViewDetails(int Id)
         {
-            return View();
+            var selectProd = await SEDA.Find(Id);
+            return View(selectProd);
         }
 
         public ActionResult Create()

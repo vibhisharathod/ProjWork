@@ -9,5 +9,6 @@ namespace Veritas.DataAccess
         Task<IEnumerable<SeMaster>> GetAll();
         Task<IEnumerable<SeMasterViewModel>> GetAllSeMasterForViews();
         Task<SeMaster> Find(int id);
+        Task AddSEMaster(SeMaster SEData);
     }
 }

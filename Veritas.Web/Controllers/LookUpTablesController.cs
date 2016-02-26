@@ -54,6 +54,10 @@ namespace Veritas.Web.Controllers
         {
             return Json(lookUpsDA.GetVerticalTypes(), JsonRequestBehavior.AllowGet);
         }
+        public async Task<JsonResult> Area()
+        {
+            return Json(await lookUpsDA.GetAreaLookUp(), JsonRequestBehavior.AllowGet);
+        }
         public async Task<JsonResult> City()
         {
             return Json(await lookUpsDA.GetCityLookUp(), JsonRequestBehavior.AllowGet);
@@ -90,6 +94,18 @@ namespace Veritas.Web.Controllers
         public async Task<JsonResult> ASM()
         {
             return Json(await lookUpsDA.GetASMLookUp(), JsonRequestBehavior.AllowGet);
+        }
+        public async Task<JsonResult> TM()
+        {
+            return Json(await lookUpsDA.GetTMLookUp(), JsonRequestBehavior.AllowGet);
+        }
+        public JsonResult Gender()
+        {
+            return Json(lookUpsDA.GetGenderTypes(), JsonRequestBehavior.AllowGet);
+        }
+        public async Task<JsonResult> Division()
+        {
+            return Json(await lookUpsDA.GetDivisionLookUp(), JsonRequestBehavior.AllowGet);
         }
     }
 }
