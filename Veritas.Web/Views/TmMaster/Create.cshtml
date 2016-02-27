@@ -1,0 +1,386 @@
+﻿@model Veritas.Entities.TmMaster
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <h3 class="header smaller lighter blue">Create TM Master</h3>
+
+        <form class="form-horizontal">
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">TM Name</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtTMName" placeholder="Enter TM Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">ASM</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddASM" placeholder="Select ASM">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Gender</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddSelectGender" placeholder="Select Gender">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Join Date</label>
+                <div class="col-xs-6 col-sm-5">
+                    <div class="input-group">
+                        <input type="text" id="JoinDate" class="form-control" />
+                        <span class="input-group-addon">
+                            <i class="ace-icon fa fa-calendar"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Reg Date</label>
+                <div class="col-xs-6 col-sm-5">
+                    <div class="input-group">
+                        <input type="text" id="RegDate" class="form-control" />
+                        <span class="input-group-addon">
+                            <i class="ace-icon fa fa-calendar"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Division</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddDivision" placeholder="Select Division">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">User Name</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtUserName" placeholder="Enter User Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Password</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtPassword" placeholder="Enter Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">House FlatNo</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtHouse_FlatNo" placeholder="Enter House_FlatNo">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Street</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtStreet" placeholder="Enter Street">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Landmark</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtLandmark" placeholder="Enter Landmark">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Area</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddSelectArea" placeholder="Select Area">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">City</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddSelectCity" placeholder="Select City">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">State</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddSelectState" placeholder="Select State">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Pin Code</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtPincode" placeholder="Enter Pin Code">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Email</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtEmail" placeholder="Enter Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Phone No1</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtPhoneNo1" placeholder="Enter PhoneNo1">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Phone No2</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtPhoneNo2" placeholder="Enter PhoneNo2">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">MobileNo</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtMobileNo" placeholder="Enter MobileNo">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Login Status</label>
+                <div class="col-xs-10 col-sm-5">
+                    <label>
+                        <input id="LoginStatus" class="ace ace-switch ace-switch-3" type="checkbox" />
+                        <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Remarks</label>
+                <div class="col-xs-10 col-sm-5">
+                    <textarea class="form-control limited" id="txtremarks" maxlength="50"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Discontinue</label>
+                <div class="col-xs-10 col-sm-5">
+                    <label>
+                        <input id="prodDiscontinue" class="ace ace-switch ace-switch-3" type="checkbox" />
+                        <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
+                    </label>
+                </div>
+            </div>
+        </form>
+        <div class="clearfix">
+            <div class="col-md-offset-3 col-md-9">
+                <button class="btn btn-info" type="button" id="btnSubmit">
+                    <i class="ace-icon fa fa-check bigger-110"></i>
+                    Submit
+                </button>
+                &nbsp; &nbsp; &nbsp;
+                <button class="btn" type="reset">
+                    <i class="ace-icon fa fa-undo bigger-110"></i>
+                    Reset
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Myscripts {
+    <!-- page specific plugin styles -->
+
+    <link rel="stylesheet" href="~/assets/css/jquery-ui.css" />
+    <link href="~/assets/css/magicsuggest.css" rel="stylesheet" />
+    <script src="~/assets/js/jquery-ui.js"></script>
+    <script src="~/assets/js/jquery.ui.touch-punch.js"></script>
+    <script src="~/assets/js/magicsuggest.js"></script>
+    <script type="text/javascript">
+
+
+        //Loading Date Picker
+        $("#JoinDate").datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: false
+        });
+
+        $("#RegDate").datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: false
+        });
+
+        //Loading Gender Data
+        var GenderDatalist = Common_AjaxGET("/LookUpTables/Gender");
+        if (GenderDatalist.length > 0) {
+
+            var _elmTxtGender = $('#ddSelectGender').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'Value',
+                displayField: 'Text',
+                data: GenderDatalist
+            });
+
+            $(_elmTxtGender).on('selectionchange', function () {
+                _arrGenderTypes = this.getValue();
+            });
+        }
+        var _arrGenderTypes = new Array();
+        //Loading Division Data
+        var DivisionDatalist = Common_AjaxGET("/LookUpTables/Division");
+        if (DivisionDatalist.length > 0) {
+
+            var _elmTxtDivision = $('#ddDivision').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'DivisionIndex',
+                displayField: 'Division',
+                data: DivisionDatalist
+            });
+
+            $(_elmTxtDivision).on('selectionchange', function () {
+                _arrDivision = this.getValue();
+            });
+        }
+        var _arrDivision = new Array();
+        //Loading Area Data
+        var AreaDatalist = Common_AjaxGET("/LookUpTables/Area");
+        if (AreaDatalist.length > 0) {
+
+            var _elmTxtArea = $('#ddSelectArea').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'AreaIndex',
+                displayField: 'AreaName',
+                data: AreaDatalist
+            });
+
+            $(_elmTxtArea).on('selectionchange', function () {
+                _arrAreaTypes = this.getValue();
+            });
+        }
+        var _arrAreaTypes = new Array();
+
+        //Loading City Data
+        var CityDatalist = Common_AjaxGET("/LookUpTables/City");
+        if (CityDatalist.length > 0) {
+
+            var _elmTxtVertical = $('#ddSelectCity').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'CityIndex',
+                displayField: 'CityName',
+                data: CityDatalist
+            });
+
+            $(_elmTxtVertical).on('selectionchange', function () {
+                _arrCityTypes = this.getValue();
+            });
+        }
+        var _arrCityTypes = new Array();
+        //Loading State Data
+        var StateDatalist = Common_AjaxGET("/LookUpTables/State");
+        if (StateDatalist.length > 0) {
+
+            var _elmTxtState = $('#ddSelectState').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'StateIndex',
+                displayField: 'StateName',
+                data: StateDatalist
+            });
+
+            $(_elmTxtState).on('selectionchange', function () {
+                _arrStateTypes = this.getValue();
+            });
+        }
+        // Loading ASM Data
+        var ASMDatalist = Common_AjaxGET("/LookUpTables/ASM");
+        if (ASMDatalist.length > 0) {
+
+            var _elmTxtASM = $('#ddASM').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'ASMIndex',
+                displayField: 'ASM_Name',
+                data: ASMDatalist
+            });
+
+            $(_elmTxtASM).on('selectionchange', function () {
+                _arrASM = this.getValue();
+            });
+        }
+        var _arrASM = new Array();
+        // Loading Branch Data
+        var BranchDatalist = Common_AjaxGET("/LookUpTables/Branch");
+        if (BranchDatalist.length > 0) {
+
+            var _elmTxtBranch = $('#ddBranch').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'Branch_ID',
+                displayField: 'FullName',
+                data: BranchDatalist
+            });
+
+            $(_elmTxtBranch).on('selectionchange', function () {
+                _arrBranch = this.getValue();
+            });
+        }
+        var _arrBranch = new Array();
+
+        //SUBMIT form
+        $("#btnSubmit").click(function () {
+            var ASMIndex;
+            if (_arrASM.length > 0) {
+                ASMIndex = _arrASM[0];
+            }          
+          
+            var AreaIndex;
+            if (_arrAreaTypes.length > 0) {
+                AreaIndex = _arrAreaTypes[0];
+            }
+            var CityIndex;
+            if (_arrCityTypes.length > 0) {
+                CityIndex = _arrCityTypes[0];
+            }
+            var StateIndex;
+            if (_arrStateTypes.length > 0) {
+                StateIndex = _arrStateTypes[0];
+            }
+            var Gender;
+            if (_arrGenderTypes.length > 0) {
+                Gender = _arrGenderTypes[0];
+            }
+            var DivisionID;
+            if (_arrDivision.length > 0) {
+                DivisionID = _arrDivision[0];
+            }
+
+            var requestObj = {
+
+                "TM_Name": $("#txtTMName").val(),
+                "ASM_ID": ASMIndex,
+                "Gender": Gender,
+                "JoinDate": $("#JoinDate").val(),
+                "RegDate": $("#RegDate").val(),
+                "UserName": $("#txtUserName").val(),
+                "Password": $("#txtPassword").val(),
+                "DivisionID": DivisionID,
+                "House_FlatNo": $("#txtHouse_FlatNo").val(),
+                "Street": $("#txtStreet").val(),
+                "Landmark": $("#txtLandmark").val(),
+                "AreaIndex": AreaIndex,
+                "Pincode": $("#txtPincode").val(),
+                "CityIndex": CityIndex,
+                "StateIndex": StateIndex,
+                "Email": $("#txtEmail").val(),
+                "Cont1": $("#txtPhoneNo1").val(),
+                "Cont2": $("#txtPhoneNo2").val(),
+                "MobileNo": $("#txtMobileNo").val(),
+                "LoginStatus": $("#LoginStatus").is(":checked"),
+                "Remarks": $("#txtremarks").val(),
+                "Discontinue": $("#prodDiscontinue").is(":checked")
+
+            }
+
+            var result = Common_AjaxPOST("http://localhost:54510/api/TMMasterApi/Create", JSON.stringify(requestObj));
+
+        });
+
+
+    </script>
+}

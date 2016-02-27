@@ -13,6 +13,7 @@ namespace Veritas.Web
         {
             var container = new UnityContainer();
             container.RegisterType<ISeMasterDA, SeMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<ITmMasterDA, TmMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IClientMasterDA, ClientMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IInsureMasterDA, InsureMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IProductMasterDA, GiProductMasterDA>((new HierarchicalLifetimeManager()));
@@ -29,6 +30,7 @@ namespace Veritas.Web
             container.RegisterType<IBranchMasterDA, BranchMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IAsmMasterDA, AsmMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IMainAgentMasterDA, MainAgentMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<ISubAgentMasterDA, SubAgentMasterDA>((new HierarchicalLifetimeManager()));
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
 
@@ -48,6 +50,7 @@ namespace Veritas.Web
         private static void RegisterTypes(UnityContainer container)
         {
             container.RegisterType<ISeMasterDA, SeMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<ITmMasterDA, TmMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IClientMasterDA, ClientMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IInsureMasterDA, InsureMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IProductMasterDA, GiProductMasterDA>((new HierarchicalLifetimeManager()));
@@ -64,6 +67,7 @@ namespace Veritas.Web
             container.RegisterType<IBranchMasterDA, BranchMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IAsmMasterDA, AsmMasterDA>((new HierarchicalLifetimeManager()));
             container.RegisterType<IMainAgentMasterDA, MainAgentMasterDA>((new HierarchicalLifetimeManager()));
+            container.RegisterType<ISubAgentMasterDA, SubAgentMasterDA>((new HierarchicalLifetimeManager()));
         }
 
         /// <summary>

@@ -9,5 +9,6 @@ namespace Veritas.DataAccess
         Task<IEnumerable<SubAgentMaster>> GetAll();
         Task<IEnumerable<SubAgentMasterViewModel>> GetAllSubAgentMasterForViews();
         Task<SubAgentMaster> Find(int id);
+        Task AddSubAgentMaster(SubAgentMaster AgentData);
     }
 }

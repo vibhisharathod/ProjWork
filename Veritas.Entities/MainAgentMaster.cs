@@ -46,5 +46,14 @@ namespace Veritas.Entities
         public DateTime? CreateDateTime { get; set; } // datetime, null
         public int? UpdateUserIndex { get; set; } // int, null
         public DateTime? UpdateDateTime { get; set; } // datetime, null
+
+        //FK
+        public string SE_Name { get; set; }
+        public string BranchName { get; set; }
+        public string ASMName { get; set; }
+        public string CityName { get; set; }
+        public string AreaName { get; set; }
+        public string StateName { get; set; }
+
     }
 }

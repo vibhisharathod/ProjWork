@@ -107,5 +107,13 @@ namespace Veritas.Web.Controllers
         {
             return Json(await lookUpsDA.GetDivisionLookUp(), JsonRequestBehavior.AllowGet);
         }
+        public async Task<JsonResult> AgentType()
+        {
+            return Json(await lookUpsDA.GetAgentTypeLookUp(), JsonRequestBehavior.AllowGet);
+        }
+        public async Task<JsonResult> MA()
+        {
+            return Json(await lookUpsDA.GetMALookUp(), JsonRequestBehavior.AllowGet);
+        }
     }
 }

@@ -9,5 +9,6 @@ namespace Veritas.DataAccess
         Task<IEnumerable<TmMaster>> GetAll();
         Task<IEnumerable<TmMasterViewModel>> GetAllTmMasterForViews();
         Task<TmMaster> Find(int id);
+        Task AddTMMaster(TmMaster TMData);
     }
 }

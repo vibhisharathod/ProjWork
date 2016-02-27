@@ -19,6 +19,8 @@
         public static readonly string CountryMasterLookUp = "SELECT CountryIndex,CountryName from CountryMaster;";
         public static readonly string ASMMasterLookUp = "SELECT ASMIndex,ASM_Name from ASMMaster;";
         public static readonly string DivisionMasterLookUp = "SELECT DivisionIndex,Division from DivisionMaster;";
+        public static readonly string AgentTypeMasterLookUp = "SELECT AgentTypeID,Name from AgentTypeMaster;";
+     
         #endregion
 
         #region InsureMaster
@@ -141,6 +143,7 @@
 
         public static readonly string GetTmMasterViewModelQuery = "SELECT TM_ID,TM_Name,DIV.Division,TM.UserName,TM.Password FROM TMMaster TM left outer join DivisionMaster DIV on TM.DivisionID = DIV.DivisionIndex ";
 
+        public static readonly string InsertTMMaster = "INSERT INTO TMMaster (TM_ID,TM_Name,ASM_ID,Gender,JoinDate,RegDate,DivisionID,UserName,Password,House_FlatNo,Street,Landmark,AreaIndex,CityIndex,StateIndex,Pincode,MobileNo,Cont1,Cont2,Email,LoginStatus,Remarks,CreateUserIndex,CreateDateTime,Discontinue) VALUES(@TM_ID,@TM_Name,@ASM_ID,@Gender,@JoinDate,@RegDate,@DivisionID,@UserName,@Password,@House_FlatNo,@Street,@Landmark,@AreaIndex,@CityIndex,@StateIndex,@Pincode,@MobileNo,@Cont1,@Cont2,@Email,@LoginStatus,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue);" + "SELECT TM_ID from TMMaster where TM_ID = @TM_ID";
         #endregion
 
         #region Sub Agent Master
@@ -151,6 +154,7 @@
 
         public static readonly string GetSubAgentMasterViewModelQuery = "SELECT TM_ID,TM_Name,DIV.Division,TM.UserName,TM.Password FROM TMMaster TM left outer join DivisionMaster DIV on TM.DivisionID = DIV.DivisionIndex ";
 
+        public static readonly string InsertSubAgentMaster = "INSERT INTO SubAgentMaster (SubAgent_ID,SubAgentName,MA_ID,SE_ID,Branch_ID,AgentTypeID,UserName,Password,Res_House_FlatNo,Res_Street,Res_Landmark,AreaIndex,CityIndex,StateIndex,Res_Pincode,Cont_MobileNo,Cont1,Cont2,Cont_Email,PANNo,StartYear,BankAccountNo,BankIFSCNo,LoginStatus,Remarks,CreateUserIndex,CreateDateTime,Discontinue,BankName) VALUES(@SubAgent_ID,@SubAgentName,@MA_ID,@SE_ID,@Branch_ID,@AgentTypeID,@UserName,@Password,@Res_House_FlatNo,@Res_Street,@Res_Landmark,@AreaIndex,@CityIndex,@StateIndex,@Res_Pincode,@Cont_MobileNo,@Cont1,@Cont2,@Cont_Email,@PANNo,@StartYear,@BankAccountNo,@BankIFSCNo,@LoginStatus,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue,@BankName);" + "SELECT SubAgent_ID from SubAgentMaster where SubAgent_ID = @SubAgent_ID";
         #endregion
 
         #region Client Master
@@ -161,7 +165,7 @@
 
         public static readonly string GetInClientleMasterViewModelQuery = "SELECT CLM.ClientleIndex,CLM.GroupIndex,GRP.Full_NM_LA as GroupHead,CLM.Full_NM_LA,CLM.FatherName,CLM.DOB_LA FROM IN_ClientleMaster clm left outer join IN_ClientleMaster GRP on CLM.GroupIndex = GRP.ClientleIndex ";
 
-        public static readonly string InsertInClientleMaster = "";
+        public static readonly string InsertInClientleMaster = "INSERT INTO IN_ClientleMaster (ClientleIndex,GroupIndex,BranchID,Full_NM_LA,FatherName,DOB_LA,Gender,Maritial_Status,Anniversary,Nationality,Pan_No,Comm_House_FlatNo,Comm_Street,Comm_Address,Comm_Landmark,Comm_AreaIndex,Comm_CityIndex,Comm_PinCode,Comm_StateIndex,Comm_CountryIndex,Cont_MobileNo,Cont_Home,Cont_Fax,Cont_Office,Cont_Email,Res_House_FlatNo,Res_Street,Res_Address,Res_Landmark,Res_AreaIndex,Res_CityIndex,Res_StateIndex,Res_CountryIndex,Res_Pincode,Res_Mobile,Res_Phone,Res_Email,OccupationDetail,Designation,EMP_Year,Yearly_Gross_Income,BusinessType,Bus_BldgNameNo,Bus_Street,Bus_Address,Bus_Landmark,Bus_AreaIndex,Bus_CityIndex,Bus_StateIndex,Bus_Pincode,Bus_CountryIndex,Bus_Email,Name_Employer,Comp_Type,Department,Office_BldgNameNo,Office_Street,Office_Address,Office_Landmark,Office_AreaIndex,Office_CityIndex,Office_StateIndex,Office_Pincode,Office_CountryIndex,Office_Email,Relation_With_LA,PHONE_R2,PHONE_O2,Mobile2,Co_Mobile1,Co_Phone1,Co_Email1,Co_address_Same,Per_address_Same,Watch_flag,SE_CODE,SA_CODE,MA_CODE,Group_Head,Group_Defined,Client_Match_Index,Client_Match,Discontinue,CreateUserIndex,CreateDateTime,UserCode,Password,Age) VALUES(@ClientleIndex,@GroupIndex,@BranchID,@Full_NM_LA,@FatherName,@DOB_LA,@Gender,@Maritial_Status,@Anniversary,@Nationality,@Pan_No,@Comm_House_FlatNo,@Comm_Street,@Comm_Address,@Comm_Landmark,@Comm_AreaIndex,@Comm_CityIndex,@Comm_PinCode,@Comm_StateIndex,@Comm_CountryIndex,@Cont_MobileNo,@Cont_Home,@Cont_Fax,@Cont_Office,@Cont_Email,@Res_House_FlatNo,@Res_Street,@Res_Address,@Res_Landmark,@Res_AreaIndex,@Res_CityIndex,@Res_StateIndex,@Res_CountryIndex,@Res_Pincode,@Res_Mobile,@Res_Phone,@Res_Email,@OccupationDetail,@Designation,@EMP_Year,@Yearly_Gross_Income,@BusinessType,@Bus_BldgNameNo,@Bus_Street,@Bus_Address,@Bus_Landmark,@Bus_AreaIndex,@Bus_CityIndex,@Bus_StateIndex,@Bus_Pincode,@Bus_CountryIndex,@Bus_Email,@Name_Employer,@Comp_Type,@Department,@Office_BldgNameNo,@Office_Street,@Office_Address,@Office_Landmark,@Office_AreaIndex,@Office_CityIndex,@Office_StateIndex,@Office_Pincode,@Office_CountryIndex,@Office_Email,@Relation_With_LA,@PHONE_R2,@PHONE_O2,@Mobile2,@Co_Mobile1,@Co_Phone1,@Co_Email1,@Co_address_Same,@Per_address_Same,@Watch_flag,@SE_CODE,@SA_CODE,@MA_CODE,@Group_Head,@Group_Defined,@Client_Match_Index,@Client_Match,@Discontinue,CreateUserIndex,CreateDateTime,@UserCode,@Password,@Age);" + "SELECT ClientleIndex from IN_ClientleMaster where ClientleIndex = @ClientleIndex";
         #endregion
 
         #region Country Master

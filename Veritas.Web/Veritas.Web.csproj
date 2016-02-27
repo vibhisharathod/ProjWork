@@ -388,6 +388,8 @@
     <Compile Include="API\ProductTypeMasterApiController.cs" />
     <Compile Include="API\SEMasterApiController.cs" />
     <Compile Include="API\StateMasterApiController.cs" />
+    <Compile Include="API\SubAgentMasterApiController.cs" />
+    <Compile Include="API\TMMasterApiController.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityResolver.cs" />
@@ -650,6 +652,12 @@
     <Content Include="Views\BranchMaster\Delete.cshtml" />
     <Content Include="Views\ClientMaster\Create.cshtml" />
     <Content Include="Views\SEMaster\Create.cshtml" />
+    <Content Include="Views\TmMaster\Create.cshtml" />
+    <Content Include="Views\TmMaster\ViewDetails.cshtml" />
+    <Content Include="Views\SubAgentMaster\Create.cshtml" />
+    <Content Include="Views\SubAgentMaster\ViewDetails.cshtml" />
+    <Content Include="Views\BranchMaster\ViewDetails.cshtml" />
+    <Content Include="Views\SEMaster\ViewDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

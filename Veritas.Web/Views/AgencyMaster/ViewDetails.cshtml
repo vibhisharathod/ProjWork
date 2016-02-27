@@ -1,7 +1,194 @@
-﻿
+﻿@model Veritas.Entities.GiAgencyMaster
+
 @{
     ViewBag.Title = "ViewDetails";
 }
 
-<h2>ViewDetails</h2>
+<div class="row">
+    <div class="col-xs-12">
+        <h3 class="header smaller lighter blue">View <b> @Model.AgencyName </b> Details</h3>
 
+        <div class="profile-user-info profile-user-info-striped">
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Agency Name </div>
+
+                <div class="profile-info-value">
+                    <span id="companyName">@Model.AgencyName</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Agency Code </div>
+
+                <div class="profile-info-value">
+                    <span id="AgencyCode">@Model.AgencyCode</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Company Name </div>
+
+                <div class="profile-info-value">
+                    <span id="CompanyName">@Model.CompanyName</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Date Of Enrollment </div>
+
+                <div class="profile-info-value">
+                    <span id="DateOfEnrollment">@string.Format("{0:dd/MMM/yyyy}", Model.DateOfEnrollment)</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Date Of Expiration </div>
+
+                <div class="profile-info-value">
+                    <span id="DateOfEnrollment">@string.Format("{0:dd/MMM/yyyy}", Model.DateOfExpiration)</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Bank Name </div>
+
+                <div class="profile-info-value">
+                    <span id="BankName">@Model.BankName</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Branch Name </div>
+
+                <div class="profile-info-value">
+                    <span id="BranchName">@Model.BranchName</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Account Type </div>
+
+                <div class="profile-info-value">
+                    <span id="AccountType">@Model.AccountType</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Account No </div>
+
+                <div class="profile-info-value">
+                    <span id="AccountNo">@Model.AccountNo</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Branch Name </div>
+
+                <div class="profile-info-value">
+                    <span id="BranchName">@Model.BranchName</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> MICR Code </div>
+
+                <div class="profile-info-value">
+                    <span id="MICRCode">@Model.MICRCode</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> IFSC Code </div>
+
+                <div class="profile-info-value">
+                    <span id="IFSCCode">@Model.IFSCCode</span>
+                </div>
+            </div>
+           
+            <div class="profile-info-row">
+                <div class="profile-info-name"> PAN No </div>
+
+                <div class="profile-info-value">
+                    <span id="PAN_No">@Model.PAN_No</span>
+                </div>
+            </div>
+           
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Address1 </div>
+
+                <div class="profile-info-value">
+                    <span id="Address1">@Model.Address1</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Address2 </div>
+
+                <div class="profile-info-value">
+                    <span id="Address2">@Model.Address2</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> City Name </div>
+
+                <div class="profile-info-value">
+                    <span id="CityName">@Model.CityName</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> State Name </div>
+
+                <div class="profile-info-value">
+                    <span id="StateName">@Model.StateName</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Email </div>
+
+                <div class="profile-info-value">
+                    <span id="Email">@Model.Email</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Phone1 </div>
+
+                <div class="profile-info-value">
+                    <span id="PhoneNo1">@Model.PhoneNo1</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Phone2 </div>
+
+                <div class="profile-info-value">
+                    <span id="PhoneNo2">@Model.PhoneNo2</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Company Mobile </div>
+
+                <div class="profile-info-value">
+                    <span id="MobileNo">@Model.MobileNo</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Remarks </div>
+
+                <div class="profile-info-value">
+                    <span id="remarks">@Model.Remarks</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Discontinue </div>
+
+                <div class="profile-info-value">
+                    <input id="prodDiscontinue" class="ace ace-switch ace-switch-3" type="checkbox" checked="@Model.Discontinue" disabled="disabled" />
+                    <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
+                </div>
+            </div>
+        </div>
+        <br />
+
+        <div class="clearfix">
+            <div class="col-md-offset-3 col-md-9">
+                <a class="btn btn-info2" href="/AgencyMaster/Edit/@Model" id="btnEdit">
+                    <i class="ace-icon fa fa-pencil bigger-110"></i>
+                    Edit
+                </a>
+                &nbsp; &nbsp; &nbsp;
+                <a class="btn" href="/AgencyMaster/Index">
+                    <i class="ace-icon fa fa-backward bigger-110"></i>
+                    Back
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>

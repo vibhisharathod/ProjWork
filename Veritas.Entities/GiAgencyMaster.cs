@@ -56,5 +56,7 @@ namespace Veritas.Entities
 
         //FK
         public string CompanyName { get; set; }
+        public string CityName { get; set; }
+        public string StateName { get; set; }
     }
 }

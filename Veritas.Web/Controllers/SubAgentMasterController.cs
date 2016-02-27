@@ -8,17 +8,26 @@ namespace Veritas.Web.Controllers
     public class SubAgentMasterController : Controller
     {
         // GET: SubAgentMaster
+        private readonly ISubAgentMasterDA subAgentDA;
+
+        public SubAgentMasterController(ISubAgentMasterDA subAgent)
+        {
+            subAgentDA = subAgent;
+        }
+
         public async Task<ActionResult> Index()
         {
-            ISubAgentMasterDA test = new SubAgentMasterDA();
-            var result = await test.GetAllSubAgentMasterForViews();
+            var result = await subAgentDA.GetAllSubAgentMasterForViews();
 
             return View(result);
         }
-        public ActionResult ViewDetails(string Id)
+
+        public async Task<ActionResult> ViewDetails(int Id)
         {
-            return View();
+            var selectProd = await subAgentDA.Find(Id);
+            return View(selectProd);
         }
+
 
         public ActionResult Create()
         {

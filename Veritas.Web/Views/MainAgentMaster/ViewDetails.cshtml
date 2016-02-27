@@ -1,7 +1,160 @@
-﻿
+﻿@model Veritas.Entities.MainAgentMaster
+
 @{
     ViewBag.Title = "ViewDetails";
 }
 
-<h2>ViewDetails</h2>
+<div class="row">
+    <div class="col-xs-12">
+        <h3 class="header smaller lighter blue">View <b> @Model.MainAgentName </b> Details</h3>
 
+        <div class="profile-user-info profile-user-info-striped">
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Main Agent Name </div>
+
+                <div class="profile-info-value">
+                    <span id="MainAgentName">@Model.MainAgentName</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> SE Name </div>
+
+                <div class="profile-info-value">
+                    <span id="SEName">@Model.SE_Name</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> ASM Name </div>
+
+                <div class="profile-info-value">
+                    <span id="ASMName">@Model.ASMName</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Branch Name </div>
+
+                <div class="profile-info-value">
+                    <span id="BranchName">@Model.BranchName</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> User Name </div>
+
+                <div class="profile-info-value">
+                    <span id="UserName">@Model.UserName</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> House FlatNo </div>
+
+                <div class="profile-info-value">
+                    <span id="House_FlatNo">@Model.House_FlatNo</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Street </div>
+
+                <div class="profile-info-value">
+                    <span id="Street">@Model.Street</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Landmark </div>
+
+                <div class="profile-info-value">
+                    <span id="Landmark">@Model.Landmark</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Area Name </div>
+
+                <div class="profile-info-value">
+                    <span id="AreaName">@Model.AreaName</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> City Name </div>
+
+                <div class="profile-info-value">
+                    <span id="CityName">@Model.CityName</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> State Name </div>
+
+                <div class="profile-info-value">
+                    <span id="StateName">@Model.StateName</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Pincode </div>
+
+                <div class="profile-info-value">
+                    <span id="Pincode">@Model.Pincode</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Contact1 </div>
+
+                <div class="profile-info-value">
+                    <span id="Cont1">@Model.Cont1</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Contact2 </div>
+
+                <div class="profile-info-value">
+                    <span id="Cont2">@Model.Cont2</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Mobile No </div>
+
+                <div class="profile-info-value">
+                    <span id="MobileNo">@Model.MobileNo</span>
+                </div>
+            </div>
+
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Contact Email </div>
+
+                <div class="profile-info-value">
+                    <span id="Cont_Email">@Model.Cont_Email</span>
+                </div>
+            </div>
+
+          
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Remarks </div>
+
+                <div class="profile-info-value">
+                    <span id="remarks">@Model.Remarks</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Discontinue </div>
+
+                <div class="profile-info-value">
+                    <input id="prodDiscontinue" class="ace ace-switch ace-switch-3" type="checkbox" checked="@Model.Discontinue" disabled="disabled" />
+                    <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
+                </div>
+            </div>
+        </div>
+        <br />
+
+        <div class="clearfix">
+            <div class="col-md-offset-3 col-md-9">
+                <a class="btn btn-info2" href="/MainAgentMaster/Edit/@Model" id="btnEdit">
+                    <i class="ace-icon fa fa-pencil bigger-110"></i>
+                    Edit
+                </a>
+                &nbsp; &nbsp; &nbsp;
+                <a class="btn" href="/ASMMaster/Index">
+                    <i class="ace-icon fa fa-backward bigger-110"></i>
+                    Back
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>

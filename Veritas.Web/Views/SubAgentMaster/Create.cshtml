@@ -1,0 +1,408 @@
+﻿@model Veritas.Entities.SubAgentMaster
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <h3 class="header smaller lighter blue">Create Sub Agent Master</h3>
+
+        <form class="form-horizontal">
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Sub Agent Name</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtSubAgentName" placeholder="Enter Sub Agent Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">SE</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddSE" placeholder="Select SE">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Branch</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddBranch" placeholder="Select Branch">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">MA</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddMA" placeholder="Select MA">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Agent Type</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddAgentType" placeholder="Select Agent Type">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">User Name</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtUserName" placeholder="Enter User Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Password</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtPassword" placeholder="Enter Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">House FlatNo</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtHouse_FlatNo" placeholder="Enter House_FlatNo">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Street</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtStreet" placeholder="Enter Street">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Landmark</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtLandmark" placeholder="Enter Landmark">
+                </div>
+            </div>
+
+
+          
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Area</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddSelectArea" placeholder="Select Area">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">City</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddSelectCity" placeholder="Select City">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">State</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="ddSelectState" placeholder="Select State">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Pin Code</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtPincode" placeholder="Enter Pin Code">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Email</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtEmail" placeholder="Enter Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Phone No1</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtPhoneNo1" placeholder="Enter PhoneNo1">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Phone No2</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtPhoneNo2" placeholder="Enter PhoneNo2">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Mobile No</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtMobileNo" placeholder="Enter MobileNo">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Start Date</label>
+                <div class="col-xs-6 col-sm-5">
+                    <div class="input-group">
+                        <input type="text" id="prodStartDate" class="form-control" />
+                        <span class="input-group-addon">
+                            <i class="ace-icon fa fa-calendar"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">PAN No</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtPANNo" placeholder="Enter PANNo">
+                </div>
+            </div> 
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Bank Account No</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtBankAccountNo" placeholder="Enter BankAccountNo">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Bank IFSC No</label>
+                <div class="col-xs-10 col-sm-5">
+                    <input type="text" id="txtBankIFSCNo" placeholder="Enter BankIFSCNo">
+                </div>
+            </div> 
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Login Status</label>
+                <div class="col-xs-10 col-sm-5">
+                    <label>
+                        <input id="LoginStatus" class="ace ace-switch ace-switch-3" type="checkbox" />
+                        <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Remarks</label>
+                <div class="col-xs-10 col-sm-5">
+                    <textarea class="form-control limited" id="txtremarks" maxlength="50"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Discontinue</label>
+                <div class="col-xs-10 col-sm-5">
+                    <label>
+                        <input id="prodDiscontinue" class="ace ace-switch ace-switch-3" type="checkbox" />
+                        <span class="lbl" data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO"></span>
+                    </label>
+                </div>
+            </div>
+        </form>
+        <div class="clearfix">
+            <div class="col-md-offset-3 col-md-9">
+                <button class="btn btn-info" type="button" id="btnSubmit">
+                    <i class="ace-icon fa fa-check bigger-110"></i>
+                    Submit
+                </button>
+                &nbsp; &nbsp; &nbsp;
+                <button class="btn" type="reset">
+                    <i class="ace-icon fa fa-undo bigger-110"></i>
+                    Reset
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Myscripts {
+    <!-- page specific plugin styles -->
+
+    <link rel="stylesheet" href="~/assets/css/jquery-ui.css" />
+    <link href="~/assets/css/magicsuggest.css" rel="stylesheet" />
+    <script src="~/assets/js/jquery-ui.js"></script>
+    <script src="~/assets/js/jquery.ui.touch-punch.js"></script>
+    <script src="~/assets/js/magicsuggest.js"></script>
+    <script type="text/javascript">
+
+        //Loading Date Picker
+        $("#prodStartDate").datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: false
+
+        });
+        //Loading Area Data
+        var AreaDatalist = Common_AjaxGET("/LookUpTables/Area");
+        if (AreaDatalist.length > 0) {
+
+            var _elmTxtArea = $('#ddSelectArea').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'AreaIndex',
+                displayField: 'AreaName',
+                data: AreaDatalist
+            });
+
+            $(_elmTxtArea).on('selectionchange', function () {
+                _arrAreaTypes = this.getValue();
+            });
+        }
+        var _arrAreaTypes = new Array();
+
+        //Loading City Data
+        var CityDatalist = Common_AjaxGET("/LookUpTables/City");
+        if (CityDatalist.length > 0) {
+
+            var _elmTxtVertical = $('#ddSelectCity').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'CityIndex',
+                displayField: 'CityName',
+                data: CityDatalist
+            });
+
+            $(_elmTxtVertical).on('selectionchange', function () {
+                _arrCityTypes = this.getValue();
+            });
+        }
+
+        //Loading State Data
+        var StateDatalist = Common_AjaxGET("/LookUpTables/State");
+        if (StateDatalist.length > 0) {
+
+            var _elmTxtState = $('#ddSelectState').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'StateIndex',
+                displayField: 'StateName',
+                data: StateDatalist
+            });
+
+            $(_elmTxtState).on('selectionchange', function () {
+                _arrStateTypes = this.getValue();
+            });
+        }
+
+       //// Loading MA Data
+       // var ASMDatalist = Common_AjaxGET("/LookUpTables/MA");
+       // if (ASMDatalist.length > 0) {
+
+       //     var _elmTxtASM = $('#ddMA').magicSuggest({
+       //         allowFreeEntries: false,
+       //         maxSelection: 1,
+       //         valueField: 'MainAgent_ID',
+       //         displayField: 'MainAgentName',
+       //         data: ASMDatalist
+       //     });
+
+       //     $(_elmTxtASM).on('selectionchange', function () {
+       //         _arrASM = this.getValue();
+       //     });
+       // }
+
+        // Loading SE Data
+        var SEDatalist = Common_AjaxGET("/LookUpTables/SE");
+        if (SEDatalist.length > 0) {
+
+            var _elmTxtSE = $('#ddSE').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'SE_ID',
+                displayField: 'SE_Name',
+                data: SEDatalist
+            });
+
+            $(_elmTxtSE).on('selectionchange', function () {
+                _arrSE = this.getValue();
+            });
+        }
+        // Loading Branch Data
+        var BranchDatalist = Common_AjaxGET("/LookUpTables/Branch");
+        if (BranchDatalist.length > 0) {
+
+            var _elmTxtBranch = $('#ddBranch').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'Branch_ID',
+                displayField: 'FullName',
+                data: BranchDatalist
+            });
+
+            $(_elmTxtBranch).on('selectionchange', function () {
+                _arrBranch = this.getValue();
+            });
+        }
+
+        // Loading AgentType Data
+        var AgentTypeDatalist = Common_AjaxGET("/LookUpTables/AgentType");
+        if (AgentTypeDatalist.length > 0) {
+
+            var _elmTxtAgentType = $('#ddAgentType').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'AgentTypeID',
+                displayField: 'Name',
+                data: AgentTypeDatalist
+            });
+
+            $(_elmTxtAgentType).on('selectionchange', function () {
+                _arrAgentType = this.getValue();
+            });
+        }
+
+        //var _arrASM = new Array();
+        var _arrSE = new Array();
+        var _arrBranch = new Array();
+        var _arrCityTypes = new Array();
+        var _arrStateTypes = new Array();
+        var _arrAgentType = new Array();
+
+        //SUBMIT form
+        $("#btnSubmit").click(function () {
+
+            //var ASMIndex;
+            //if (_arrASM.length > 0) {
+            //    ASMIndex = _arrASM[0];
+            //}
+            var SE_ID;
+            if (_arrSE.length > 0) {
+                SE_ID = _arrSE[0];
+            }
+            var Branch_ID;
+            if (_arrBranch.length > 0) {
+                Branch_ID = _arrBranch[0];
+            }
+            var AreaIndex;
+            if (_arrAreaTypes.length > 0) {
+                AreaIndex = _arrAreaTypes[0];
+            }
+            var CityIndex;
+            if (_arrCityTypes.length > 0) {
+                CityIndex = _arrCityTypes[0];
+            }
+            var StateIndex;
+            if (_arrStateTypes.length > 0) {
+                StateIndex = _arrStateTypes[0];
+            }
+            var AgentTypeID;
+            if (_arrAgentType.length > 0) {
+                AgentTypeID = _arrAgentType[0];
+            }
+
+            var requestObj = {
+
+                "SubAgentName": $("#txtSubAgentName").val(),
+                //"MA_ID": ASMIndex,
+                "SE_ID": SE_ID,
+                "Branch_ID": Branch_ID,
+                "AgentTypeID": AgentTypeID,
+                "UserName": $("#txtUserName").val(),
+                "Password": $("#txtPassword").val(),
+                "Res_House_FlatNo": $("#txtHouse_FlatNo").val(),
+                "Res_Street": $("#txtStreet").val(),
+                "Res_Landmark": $("#txtLandmark").val(),
+                "Res_Pincode": $("#txtPincode").val(),
+                "AreaIndex" : AreaIndex,
+                "CityIndex": CityIndex,
+                "StateIndex": StateIndex,
+                "Cont_Email": $("#txtEmail").val(),
+                "Cont1": $("#txtPhoneNo1").val(),
+                "Cont2": $("#txtPhoneNo2").val(),
+                "Cont_MobileNo": $("#txtMobileNo").val(),
+                "PANNo": $("#txtPANNo"),
+                "BankAccountNo": $("#txtBankAccountNo"),
+                "BankIFSCNo": $("#txtBankIFSCNo"),
+                "StartYear": $("#prodStartDate"),
+                "LoginStatus": $("#LoginStatus").is(":checked"),
+                "Remarks": $("#txtremarks").val(),
+                "Discontinue": $("#prodDiscontinue").is(":checked")
+
+            }
+
+            var result = Common_AjaxPOST("http://localhost:54510/api/SubAgentMasterApi/Create", JSON.stringify(requestObj));
+
+        });
+
+
+    </script>
+}

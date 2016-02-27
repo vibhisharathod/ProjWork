@@ -1,4 +1,4 @@
-﻿@model Veritas.Entities.AsmMaster
+﻿@model Veritas.Entities.BranchMaster
 
 @{
     ViewBag.Title = "ViewDetails";
@@ -6,14 +6,14 @@
 
 <div class="row">
     <div class="col-xs-12">
-        <h3 class="header smaller lighter blue">View <b> @Model.ASM_Name </b> Details</h3>
+        <h3 class="header smaller lighter blue">View <b> @Model.FullName </b> Details</h3>
 
         <div class="profile-user-info profile-user-info-striped">
             <div class="profile-info-row">
-                <div class="profile-info-name"> ASM Name </div>
+                <div class="profile-info-name"> Branch Name </div>
 
                 <div class="profile-info-value">
-                    <span id="ASM_Name">@Model.ASM_Name</span>
+                    <span id="FullName">@Model.FullName</span>
                 </div>
             </div>
             <div class="profile-info-row">
@@ -21,6 +21,13 @@
 
                 <div class="profile-info-value">
                     <span id="UserName">@Model.UserName</span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Type </div>
+
+                <div class="profile-info-value">
+                    <span id="Type">@Model.Type</span>
                 </div>
             </div>
             <div class="profile-info-row">
@@ -37,6 +44,7 @@
                     <span id="Street">@Model.Street</span>
                 </div>
             </div>
+           
             <div class="profile-info-row">
                 <div class="profile-info-name"> Landmark </div>
 
@@ -44,7 +52,7 @@
                     <span id="Landmark">@Model.Landmark</span>
                 </div>
             </div>
-                     
+            
             <div class="profile-info-row">
                 <div class="profile-info-name"> City Name </div>
 
@@ -60,10 +68,10 @@
                 </div>
             </div>
             <div class="profile-info-row">
-                <div class="profile-info-name"> Email </div>
+                <div class="profile-info-name"> Pincode </div>
 
                 <div class="profile-info-value">
-                    <span id="Email">@Model.Email</span>
+                    <span id="Pincode">@Model.Pincode</span>
                 </div>
             </div>
             <div class="profile-info-row">
@@ -81,12 +89,22 @@
                 </div>
             </div>
             <div class="profile-info-row">
-                <div class="profile-info-name"> Mobile </div>
+                <div class="profile-info-name"> Mobile No </div>
 
                 <div class="profile-info-value">
-                    <span id="MobileNo">@Model.MobileNo</span>
+                    <span id="MobileNo">@Model.Cont_MobileNo</span>
                 </div>
             </div>
+
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Contact Email </div>
+
+                <div class="profile-info-value">
+                    <span id="Cont_Email">@Model.Cont_Email</span>
+                </div>
+            </div>
+
+
             <div class="profile-info-row">
                 <div class="profile-info-name"> Remarks </div>
 
@@ -107,12 +125,12 @@
 
         <div class="clearfix">
             <div class="col-md-offset-3 col-md-9">
-                <a class="btn btn-info2" href="/ASMMaster/Edit/@Model" id="btnEdit">
+                <a class="btn btn-info2" href="/BranchMaster/Edit/@Model" id="btnEdit">
                     <i class="ace-icon fa fa-pencil bigger-110"></i>
                     Edit
                 </a>
                 &nbsp; &nbsp; &nbsp;
-                <a class="btn" href="/ASMMaster/Index">
+                <a class="btn" href="/BranchMaster/Index">
                     <i class="ace-icon fa fa-backward bigger-110"></i>
                     Back
                 </a>

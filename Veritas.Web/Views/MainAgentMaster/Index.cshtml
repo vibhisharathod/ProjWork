@@ -31,10 +31,10 @@
                             foreach (var item in Model.Select((value, i) => new { i, value }))
                             {
                                 <tr>
-                                    @*<td>
-                                            <a href="/InsureMaster/ViewDetails/@item.value.GIMastIndex">@item.value.PolicyNo</a>
-                                        </td>*@
-                                    <td>@item.value.MainAgentName</td>
+                                    <td>
+                                            <a href="/MainAgentMaster/ViewDetails/@item.value.MainAgent_ID">@item.value.MainAgentName</a>
+                                        </td>
+                                    @*<td>@item.value.MainAgentName</td>*@
                                     @*<td class="hidden-480">@item.value.Type</td>*@
                                     <td>@item.value.UserName</td>
 

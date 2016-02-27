@@ -286,5 +286,17 @@ namespace Veritas.DataAccess.Sql
 
             return Gender;
         }
+        /// <summary>
+        /// ASMMaster
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IEnumerable<AgentTypeMaster>> GetAgentTypeLookUp()
+        {
+            return await WithConnection(async c =>
+            {
+                var lookUpLists = await c.QueryAsync<AgentTypeMaster>(SQLConstants.AgentTypeMasterLookUp);
+                return lookUpLists;
+            });
+        }
     }
 }
