@@ -55,6 +55,7 @@
     <Compile Include="CountryMaster.cs" />
     <Compile Include="DivisionMaster.cs" />
     <Compile Include="Gender.cs" />
+    <Compile Include="MartialStatus.cs" />
     <Compile Include="VerticalTypes.cs" />
     <Compile Include="GiAgencyMaster.cs" />
     <Compile Include="GiCompanyMaster.cs" />

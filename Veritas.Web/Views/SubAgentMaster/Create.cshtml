@@ -263,22 +263,22 @@
             });
         }
 
-       //// Loading MA Data
-       // var ASMDatalist = Common_AjaxGET("/LookUpTables/MA");
-       // if (ASMDatalist.length > 0) {
+       // Loading MA Data
+        var ASMDatalist = Common_AjaxGET("/LookUpTables/MA");
+        if (ASMDatalist.length > 0) {
 
-       //     var _elmTxtASM = $('#ddMA').magicSuggest({
-       //         allowFreeEntries: false,
-       //         maxSelection: 1,
-       //         valueField: 'MainAgent_ID',
-       //         displayField: 'MainAgentName',
-       //         data: ASMDatalist
-       //     });
+            var _elmTxtASM = $('#ddMA').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'MainAgent_ID',
+                displayField: 'MainAgentName',
+                data: ASMDatalist
+            });
 
-       //     $(_elmTxtASM).on('selectionchange', function () {
-       //         _arrASM = this.getValue();
-       //     });
-       // }
+            $(_elmTxtASM).on('selectionchange', function () {
+                _arrASM = this.getValue();
+            });
+        }
 
         // Loading SE Data
         var SEDatalist = Common_AjaxGET("/LookUpTables/SE");
@@ -330,7 +330,7 @@
             });
         }
 
-        //var _arrASM = new Array();
+        var _arrASM = new Array();
         var _arrSE = new Array();
         var _arrBranch = new Array();
         var _arrCityTypes = new Array();
@@ -340,10 +340,10 @@
         //SUBMIT form
         $("#btnSubmit").click(function () {
 
-            //var ASMIndex;
-            //if (_arrASM.length > 0) {
-            //    ASMIndex = _arrASM[0];
-            //}
+            var ASMIndex;
+            if (_arrASM.length > 0) {
+                ASMIndex = _arrASM[0];
+            }
             var SE_ID;
             if (_arrSE.length > 0) {
                 SE_ID = _arrSE[0];

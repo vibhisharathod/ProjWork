@@ -35,7 +35,7 @@ namespace Veritas.Web.API
             if (prodData != null)
             {
                 await BranchDA.AddBranchMaster(prodData);
-                return Ok(Redirect("/BranchMaster/Index"));
+                return Ok();
             }
             return BadRequest("Request cannot be NULL");
         }
@@ -46,11 +46,8 @@ namespace Veritas.Web.API
             if (prodData != null)
             {
                 await BranchDA.EditBranchMaster(prodData);
-                string url = "http://localhost:54510/BranchMaster/Index";
-
-                System.Uri uri = new System.Uri(url);
-
-                return Redirect(uri);
+               
+                return Ok("ok");
             }
             return BadRequest("Request cannot be NULL");
         }

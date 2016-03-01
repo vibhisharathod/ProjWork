@@ -1,4 +1,4 @@
-﻿@model Veritas.Entities.SubAgentMaster
+﻿@model Veritas.Entities.GiCompanyMaster
 
 @{
     ViewBag.Title = "ViewDetails";
@@ -6,85 +6,71 @@
 
 <div class="row">
     <div class="col-xs-12">
-        <h3 class="header smaller lighter blue">View <b> @Model.SubAgentName </b> Details</h3>
+        <h3 class="header smaller lighter blue">View <b> @Model.GICompanyName </b> Details</h3>
 
         <div class="profile-user-info profile-user-info-striped">
             <div class="profile-info-row">
-                <div class="profile-info-name"> Sub Agent Name </div>
+                <div class="profile-info-name"> Company Name </div>
 
                 <div class="profile-info-value">
-                    <span id="ASM_Name">@Model.SubAgentName</span>
+                    <span id="companyName">@Model.GICompanyName</span>
+                </div>
+            </div>
+                   
+            <div class="profile-info-row">
+                <div class="profile-info-name"> Address1 </div>
+
+                <div class="profile-info-value">
+                    <span id="Address1">@Model.Address1</span>
                 </div>
             </div>
             <div class="profile-info-row">
-                <div class="profile-info-name"> User Name </div>
+                <div class="profile-info-name"> Address2 </div>
 
                 <div class="profile-info-value">
-                    <span id="UserName">@Model.UserName</span>
+                    <span id="Address2">@Model.Address2</span>
                 </div>
             </div>
-            <div class="profile-info-row">
-                <div class="profile-info-name"> House FlatNo </div>
-
-                <div class="profile-info-value">
-                    <span id="House_FlatNo">@Model.Res_House_FlatNo</span>
-                </div>
-            </div>
-            <div class="profile-info-row">
-                <div class="profile-info-name"> Street </div>
-
-                <div class="profile-info-value">
-                    <span id="Street">@Model.Res_Street</span>
-                </div>
-            </div>
-            <div class="profile-info-row">
-                <div class="profile-info-name"> Landmark </div>
-
-                <div class="profile-info-value">
-                    <span id="Landmark">@Model.Res_Landmark</span>
-                </div>
-            </div>
-
             <div class="profile-info-row">
                 <div class="profile-info-name"> City Name </div>
 
                 <div class="profile-info-value">
-                    <span id="CityName">@Model.CityName</span>
+                    <span id="CityName">@Model.City</span>
                 </div>
             </div>
             <div class="profile-info-row">
-                <div class="profile-info-name"> State Name </div>
+                <div class="profile-info-name"> PinCode </div>
 
                 <div class="profile-info-value">
-                    <span id="StateName">@Model.StateName</span>
+                    <span id="Email">@Model.PinCode</span>
                 </div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name"> Email </div>
 
                 <div class="profile-info-value">
-                    <span id="Email">@Model.Cont_Email</span>
+                    <span id="Email">@Model.Email</span>
                 </div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name"> Contact1 </div>
 
                 <div class="profile-info-value">
-                    <span id="Cont1">@Model.Cont1</span>
+                    <span id="PhoneNo1">@Model.Contact1</span>
                 </div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name"> Contact2 </div>
 
                 <div class="profile-info-value">
-                    <span id="Cont2">@Model.Cont2</span>
+                    <span id="PhoneNo2">@Model.Contact2</span>
                 </div>
             </div>
             <div class="profile-info-row">
-                <div class="profile-info-name"> Mobile </div>
+                <div class="profile-info-name"> Company Website </div>
 
                 <div class="profile-info-value">
-                    <span id="MobileNo">@Model.Cont_MobileNo</span>
+                    <span id="Website">@Model.Website</span>
                 </div>
             </div>
             <div class="profile-info-row">
@@ -107,12 +93,12 @@
 
         <div class="clearfix">
             <div class="col-md-offset-3 col-md-9">
-                <a class="btn btn-info2" href="/SubAgentMaster/Edit/@Model" id="btnEdit">
+                <a class="btn btn-info2" href="/CompanyMaster/Edit/@Model" id="btnEdit">
                     <i class="ace-icon fa fa-pencil bigger-110"></i>
                     Edit
                 </a>
                 &nbsp; &nbsp; &nbsp;
-                <a class="btn" href="/SubAgentMaster/Index">
+                <a class="btn" href="/CompanyMaster/Index">
                     <i class="ace-icon fa fa-backward bigger-110"></i>
                     Back
                 </a>

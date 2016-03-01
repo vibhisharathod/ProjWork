@@ -32,5 +32,15 @@ namespace Veritas.Web.Controllers
         {
             return View();
         }
+        public async Task<ActionResult> Edit(int Id)
+        {
+            var selectProd = await GiAgencyMasterDA.Find(Id);
+            return View(selectProd);
+        }
+        public async Task<ActionResult> Delete(int Id)
+        {
+            var selectProd = await GiAgencyMasterDA.Find(Id);
+            return View(selectProd);
+        }
     }
 }

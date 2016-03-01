@@ -3,118 +3,370 @@
     ViewBag.Title = "Create";
 }
 <div class="row">
-<div class="col-xs-12">
-    <h3 class="header smaller lighter blue">Create Insure Masters</h3>    
-    <div class="tabbable">
-        <ul class="nav nav-tabs padding-12 tab-color-blue background-blue" id="myTab4">
-            <li class="active">
-                <a data-toggle="tab" href="#home4">Home</a>
-            </li>
+    <div class="col-xs-12">
+        <h3 class="header smaller lighter blue">Create Insure Master</h3>
+        <div class="tabbable">
+            <ul class="nav nav-tabs padding-12 tab-color-blue background-blue" id="myTab4">
+                <li class="active">
+                    <a data-toggle="tab" href="#home4">Home</a>
+                </li>
 
-            <li>
-                <a data-toggle="tab" href="#PremiumDetails">Premium Details</a>
-            </li>
+                <li>
+                    <a data-toggle="tab" href="#PremiumDetails">Premium Details</a>
+                </li>
 
-            <li>
-                <a data-toggle="tab" href="#VehicleDetails">Vehicle Details</a>
-            </li>
-            <li>
-                <a data-toggle="tab" href="#PaymentDetails">Payment Details</a>
-            </li>
-        </ul>
+                <li>
+                    <a data-toggle="tab" href="#VehicleDetails">Vehicle Details</a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#PaymentDetails">Payment Details</a>
+                </li>
+            </ul>
 
-        <div class="tab-content">
-            <div id="home4" class="tab-pane in active">
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Status</label>
-                        <div class="col-xs-10 col-sm-5">
-                            <input type="text" id="ddSelectStatus" placeholder="Select Status">
+            <div class="tab-content">
+                <div id="home4" class="tab-pane in active">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Status</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddSelectStatus" placeholder="Select Status">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Business Status</label>
-                        <div class="col-xs-10 col-sm-5">
-                            <input type="text" id="ddSelectBusinessStatus" placeholder="Select Business Status">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Business Status</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddSelectBusinessStatus" placeholder="Select Business Status">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Client</label>
-                        <div class="col-xs-10 col-sm-5">
-                            <input type="text" id="ddSelectClient" placeholder="Select Client">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Client</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddSelectClient" placeholder="Select Client">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">SE Name</label>
-                        <div class="col-xs-10 col-sm-5">
-                            <input type="text" id="ddSelectSE" placeholder="Select SE">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">SE Name</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddSelectSE" placeholder="Select SE">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Agency</label>
-                        <div class="col-xs-10 col-sm-5">
-                            <input type="text" id="ddSelectAgency" placeholder="Select Agency">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Sub Agent Name</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddSelectSA" placeholder="Select Sub Agent Name">
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Agency</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddSelectAgency" placeholder="Select Agency">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">Company</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddCompany" placeholder="Select Company">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">Product</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddProduct" placeholder="Select Product">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">Product Type</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddProductType" placeholder="Select Product Type">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">Login Date</label>
+                            <div class="col-xs-6 col-sm-5">
+                                <div class="input-group">
+                                    <input type="text" id="prodLoginDate" class="form-control" />
+                                    <span class="input-group-addon">
+                                        <i class="ace-icon fa fa-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right">Start Date</label>
+                                <div class="col-xs-6 col-sm-5">
+                                    <div class="input-group">
+                                        <input type="text" id="prodStartDate" class="form-control" />
+                                        <span class="input-group-addon">
+                                            <i class="ace-icon fa fa-calendar"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right">End Date</label>
+                                <div class="col-xs-6 col-sm-5">
+                                    <div class="input-group">
+                                        <input type="text" id="prodEndDate" class="form-control" />
+                                        <span class="input-group-addon">
+                                            <i class="ace-icon fa fa-calendar"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                    </form>
+                </div>
 
-            <div id="PremiumDetails" class="tab-pane">
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Basic Premium</label>
-                        <div class="col-xs-10 col-sm-2">
-                            <input type="text" id="txtBasicPremium" placeholder="Enter Basic Premium">
+                <div id="PremiumDetails" class="tab-pane">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Basic Premium</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtBasicPremium" placeholder="Enter Basic Premium">
+                            </div>
+                            @*</div>
+                                <div class="form-group">*@
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">TP Premium</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtThirdPartyPrem" placeholder="Enter TP Premium">
+                            </div>
                         </div>
-                    @*</div>
-                    <div class="form-group">*@
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">TP Premium</label>
-                        <div class="col-xs-10 col-sm-2">
-                            <input type="text" id="txtThirdPartyPrem" placeholder="Enter TP Premium">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">PA to Car Owner</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtPAtoCarOwner" placeholder="Enter PA to Car Owner">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">PA to Unnamed</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtPAtoUnnamed" placeholder="Enter PA to Unnamed">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">PA to Car Owner</label>
-                        <div class="col-xs-10 col-sm-2">
-                            <input type="text" id="txtPAtoCarOwner" placeholder="Enter PA to Car Owner">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Loading Amt</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtLoadingAmt" placeholder="Enter Loading Amt">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Premium After Loading</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtPremiumAfterLoading">
+                            </div>
                         </div>
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">PA to Unnamed</label>
-                        <div class="col-xs-10 col-sm-2">
-                            <input type="text" id="txtPAtoUnnamed" placeholder="Enter PA to Unnamed">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Add On Cover</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtAddOnCover" placeholder="Enter Add On Cover">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Terrisiom Premium</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtTerrisiomPremium" placeholder="Enter Terrisiom Premium">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Loading Amt</label>
-                        <div class="col-xs-10 col-sm-2">
-                            <input type="text" id="txtLoadingAmt" placeholder="Enter Loading Amt">
-                        </div>
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Premium After Loading</label>
-                        <div class="col-xs-10 col-sm-2">
-                            <input type="text" id="txtPremiumAfterLoading">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Add On Cover</label>
-                        <div class="col-xs-10 col-sm-2">
-                            <input type="text" id="txtAddOnCover" placeholder="Enter Add On Cover">
-                        </div>
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Terrisiom Premium</label>
-                        <div class="col-xs-10 col-sm-2">
-                            <input type="text" id="txtTerrisiomPremium" placeholder="Enter Terrisiom Premium">
-                        </div>
-                    </div>
-                </form>
-            </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Stamp Duty</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtStampDuty" placeholder="Enter Stamp Duty">
+                            </div>
 
-            <div id="VehicleDetails" class="tab-pane">
-                <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
-            </div>
-            <div id="PaymentDetails" class="tab-pane">
-                <p>This is Payment Details</p>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Discount(%)</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtDiscPer" placeholder="Enter Discount(%)">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Discount</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtDiscount">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">NCB(%)</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtNCBPer" placeholder="Enter NCB(%)">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">NCB</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtNCB">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Service Tax(%)</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtSTPer" placeholder="Enter Service Tax(%)">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Service Tax</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtServiceTax">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Gross Premium Amt</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtPremBeforeTax">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Net Premium Amt</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtNetPrem">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="VehicleDetails" class="tab-pane">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">IDV</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtIDV" placeholder="Enter IDV">
+                            </div>
+                            @*</div>
+                                <div class="form-group">*@
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Make</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtMake" placeholder="Enter Make">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Model</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtModel" placeholder="Enter Model">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Color</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtColor" placeholder="Enter Color">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Reg No</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtRegNo" placeholder="Enter Reg No">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Place Of Regtration</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtRegPlace" placeholder="Enter Reg Place">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Reg Date</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtRegDate" placeholder="Enter Reg Date">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Seating Capacity</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtSeatingCapicity" placeholder="Enter Seating Capacity">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Cubic Capicity</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtStampDuty" placeholder="Enter Stamp Duty">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Fuel Type</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtFuelType" placeholder="Enter Fuel Type">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Engine No</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtEngineNo" placeholder="Enter Engine No">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Chasis No</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtChasisNo" placeholder="Enter Chasis No">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">MFG Year</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtMFGYear" placeholder="Enter MFG Year">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Vehicle Weight</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtVehicleWeight" placeholder="Enter Vehicle Weight">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div id="PaymentDetails" class="tab-pane">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">IDV</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtIDV" placeholder="Enter IDV">
+                            </div>
+                            @*</div>
+                                <div class="form-group">*@
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Make</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtMake" placeholder="Enter Make">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Model</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtModel" placeholder="Enter Model">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Color</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtColor" placeholder="Enter Color">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Reg No</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtRegNo" placeholder="Enter Reg No">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Place Of Regtration</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtRegPlace" placeholder="Enter Reg Place">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Reg Date</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtRegDate" placeholder="Enter Reg Date">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Seating Capacity</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtSeatingCapicity" placeholder="Enter Seating Capacity">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Cubic Capicity</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtStampDuty" placeholder="Enter Stamp Duty">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Fuel Type</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtFuelType" placeholder="Enter Fuel Type">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Engine No</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtEngineNo" placeholder="Enter Engine No">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Chasis No</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtChasisNo" placeholder="Enter Chasis No">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">MFG Year</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtMFGYear" placeholder="Enter MFG Year">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Vehicle Weight</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtVehicleWeight" placeholder="Enter Vehicle Weight">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 <div class="hr hr-double hr-dotted hr18"></div>
 <div class="clearfix">
@@ -133,76 +385,295 @@
 @section Myscripts {
     <!-- page specific plugin styles -->
 
-<link rel="stylesheet" href="~/assets/css/jquery-ui.css" />
-<link href="~/assets/css/magicsuggest.css" rel="stylesheet" />
-<script src="~/assets/js/jquery-ui.js"></script>
-<script src="~/assets/js/jquery.ui.touch-punch.js"></script>
-<script src="~/assets/js/magicsuggest.js"></script>
+    <link rel="stylesheet" href="~/assets/css/jquery-ui.css" />
+    <link href="~/assets/css/magicsuggest.css" rel="stylesheet" />
+    <script src="~/assets/js/jquery-ui.js"></script>
+    <script src="~/assets/js/jquery.ui.touch-punch.js"></script>
+    <script src="~/assets/js/magicsuggest.js"></script>
 
-<script type="text/javascript">
-    //Loading Policy Data
-    var statusData = Common_AjaxGET("/LookUpTables/PolicyStatus");
-    if (statusData.length > 0) {
+    <script type="text/javascript">
+        //Loading Policy Data
+        var statusData = Common_AjaxGET("/LookUpTables/PolicyStatus");
+        if (statusData.length > 0) {
 
-        var _elmTxtApprover = $('#ddSelectStatus').magicSuggest({
-            allowFreeEntries: false,
-            maxSelection: 1,
-            valueField: 'Value',
-            displayField: 'Text',
-            data: statusData
+            var _elmTxtApprover = $('#ddSelectStatus').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'Value',
+                displayField: 'Text',
+                data: statusData
+            });
+        }
+
+        //Loading Business Data
+        var businessstatusData = Common_AjaxGET("/LookUpTables/BusinessStatus");
+        if (businessstatusData.length > 0) {
+
+            var _elmTxtApprover = $('#ddSelectBusinessStatus').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'Value',
+                displayField: 'Text',
+                data: businessstatusData
+            });
+        }
+
+        //Loading Client
+        var clientData = Common_AjaxGET("/LookUpTables/Client");
+        if (clientData.length > 0) {
+
+            var _elmTxtClient = $('#ddSelectClient').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'ClientIndex',
+                displayField: 'Full_NM_LA',
+                data: clientData
+            });
+            $(_elmTxtClient).on('selectionchange', function () {
+                _arrClient = this.getValue();
+            });
+        }
+
+        //Loading SE
+        var SEData = Common_AjaxGET("/LookUpTables/SE");
+        if (SEData.length > 0) {
+
+            var _elmTxtApprover = $('#ddSelectSE').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'SE_ID',
+                displayField: 'SE_Name',
+                data: SEData
+            });
+        }
+
+        //Loading Agency
+        var AgencyData = Common_AjaxGET("/LookUpTables/Agency");
+        if (AgencyData.length > 0) {
+
+            var _elmTxtAgency = $('#ddSelectAgency').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'AgencyIndex',
+                displayField: 'AgencyName',
+                data: AgencyData
+            });
+            $(_elmTxtAgency).on('selectionchange', function () {
+                _arrAgency = this.getValue();
+            });
+        }
+
+        //Loading SA
+        var AgencyData = Common_AjaxGET("/LookUpTables/SubAgent");
+        if (AgencyData.length > 0) {
+
+            var _elmTxtApprover = $('#ddSelectSA').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'SubAgent_ID',
+                displayField: 'SubAgentName',
+                data: AgencyData
+            });
+            $(_elmTxtApprover).on('selectionchange', function () {
+                _arrSA = this.getValue();
+            });
+        }
+
+        //Loading Date Picker
+        $("#prodStartDate").datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: false
         });
-    }
-
-    //Loading Business Data
-    var businessstatusData = Common_AjaxGET("/LookUpTables/BusinessStatus");
-    if (businessstatusData.length > 0) {
-
-        var _elmTxtApprover = $('#ddSelectBusinessStatus').magicSuggest({
-            allowFreeEntries: false,
-            maxSelection: 1,
-            valueField: 'Value',
-            displayField: 'Text',
-            data: businessstatusData
+        $("#prodLoginDate").datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: false
         });
-    }
-    
-    //Loading Client
-    var clientData = Common_AjaxGET("/LookUpTables/Client");
-    if (clientData.length > 0) {
-
-        var _elmTxtApprover = $('#ddSelectClient').magicSuggest({
-            allowFreeEntries: false,
-            maxSelection: 1,
-            valueField: 'Value',
-            displayField: 'Text',
-            data: clientData
+        $("#prodEndDate").datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: false
         });
-    }
+        //Loading Company Data
+        var CompaniesDatalist = Common_AjaxGET("/LookUpTables/Companies");
+        if (CompaniesDatalist.length > 0) {
 
-    //Loading SE
-    var SEData = Common_AjaxGET("/LookUpTables/SE");
-    if (SEData.length > 0) {
+            var _elmTxtCompanies = $('#ddCompany').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'GICompanyIndex',
+                displayField: 'GICompanyName',
+                data: CompaniesDatalist
+            });
 
-        var _elmTxtApprover = $('#ddSelectSE').magicSuggest({
-            allowFreeEntries: false,
-            maxSelection: 1,
-            valueField: 'Value',
-            displayField: 'Text',
-            data: SEData
-        });
-    }
+            $(_elmTxtCompanies).on('selectionchange', function () {
+                _arrCompanies = this.getValue();
+            });
+        }
+        //Loading Company Data
+        var CompaniesDatalist = Common_AjaxGET("/LookUpTables/Product");
+        if (CompaniesDatalist.length > 0) {
 
-    //Loading Agency
-    var AgencyData = Common_AjaxGET("/LookUpTables/Agency");
-    if (AgencyData.length > 0) {
+            var _elmTxtCompanies = $('#ddProduct').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'GIProductIndex',
+                displayField: 'GIProductName',
+                data: CompaniesDatalist
+            });
 
-        var _elmTxtApprover = $('#ddSelectAgency').magicSuggest({
-            allowFreeEntries: false,
-            maxSelection: 1,
-            valueField: 'Value',
-            displayField: 'Text',
-            data: AgencyData
-        });
-    }
+            $(_elmTxtCompanies).on('selectionchange', function () {
+                _arrCompanies = this.getValue();
+            });
+        }
+        //Loading Product Type Data
+        var ProductTypeDatalist = Common_AjaxGET("/LookUpTables/ProductType");
+        if (ProductTypeDatalist.length > 0) {
+
+            var _elmTxtProductType = $('#ddProductType').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'GITypeIndex',
+                displayField: 'GITypeName',
+                data: ProductTypeDatalist
+            });
+
+            $(_elmTxtProductType).on('selectionchange', function () {
+                _arrProductTypes = this.getValue();
+            });
+        }
+
+
+        var _arrCompanies = new Array();
+        var _arrProductTypes = new Array();
+        var _arrSE = new Array();
+        var _arrMA = new Array();
+        var _arrAgency = new Array();
+        var _arrSA = new Array();
+        
+
+        function DiffAmt() {
+            var id1 = document.getElementById("ChequeAmt");
+            var id2 = document.getElementById("CashAmt");
+            var id3 = document.getElementById("Return_Amt");
+            id3.value = Math.round(parseFloat(id1.value) - parseFloat(id2.value));
+        }
+
+        function myFunc() {
+            var BasicPremium = document.getElementById("BasicPremium");
+            var LoadingAmount = document.getElementById("LoadingAmt");
+            var TPPremium = document.getElementById("ThirdPartyPrem");
+            var PAtoUNPass = document.getElementById("PAtoUnnamed");
+            var PAtoOwnerDriver = document.getElementById("PAtoCarOwner");
+            var PrmAftLoad = document.getElementById("PremiumAfterLoading");
+
+
+            if ((BasicPremium.value == "")) {
+                BasicPremium.value = 0;
+            }
+            if ((LoadingAmount.value == "")) {
+                LoadingAmount.value = 0;
+            }
+            if ((TPPremium.value == "")) {
+                TPPremium.value = 0;
+            }
+            if ((PAtoUNPass.value == "")) {
+                PAtoUNPass.value = 0;
+            }
+            if ((PAtoOwnerDriver.value == "")) {
+                PAtoOwnerDriver.value = 0;
+            }
+
+            if ((BasicPremium.value != "") && (LoadingAmount.value != "") && (TPPremium.value != "") && (PAtoUNPass.value != "") && (PAtoOwnerDriver.value != "")) {
+                PrmAftLoad.value = Math.round(parseFloat(BasicPremium.value) + parseFloat(LoadingAmount.value) + parseFloat(TPPremium.value) + parseFloat(PAtoUNPass.value) + parseFloat(PAtoOwnerDriver.value));
+            }
+        }
+        function myFunc2() {
+            var PrmAftLoad = document.getElementById("PremiumAfterLoading");
+            var NCB = document.getElementById("NoClaimBonus");
+            var Discount = document.getElementById("Discount");
+            var ServiceTaxPerc = document.getElementById("ST_P");
+            var EduCessPerc = document.getElementById("EduCess_P");
+            var ServiceTax = document.getElementById("ServiceTax");
+            var EduCess = document.getElementById("EduCess");
+            var TotalPremiumAmount = document.getElementById("PremiumAmt");
+            var AddOnCover = document.getElementById("AddOnCover");
+            var Terrisiom = document.getElementById("TerrisiomPremium");
+            var StampDuty = document.getElementById("StampDuty");
+            var NetPremiumAmount = document.getElementById("Premiumbeforetax");
+            if ((PrmAftLoad.value == "")) {
+                PrmAftLoad.value = 0;
+            }
+            if ((Discount.value == "")) {
+                Discount.value = 0;
+            }
+            if ((NCB.value == "")) {
+                NCB.value = 0;
+            }
+            if ((ServiceTaxPerc.value == "")) {
+                PAtoUNPass.value = 0;
+            }
+
+            if ((AddOnCover.value == "")) {
+                AddOnCover.value = 0;
+            }
+            if ((Terrisiom.value == "")) {
+                Terrisiom.value = 0;
+            }
+            if ((StampDuty.value == "")) {
+                StampDuty.value = 0;
+            }
+            if ((PrmAftLoad.value != "") && (Discount.value != "") && (NCB.value != "") && (ServiceTaxPerc.value != "")) {
+                ServiceTax.value = ((((parseFloat(PrmAftLoad.value) + parseFloat(AddOnCover.value) + parseFloat(Terrisiom.value)) - (parseFloat(Discount.value) + parseFloat(NCB.value))) * (parseFloat(ServiceTaxPerc.value))) / 100).toFixed(3);
+            }
+            if ((PrmAftLoad.value != "") && (Discount.value != "") && (NCB.value != "") && (EduCessPerc.value != "")) {
+                EduCess.value = ((((parseFloat(PrmAftLoad.value) + parseFloat(AddOnCover.value) + parseFloat(Terrisiom.value)) - (parseFloat(Discount.value) + parseFloat(NCB.value))) * (parseFloat(EduCessPerc.value))) / 100).toFixed(3);
+            }
+            if ((PrmAftLoad.value != "") && (ServiceTax.value != "") && (EduCess.value != "") && (Discount.value != "") && (NCB.value != "") && (Terrisiom.value != "")) {
+                TotalPremiumAmount.value = (Math.round((parseFloat(PrmAftLoad.value) + parseFloat(AddOnCover.value) + parseFloat(ServiceTax.value) + parseFloat(EduCess.value) + parseFloat(Terrisiom.value) + parseFloat(StampDuty.value)) - (parseFloat(Discount.value) + parseFloat(NCB.value))));
+                NetPremiumAmount.value = (Math.round((parseFloat(PrmAftLoad.value) + parseFloat(AddOnCover.value) + parseFloat(Terrisiom.value)) - (parseFloat(Discount.value) + parseFloat(NCB.value))));
+            }
+
+        }
+
+        function myFunc4() {
+            var NCB = document.getElementById("NoClaimBonus");
+            var BasicPremium = document.getElementById("BasicPremium");
+            var NCBPerc = document.getElementById("NCBPer");
+            var Discount = document.getElementById("Discount");
+            var AddOn = document.getElementById("AddOnCover");
+            if ((BasicPremium.value == "")) {
+                BasicPremium.value = 0;
+            }
+            if ((NCBPerc.value == "")) {
+                NCBPerc.value = 0;
+            }
+            if (AddOn.value == "") {
+                AddOn.value = 0;
+            }
+            if (Discount.value == "") {
+                Discount.value = 0;
+            }
+            if ((BasicPremium.value != "") && (NCBPerc.value != "")) {
+                NCB.value = (((parseFloat(BasicPremium.value) - parseFloat(Discount.value) + parseFloat(AddOn.value)) * parseFloat(NCBPerc.value)) / 100).toFixed(3);
+            }
+        }
+        function myFunc5() {
+            var NCB = document.getElementById("NoClaimBonus");
+            var BasicPremium = document.getElementById("BasicPremium");
+            var DiscountPerc = document.getElementById("DiscountPer");
+            var Discount = document.getElementById("Discount");
+
+            if ((NCB.value == "")) {
+                NCB.value = 0;
+            }
+            if ((BasicPremium.value == "")) {
+                BasicPremium.value = 0;
+            }
+            if ((DiscountPerc.value == "")) {
+                DiscountPerc.value = 0;
+            }
+            if ((BasicPremium.value != "") && (NCB.value != "") && (DiscountPerc.value > 0)) {
+                Discount.value = ((parseFloat(BasicPremium.value) * parseFloat(DiscountPerc.value)) / 100).toFixed(3);
+            }
+        }
     </script>
 }

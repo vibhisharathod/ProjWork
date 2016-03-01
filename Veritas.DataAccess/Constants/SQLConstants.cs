@@ -20,7 +20,7 @@
         public static readonly string ASMMasterLookUp = "SELECT ASMIndex,ASM_Name from ASMMaster;";
         public static readonly string DivisionMasterLookUp = "SELECT DivisionIndex,Division from DivisionMaster;";
         public static readonly string AgentTypeMasterLookUp = "SELECT AgentTypeID,Name from AgentTypeMaster;";
-     
+        public static readonly string SubAgentMasterLookUp = "SELECT SubAgent_ID,SubAgentName from SubAgentMaster;";
         #endregion
 
         #region InsureMaster
@@ -150,9 +150,9 @@
         /// <summary>
         /// Gets All SE Master table records
         /// </summary>
-        public static readonly string GetAllSubAgentMastersQuery = "SELECT TM_ID,TM_Name,ASM_ID,ASM.ASM_Name,Gender,JoinDate,RegDate,DivisionID,DIV.Division,TM.UserName,TM.Password,TM.House_FlatNo,TM.Street,TM.Landmark,TM.AreaIndex,AM.AreaName,TM.CityIndex,CM.CityName,TM.StateIndex,SM.StateName,TM.Pincode,TM.MobileNo,TM.Cont1,TM.Cont2,TM.Email,TM.LoginStatus,TM.Remarks,TM.Discontinue FROM TMMaster TM left outer join AreaMaster AM on TM.AreaIndex = AM.AreaIndex left outer join CityMaster CM on TM.CityIndex = CM.CityIndex left outer join StateMaster SM on TM.StateIndex = SM.StateIndex left outer join ASMMaster ASM on TM.ASM_ID = ASM.ASMIndex left outer join DivisionMaster DIV on TM.DivisionID = DIV.DivisionIndex";
+        public static readonly string GetAllSubAgentMastersQuery = "SELECT SubAgent_ID,SubAgentName,ASM.MA_ID,MA.MainAgentName,ASM.SE_ID,SE.SE_Name,ASM.Branch_ID,BM.FullName as BranchName,ASM.AgentTypeID,ATM.Name as AgentTypeName,ASM.UserName,ASM.Password,Res_House_FlatNo,Res_Street,Res_Landmark,ASM.AreaIndex,AM.AreaName,ASM.CityIndex,CM.CityName,ASM.StateIndex,SM.StateName,Res_Pincode,ASM.Cont_MobileNo,ASM.Cont1,ASM.Cont2,ASM.Cont_Email,PANNo,StartYear,BankName,BankAccountNo,BankIFSCNo,ASM.LoginStatus,ASM.Remarks,ASM.Discontinue FROM SubAgentMaster ASM left outer join AreaMaster AM on ASM.AreaIndex = AM.AreaIndex left outer join CityMaster CM on ASM.CityIndex = CM.CityIndex left outer join StateMaster SM on ASM.StateIndex = SM.StateIndex left outer join SEMaster SE on ASM.SE_ID = SE.SE_ID left outer join MainAgentMaster MA on ASM.MA_ID = MA.MainAgent_ID left outer join AgentTypeMaster ATM on ASM.AgentTypeID = ATM.AgentTypeID left outer join BranchMaster BM on ASM.Branch_ID = BM.Branch_ID";
 
-        public static readonly string GetSubAgentMasterViewModelQuery = "SELECT TM_ID,TM_Name,DIV.Division,TM.UserName,TM.Password FROM TMMaster TM left outer join DivisionMaster DIV on TM.DivisionID = DIV.DivisionIndex ";
+        public static readonly string GetSubAgentMasterViewModelQuery = "SELECT SubAgent_ID,SubAgentName,MA.MainAgentName,ASM.UserName,ASM.Password FROM SubAgentMaster ASM left outer join AreaMaster AM on ASM.AreaIndex = AM.AreaIndex left outer join CityMaster CM on ASM.CityIndex = CM.CityIndex left outer join StateMaster SM on ASM.StateIndex = SM.StateIndex left outer join SEMaster SE on ASM.SE_ID = SE.SE_ID left outer join MainAgentMaster MA on ASM.MA_ID = MA.MainAgent_ID left outer join AgentTypeMaster ATM on ASM.AgentTypeID = ATM.AgentTypeID left outer join BranchMaster BM on ASM.Branch_ID = BM.Branch_ID ";
 
         public static readonly string InsertSubAgentMaster = "INSERT INTO SubAgentMaster (SubAgent_ID,SubAgentName,MA_ID,SE_ID,Branch_ID,AgentTypeID,UserName,Password,Res_House_FlatNo,Res_Street,Res_Landmark,AreaIndex,CityIndex,StateIndex,Res_Pincode,Cont_MobileNo,Cont1,Cont2,Cont_Email,PANNo,StartYear,BankAccountNo,BankIFSCNo,LoginStatus,Remarks,CreateUserIndex,CreateDateTime,Discontinue,BankName) VALUES(@SubAgent_ID,@SubAgentName,@MA_ID,@SE_ID,@Branch_ID,@AgentTypeID,@UserName,@Password,@Res_House_FlatNo,@Res_Street,@Res_Landmark,@AreaIndex,@CityIndex,@StateIndex,@Res_Pincode,@Cont_MobileNo,@Cont1,@Cont2,@Cont_Email,@PANNo,@StartYear,@BankAccountNo,@BankIFSCNo,@LoginStatus,@Remarks,@CreateUserIndex,@CreateDateTime,@Discontinue,@BankName);" + "SELECT SubAgent_ID from SubAgentMaster where SubAgent_ID = @SubAgent_ID";
         #endregion

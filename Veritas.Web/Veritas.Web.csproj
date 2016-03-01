@@ -658,6 +658,9 @@
     <Content Include="Views\SubAgentMaster\ViewDetails.cshtml" />
     <Content Include="Views\BranchMaster\ViewDetails.cshtml" />
     <Content Include="Views\SEMaster\ViewDetails.cshtml" />
+    <Content Include="Views\CompanyMaster\ViewDetails.cshtml" />
+    <Content Include="Views\AgencyMaster\Edit.cshtml" />
+    <Content Include="Views\AgencyMaster\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

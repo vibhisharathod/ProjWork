@@ -38,9 +38,9 @@ namespace Veritas.Web.Controllers
         {
             return Json(lookUpsDA.ClaimProcessTypes(), JsonRequestBehavior.AllowGet);
         }
-        public JsonResult Client()
+        public async Task<JsonResult> Client()
         {
-            return Json(lookUpsDA.GetClientLookUp(), JsonRequestBehavior.AllowGet);
+            return Json(await lookUpsDA.GetClientLookUp(), JsonRequestBehavior.AllowGet);
         }
         public async Task<JsonResult> Companies()
         {
@@ -114,6 +114,22 @@ namespace Veritas.Web.Controllers
         public async Task<JsonResult> MA()
         {
             return Json(await lookUpsDA.GetMALookUp(), JsonRequestBehavior.AllowGet);
+        }
+        public JsonResult MartialStatus()
+        {
+            return Json(lookUpsDA.GetMartialStatus(), JsonRequestBehavior.AllowGet);
+        }
+        public async Task<JsonResult> SubAgent()
+        {
+            return Json(await lookUpsDA.GetSALookUp(), JsonRequestBehavior.AllowGet);
+        }
+        public async Task<JsonResult> Agency()
+        {
+            return Json(await lookUpsDA.GetAgencyLookUp(), JsonRequestBehavior.AllowGet);
+        }
+        public async Task<JsonResult> Product()
+        {
+            return Json(await lookUpsDA.GetProductLookUp(), JsonRequestBehavior.AllowGet);
         }
     }
 }

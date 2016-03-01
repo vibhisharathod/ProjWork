@@ -2,6 +2,866 @@
 @{
     ViewBag.Title = "Create";
 }
+<div class="row">
+    <div class="col-xs-12">
+        <h3 class="header smaller lighter blue">Create Client Master</h3>
+        <div class="tabbable">
+            <ul class="nav nav-tabs padding-12 tab-color-blue background-blue" id="myTab4">
+                <li class="active">
+                    <a data-toggle="tab" href="#home4">Basic Details</a>
+                </li>
 
-<h2>Create</h2>
+                <li>
+                    <a data-toggle="tab" href="#CommunicationDetails">Communication Details</a>
+                </li>
 
+                <li>
+                    <a data-toggle="tab" href="#VehicleDetails"> Residence Details</a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#PaymentDetails">Business Details</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="home4" class="tab-pane in active">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Client Name</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="txtClient" placeholder="Enter Client Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Group Head</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddSelectGroupHead" placeholder="Select Group Head">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Father Name</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtFatherName" placeholder="Enter Father Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">Gender</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddSelectGender" placeholder="Select Gender">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Date Of Birth</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="dtpDOB_LA" placeholder="Enter Date Of Birth">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Age</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtAge" placeholder="Enter Age">
+                            </div>
+                            @*</div>
+                                <div class="form-group">*@
+
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">SE</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddSE" placeholder="Select SE">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">Sub Agent</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddSA" placeholder="Select Branch">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">Main Agent</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddMA" placeholder="Select MA">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">Martial Status</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="ddSelectMartialStatus" placeholder="Select Martial Status">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Anniversary Date</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="dtpAnniversary" placeholder="Enter Anniversary Date">
+                            </div>
+                            @*</div>
+                                <div class="form-group">*@
+
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Pan_No</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtPan_No" placeholder="Enter PAN No">
+                            </div>
+                            @*</div>
+                                <div class="form-group">*@
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Place Of Birth</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtPlace_Birth" placeholder="Enter Place Of Birth">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Nationality</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtNationality" placeholder="Enter Nationality">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div id="CommunicationDetails" class="tab-pane">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Comm House Flat No</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtComm_House_FlatNo" placeholder="Enter Comm House Flat No">
+                            </div>
+                            @*</div>
+                                <div class="form-group">*@
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Comm Street</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtComm_Street" placeholder="Enter Comm Street">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Comm Address</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtComm_Address" placeholder="Enter Comm Address">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Comm Landmark</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtComm_Landmark" placeholder="Enter Comm Landmark">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">Area</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddSelectArea" placeholder="Select Area">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">City</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddSelectCity" placeholder="Select City">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">State</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddSelectState" placeholder="Select State">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">Country</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddSelectCountry" placeholder="Select Country">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Comm PinCode</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtComm_PinCode" placeholder="Enter Comm PinCode">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Cont Home</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtCont_Home" placeholder="Enter Cont Home">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Cont Mobile No</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtCont_MobileNo" placeholder="Enter Cont MobileNo">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Cont Office</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtCont_Office" placeholder="Enter Cont Office">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Cont Fax</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtCont_Fax" placeholder="Enter Cont Fax">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Cont Email</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtCont_Email" placeholder="Enter Cont Email">
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+                <div id="VehicleDetails" class="tab-pane">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">House Flat No</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtRes_House_FlatNo" placeholder="Enter Comm House Flat No">
+                            </div>
+                            @*</div>
+                                <div class="form-group">*@
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Street</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtRes_Street" placeholder="Enter Resi Street">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Address</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtRes_Address" placeholder="Enter Resi Address">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Landmark</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtRes_Landmark" placeholder="Enter Resi Landmark">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">Area</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddResSelectArea" placeholder="Select Area">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">City</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddResSelectCity" placeholder="Select City">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">State</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddResSelectState" placeholder="Select State">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">Country</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddResSelectCountry" placeholder="Select Country">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Res Pincode</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtRes_Pincode" placeholder="Enter Res Pincode">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Res Home</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtRes_Phone" placeholder="Enter Res Phone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Mobile No</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtRes_MobileNo" placeholder="Enter Res MobileNo">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Res Email</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtRes_Email" placeholder="Enter Res Email">
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <div id="PaymentDetails" class="tab-pane">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Occupation Detail</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtOccupationDetail" placeholder="Enter Occupation Detail">
+                            </div>
+                            @*</div>
+                                <div class="form-group">*@
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Designation</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtDesignation" placeholder="Enter Designation">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">EMP Year</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtEMP_Year" placeholder="Enter EMP_Year">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Yearly Gross Income</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtYearly_Gross_Income" placeholder="Enter Yearly Gross Income">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">Business Type</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtBusinessType" placeholder="Enter BusinessType">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Business BldgNameNo</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtBus_BldgNameNo" placeholder="Enter Bus BldgNameNo">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Business Street</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtBus_Street" placeholder="Enter Bus Street">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Business Address</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtBus_Address" placeholder="Enter Address">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Business Landmark</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtBus_Landmark" placeholder="Enter Department">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">Area</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddBusSelectArea" placeholder="Select Area">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">City</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddBusSelectCity" placeholder="Select City">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">State</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddBusSelectState" placeholder="Select State">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">Country</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <input type="text" id="ddBusSelectCountry" placeholder="Select Country">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Bus Pincode</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtBus_Pincode" placeholder="Enter Bus Pincode">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Bus Email</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtBus_Email" placeholder="Enter Bus Email">
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hr hr-double hr-dotted hr18"></div>
+<div class="clearfix">
+    <div class="col-md-offset-3 col-md-9">
+        <button class="btn btn-info" type="button">
+            <i class="ace-icon fa fa-check bigger-110"></i>
+            Submit
+        </button>
+        &nbsp; &nbsp; &nbsp;
+        <button class="btn" type="reset">
+            <i class="ace-icon fa fa-undo bigger-110"></i>
+            Reset
+        </button>
+    </div>
+</div>
+@section Myscripts {
+    <!-- page specific plugin styles -->
+
+    <link rel="stylesheet" href="~/assets/css/jquery-ui.css" />
+    <link href="~/assets/css/magicsuggest.css" rel="stylesheet" />
+    <script src="~/assets/js/jquery-ui.js"></script>
+    <script src="~/assets/js/jquery.ui.touch-punch.js"></script>
+    <script src="~/assets/js/magicsuggest.js"></script>
+
+    <script type="text/javascript">
+        //Loading Date Picker
+        $("#dtpDOB_LA").datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: false
+        });
+
+        $("#dtpAnniversary").datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: false
+        });
+
+        //Loading Gender Data
+        var GenderDatalist = Common_AjaxGET("/LookUpTables/Gender");
+        if (GenderDatalist.length > 0) {
+
+            var _elmTxtGender = $('#ddSelectGender').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'Value',
+                displayField: 'Text',
+                data: GenderDatalist
+            });
+
+            $(_elmTxtGender).on('selectionchange', function () {
+                _arrGenderTypes = this.getValue();
+            });
+        }
+        var _arrGenderTypes = new Array();
+
+        //Loading MartialStatus Data
+        var MartialStatusDatalist = Common_AjaxGET("/LookUpTables/MartialStatus");
+        if (MartialStatusDatalist.length > 0) {
+
+            var _elmTxtMartialStatus = $('#ddSelectMartialStatus').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'Value',
+                displayField: 'Text',
+                data: MartialStatusDatalist
+            });
+
+            $(_elmTxtMartialStatus).on('selectionchange', function () {
+                _arrMartialStatus = this.getValue();
+            });
+        }
+        var _arrMartialStatus = new Array();
+
+        //Loading Group Data
+        var GroupDatalist = Common_AjaxGET("/LookUpTables/Client");
+        if (GroupDatalist.length > 0) {
+
+            var _elmTxtGroup = $('#ddSelectGroupHead').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'ClientleIndex',
+                displayField: 'Full_NM_LA',
+                data: GroupDatalist
+            });
+
+            $(_elmTxtGroup).on('selectionchange', function () {
+                _arrGroupTypes = this.getValue();
+            });
+        }
+        var _arrGroupTypes = new Array();
+
+
+        //Loading Area Data
+        var AreaDatalist = Common_AjaxGET("/LookUpTables/Area");
+        if (AreaDatalist.length > 0) {
+
+            var _elmTxtArea = $('#ddSelectArea').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'AreaIndex',
+                displayField: 'AreaName',
+                data: AreaDatalist
+            });
+
+            $(_elmTxtArea).on('selectionchange', function () {
+                _arrAreaTypes = this.getValue();
+            });
+        }
+        var _arrAreaTypes = new Array();
+
+        //Loading City Data
+        var CityDatalist = Common_AjaxGET("/LookUpTables/City");
+        if (CityDatalist.length > 0) {
+
+            var _elmTxtVertical = $('#ddSelectCity').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'CityIndex',
+                displayField: 'CityName',
+                data: CityDatalist
+            });
+
+            $(_elmTxtVertical).on('selectionchange', function () {
+                _arrCityTypes = this.getValue();
+            });
+        }
+        var _arrCityTypes = new Array();
+        //Loading State Data
+        var StateDatalist = Common_AjaxGET("/LookUpTables/State");
+        if (StateDatalist.length > 0) {
+
+            var _elmTxtState = $('#ddSelectState').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'StateIndex',
+                displayField: 'StateName',
+                data: StateDatalist
+            });
+
+            $(_elmTxtState).on('selectionchange', function () {
+                _arrStateTypes = this.getValue();
+            });
+        }
+        var _arrStateTypes = new Array();
+
+        //Loading Country Data
+        var CountryDatalist = Common_AjaxGET("/LookUpTables/Country");
+        if (CountryDatalist.length > 0) {
+
+            var _elmTxtCountry = $('#ddSelectCountry').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'CountryIndex',
+                displayField: 'CountryName',
+                data: CountryDatalist
+            });
+
+            $(_elmTxtCountry).on('selectionchange', function () {
+                _arrCountryTypes = this.getValue();
+            });
+        }
+
+        var _arrCountryTypes = new Array();
+
+        //Loading Area Data
+        var ResAreaDatalist = Common_AjaxGET("/LookUpTables/Area");
+        if (ResAreaDatalist.length > 0) {
+
+            var _elmTxtResArea = $('#ddResSelectArea').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'AreaIndex',
+                displayField: 'AreaName',
+                data: ResAreaDatalist
+            });
+
+            $(_elmTxtResArea).on('selectionchange', function () {
+                _arrResAreaTypes = this.getValue();
+            });
+        }
+        var _arrResAreaTypes = new Array();
+
+        //Loading City Data
+        var REsCityDatalist = Common_AjaxGET("/LookUpTables/City");
+        if (REsCityDatalist.length > 0) {
+
+            var _elmTxtREsCity = $('#ddResSelectCity').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'CityIndex',
+                displayField: 'CityName',
+                data: REsCityDatalist
+            });
+
+            $(_elmTxtREsCity).on('selectionchange', function () {
+                _arrResCityTypes = this.getValue();
+            });
+        }
+        var _arrResCityTypes = new Array();
+
+        //Loading State Data
+        var REsStateDatalist = Common_AjaxGET("/LookUpTables/State");
+        if (REsStateDatalist.length > 0) {
+
+            var _elmTxtResState = $('#ddResSelectState').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'StateIndex',
+                displayField: 'StateName',
+                data: REsStateDatalist
+            });
+
+            $(_elmTxtResState).on('selectionchange', function () {
+                _arrResStateTypes = this.getValue();
+            });
+        }
+        var _arrResStateTypes = new Array();
+
+        //Loading Country Data
+        var ResCountryDatalist = Common_AjaxGET("/LookUpTables/Country");
+        if (ResCountryDatalist.length > 0) {
+
+            var _elmTxtResCountry = $('#ddResSelectCountry').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'CountryIndex',
+                displayField: 'CountryName',
+                data: ResCountryDatalist
+            });
+
+            $(_elmTxtResCountry).on('selectionchange', function () {
+                _arrResCountryTypes = this.getValue();
+            });
+        }
+
+        var _arrResCountryTypes = new Array();
+
+
+        //Loading Area Data
+        var BusAreaDatalist = Common_AjaxGET("/LookUpTables/Area");
+        if (BusAreaDatalist.length > 0) {
+
+            var _elmTxtBusArea = $('#ddBusSelectArea').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'AreaIndex',
+                displayField: 'AreaName',
+                data: BusAreaDatalist
+            });
+
+            $(_elmTxtBusArea).on('selectionchange', function () {
+                _arrBusAreaTypes = this.getValue();
+            });
+        }
+        var _arrBusAreaTypes = new Array();
+
+        //Loading City Data
+        var BusCityDatalist = Common_AjaxGET("/LookUpTables/City");
+        if (BusCityDatalist.length > 0) {
+
+            var _elmTxtBusCity = $('#ddBusSelectCity').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'CityIndex',
+                displayField: 'CityName',
+                data: BusCityDatalist
+            });
+
+            $(_elmTxtBusCity).on('selectionchange', function () {
+                _arrBusCityTypes = this.getValue();
+            });
+        }
+        var _arrBusCityTypes = new Array();
+        //Loading State Data
+        var BusStateDatalist = Common_AjaxGET("/LookUpTables/State");
+        if (BusStateDatalist.length > 0) {
+
+            var _elmTxtBusState = $('#ddBusSelectState').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'StateIndex',
+                displayField: 'StateName',
+                data: BusStateDatalist
+            });
+
+            $(_elmTxtBusState).on('selectionchange', function () {
+                _arrBusStateTypes = this.getValue();
+            });
+        }
+        var _arrBusStateTypes = new Array();
+
+        //Loading Country Data
+        var BusCountryDatalist = Common_AjaxGET("/LookUpTables/Country");
+        if (BusCountryDatalist.length > 0) {
+
+            var _elmTxtbusCountry = $('#ddBusSelectCountry').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'CountryIndex',
+                displayField: 'CountryName',
+                data: BusCountryDatalist
+            });
+
+            $(_elmTxtbusCountry).on('selectionchange', function () {
+                _arrBusCountryTypes = this.getValue();
+            });
+        }
+
+        var _arrBusCountryTypes = new Array();
+        // Loading MA Data
+        var ASMDatalist = Common_AjaxGET("/LookUpTables/MA");
+        if (ASMDatalist.length > 0) {
+
+            var _elmTxtASM = $('#ddMA').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'MainAgent_ID',
+                displayField: 'MainAgentName',
+                data: ASMDatalist
+            });
+
+            $(_elmTxtASM).on('selectionchange', function () {
+                _arrASM = this.getValue();
+            });
+        }
+        var _arrASM = new Array();
+        // Loading SE Data
+        var SEDatalist = Common_AjaxGET("/LookUpTables/SE");
+        if (SEDatalist.length > 0) {
+
+            var _elmTxtSE = $('#ddSE').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'SE_ID',
+                displayField: 'SE_Name',
+                data: SEDatalist
+            });
+
+            $(_elmTxtSE).on('selectionchange', function () {
+                _arrSE = this.getValue();
+            });
+        }
+        var _arrSE = new Array();
+
+        //Loading SA
+        var AgencyData = Common_AjaxGET("/LookUpTables/SubAgent");
+        if (AgencyData.length > 0) {
+
+            var _elmTxtApprover = $('#ddSelectSA').magicSuggest({
+                allowFreeEntries: false,
+                maxSelection: 1,
+                valueField: 'SubAgent_ID',
+                displayField: 'SubAgentName',
+                data: AgencyData
+            });
+            $(_elmTxtApprover).on('selectionchange', function () {
+                _arrSA = this.getValue();
+            });
+        }
+        var _arrSA = new Array();
+
+        //SUBMIT form
+        $("#btnSubmit").click(function () {
+
+            var AreaIndex;
+            if (_arrAreaTypes.length > 0) {
+                AreaIndex = _arrAreaTypes[0];
+            }
+            var CityIndex;
+            if (_arrCityTypes.length > 0) {
+                CityIndex = _arrCityTypes[0];
+            }
+            var StateIndex;
+            if (_arrStateTypes.length > 0) {
+                StateIndex = _arrStateTypes[0];
+            }
+            var CountryIndex;
+            if (_arrStateTypes.length > 0) {
+                CountryIndex = _arrStateTypes[0];
+            }
+            var Gender;
+            if (_arrGenderTypes.length > 0) {
+                Gender = _arrGenderTypes[0];
+            }
+            var MartialStatus;
+            if (_arrMartialStatus.length > 0) {
+                MartialStatus = _arrMartialStatus[0];
+            }
+
+            var GroupIndex;
+            if (_arrGroupTypes.length > 0) {
+                GroupIndex = _arrGroupTypes[0];
+            }
+
+            var ResAreaIndex;
+            if (_arrResAreaTypes.length > 0) {
+                ResAreaIndex = _arrResAreaTypes[0];
+            }
+            var ResCityIndex;
+            if (_arrResCityTypes.length > 0) {
+                ResCityIndex = _arrResCityTypes[0];
+            }
+            var ResStateIndex;
+            if (_arrResStateTypes.length > 0) {
+                ResStateIndex = _arrResStateTypes[0];
+            }
+            var ResCountryIndex;
+            if (_arresStateTypes.length > 0) {
+                ResCountryIndex = _arrResStateTypes[0];
+            }
+
+            var BusAreaIndex;
+            if (_arrBusAreaTypes.length > 0) {
+                BusAreaIndex = _arrBusAreaTypes[0];
+            }
+            var BusCityIndex;
+            if (_arrBusCityTypes.length > 0) {
+                BusCityIndex = _arrBusCityTypes[0];
+            }
+            var BusStateIndex;
+            if (_arrBusStateTypes.length > 0) {
+                BusStateIndex = _arrBusStateTypes[0];
+            }
+            var BusCountryIndex;
+            if (_arrbusStateTypes.length > 0) {
+                BusCountryIndex = _arrbusStateTypes[0];
+            }
+
+
+            var SEIndex;
+            if (_arrSE.length > 0) {
+                SEIndex = _arrSE[0];
+            }
+            var MAIndex;
+            if (_arrASM.length > 0) {
+                MAIndex = _arrASM[0];
+            }
+            var SAIndex;
+            if (_arrbusStateTypes.length > 0) {
+                SAIndex = _arrbusStateTypes[0];
+            }
+            var requestObj = {
+
+                "Full_NM_LA": $("#txtClient").val(),
+                "GroupIndex": GroupIndex,
+                "FatherName": $("#txtFatherName").val(),
+                "DOB_LA": $("#dtpDOB_LA").val(),
+                "Age": $("#txtAge").val(),
+                "Gender": Gender,
+                "Maritial_Status": MartialStatus,
+                "Anniversary": $("#dtpAnniversary").val(),
+                "Nationality": $("#txtNationality").val(),
+                "Pan_No": $("#txtPan_No").val(),
+                "Place_Birth": $("#txtPlace_Birth").val(),
+                "Comm_House_FlatNo": $("#txtComm_House_FlatNo").val(),
+                "Comm_Street": $("#txtComm_Street").val(),
+                "Comm_Address": $("#txtComm_Address").val(),
+                "Comm_Landmark": $("#txtComm_Landmark").val(),
+                "Comm_AreaIndex": AreaIndex,
+                "Comm_PinCode": $("#txtComm_PinCode").val(),
+                "Comm_CityIndex": CityIndex,
+                "Comm_StateIndex": StateIndex,
+                "Comm_CountryIndex": CountryIndex,
+                "Cont_MobileNo": $("#txtCont_MobileNo").val(),
+                "Cont_Home": $("#txtCont_Home").val(),
+                "Cont_Fax": $("#txtCont_Fax").val(),
+                "Cont_Office": $("#txtCont_Office").val(),
+                "Cont_Email": $("#txtCont_Email").val(),
+                "Res_House_FlatNo": $("#txtRes_House_FlatNo").val(),
+                "Res_Street": $("#txtRes_Street").val(),
+                "Res_Address": $("#txtRes_Address").val(),
+                "Res_Landmark": $("#txtRes_Landmark").val(),
+                "Res_AreaIndex": ResAreaIndex,
+                "Res_Pincode": $("#txtRes_Pincode").val(),
+                "Res_CityIndex": ResCityIndex,
+                "Res_StateIndex": ResStateIndex,
+                "Res_CountryIndex": ResCountryIndex,
+                "Res_Mobile": $("#txtRes_MobileNo").val(),
+                "Res_Phone": $("#txtRes_Phone").val(),
+                "Res_Email": $("#txtRes_Email").val(),
+                "OccupationDetail": $("#txtOccupationDetail").val(),
+                "Designation": $("#txtDesignation").val(),
+                "EMP_Year": $("#txtEMP_Year").val(),
+                "Yearly_Gross_Income": $("#txtYearly_Gross_Income").val(),
+                "BusinessType": $("#txtBusinessType").val(),
+                "Bus_BldgNameNo": $("#txtBus_BldgNameNo").val(),
+                "Bus_Street": $("#txtBus_Street").val(),
+                "Bus_Address": $("#txtBus_Address").val(),
+                "Bus_Landmark": $("#txtBus_Landmark").val(),
+                "Bus_AreaIndex": BusAreaIndex,
+                "Bus_Pincode": $("#txtBus_Pincode").val(),
+                "Bus_CityIndex": BusCityIndex,
+                "Bus_StateIndex": BusStateIndex,
+                "Bus_CountryIndex": BusCountryIndex,
+                "Bus_Email": $("#txtBus_Email").val(),
+                "Remarks": $("#txtremarks").val(),
+                "Discontinue": $("#prodDiscontinue").is(":checked")
+
+            }
+
+            var result = Common_AjaxPOST("http://localhost:54510/api/ClientMasterApi/Create", JSON.stringify(requestObj));
+
+        });
+
+    </script>
+}

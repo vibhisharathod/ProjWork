@@ -253,7 +253,11 @@
             }
 
             var result = Common_AjaxPOST("http://localhost:54510/api/BranchMasterApi/Edit", JSON.stringify(requestObj));
-
+            if ($("#result").val() == "ok")
+            {
+                window.location.href = "/BranchMaster/Index";
+                alert('worked');
+            }
         });
 
 

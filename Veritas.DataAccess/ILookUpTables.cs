@@ -15,6 +15,7 @@ namespace Veritas.DataAccess
         Task<IEnumerable<InClientleMaster>> GetClientLookUp();
         Task<IEnumerable<GiAgencyMaster>> GetAgencyLookUp();
         Task<IEnumerable<MainAgentMaster>> GetMALookUp();
+        Task<IEnumerable<SubAgentMaster>> GetSALookUp();
         Task<IEnumerable<BranchMaster>> GetBranchLookUp();
         Task<IEnumerable<GiProductMaster>> GetProductLookUp();
         Task<IEnumerable<AreaMaster>> GetAreaLookUp();
@@ -33,5 +34,6 @@ namespace Veritas.DataAccess
         IEnumerable<BranchType> GetBranchTypes();
         IEnumerable<ASMTypes> GetASMTypes();
         IEnumerable<Gender> GetGenderTypes();
+        IEnumerable<MartialStatus> GetMartialStatus();
     }
 }

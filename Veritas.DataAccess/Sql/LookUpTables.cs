@@ -80,6 +80,19 @@ namespace Veritas.DataAccess.Sql
         }
 
         /// <summary>
+        /// GI_ProductMaster
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IEnumerable<GiProductMaster>> GetProductLookUp()
+        {
+            return await WithConnection(async c =>
+            {
+                var lookUpLists = await c.QueryAsync<GiProductMaster>(SQLConstants.GIProductMasterLookUp);
+                return lookUpLists;
+            });
+        }
+
+        /// <summary>
         /// MainAgentMaster
         /// </summary>
         /// <returns></returns>
@@ -91,7 +104,18 @@ namespace Veritas.DataAccess.Sql
                 return lookUpLists;
             });
         }
-
+        /// <summary>
+        /// SubAgentMaster
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IEnumerable<SubAgentMaster>> GetSALookUp()
+        {
+            return await WithConnection(async c =>
+            {
+                var lookUpLists = await c.QueryAsync<SubAgentMaster>(SQLConstants.SubAgentMasterLookUp);
+                return lookUpLists;
+            });
+        }
         public IEnumerable<PaymentTypes> GetPaymentTypes()
         {
             var paymentTypes = new List<PaymentTypes>();
@@ -109,18 +133,7 @@ namespace Veritas.DataAccess.Sql
             return policyStatuses;
         }
 
-        /// <summary>
-        /// GI_ProductMaster
-        /// </summary>
-        /// <returns></returns>
-        public async Task<IEnumerable<GiProductMaster>> GetProductLookUp()
-        {
-            return await WithConnection(async c =>
-            {
-                var lookUpLists = await c.QueryAsync<GiProductMaster>(SQLConstants.GIProductTypeMasterLookUp);
-                return lookUpLists;
-            });
-        }
+        
 
         public IEnumerable<ProductSubTypes> GetProductSubTypes()
         {
@@ -297,6 +310,17 @@ namespace Veritas.DataAccess.Sql
                 var lookUpLists = await c.QueryAsync<AgentTypeMaster>(SQLConstants.AgentTypeMasterLookUp);
                 return lookUpLists;
             });
+        }
+
+        public IEnumerable<MartialStatus> GetMartialStatus()
+        {
+            var MartialStatus = new List<MartialStatus>();
+            MartialStatus.Add(new MartialStatus() { Text = "Single", Value = "Single" });
+            MartialStatus.Add(new MartialStatus() { Text = "Married", Value = "Married" });
+            MartialStatus.Add(new MartialStatus() { Text = "Divorced", Value = "Divorced" });
+            MartialStatus.Add(new MartialStatus() { Text = "Widow", Value = "Widow" });
+
+            return MartialStatus;
         }
     }
 }

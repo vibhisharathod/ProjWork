@@ -55,5 +55,9 @@ namespace Veritas.Entities
         public DateTime? UpdateDateTime { get; set; } // datetime, null
         [MaxLength(150)]
         public string BankName { get; set; } // varchar(150), null
+
+        //FK
+        public string CityName { get; set; }
+        public string StateName { get; set; }
     }
 }
