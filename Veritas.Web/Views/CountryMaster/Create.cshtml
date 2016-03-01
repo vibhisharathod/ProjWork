@@ -67,16 +67,19 @@
 
     <link rel="stylesheet" href="~/assets/css/jquery-ui.css" />
     <link href="~/assets/css/magicsuggest.css" rel="stylesheet" />    
+    <link rel="stylesheet" href="~/assets/css/jquery.gritter.css" />
+
     <script src="~/assets/js/jquery-ui.js"></script>
     <script src="~/assets/js/jquery.ui.touch-punch.js"></script>
     <script src="~/assets/js/magicsuggest.js"></script>
+    <script src="~/assets/js/jquery.gritter.js"></script>
     <script type="text/javascript">
 
     //SUBMIT form
     $("#btnSubmit").click(function () {
-       
+
         var requestObj = {
-                     
+
             "CountryName": $("#txtCountry").val(),
             "Remarks": $("#txtremarks").val(),
             "Discontinue": $("#prodDiscontinue").is(":checked")
@@ -85,8 +88,18 @@
 
         var result = Common_AjaxPOST("http://localhost:54510/api/CountryMasterApi/Create", JSON.stringify(requestObj));
 
+        //On Success
+        if (result.statusCode == "200") {
+            
+            location.href = '@Url.Content("~/CountryMaster/Index/")';
+            SuccessAlert("Country Master Operation was Successfull !!");
+        }
+        else {
+            FailureAlert("Country Master Operation resulted in error.");
+        }
+
     });
-    
+
 
     </script>
 }

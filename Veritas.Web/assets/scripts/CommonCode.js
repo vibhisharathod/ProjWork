@@ -41,3 +41,21 @@ function Common_AjaxPOST(url, obj) {
 
     return data;
 }
+
+//Success Alert
+function SuccessAlert(msg) {
+    $.gritter.add({        
+        title: 'Success!!',        
+        text: msg,
+        class_name: 'gritter-success'
+    });
+}
+
+//Fail Alert
+function FailureAlert(msg) {
+    $.gritter.add({
+        title: 'Error!!',
+        text: msg,
+        class_name: 'gritter-error'
+    });
+}
