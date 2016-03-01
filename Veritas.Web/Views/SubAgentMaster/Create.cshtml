@@ -245,7 +245,7 @@
                 _arrCityTypes = this.getValue();
             });
         }
-
+        var _arrCityTypes = new Array();
         //Loading State Data
         var StateDatalist = Common_AjaxGET("/LookUpTables/State");
         if (StateDatalist.length > 0) {
@@ -262,7 +262,7 @@
                 _arrStateTypes = this.getValue();
             });
         }
-
+        var _arrStateTypes = new Array();
        // Loading MA Data
         var ASMDatalist = Common_AjaxGET("/LookUpTables/MA");
         if (ASMDatalist.length > 0) {
@@ -279,7 +279,7 @@
                 _arrASM = this.getValue();
             });
         }
-
+        var _arrASM = new Array();
         // Loading SE Data
         var SEDatalist = Common_AjaxGET("/LookUpTables/SE");
         if (SEDatalist.length > 0) {
@@ -296,6 +296,7 @@
                 _arrSE = this.getValue();
             });
         }
+        var _arrSE = new Array();
         // Loading Branch Data
         var BranchDatalist = Common_AjaxGET("/LookUpTables/Branch");
         if (BranchDatalist.length > 0) {
@@ -312,7 +313,7 @@
                 _arrBranch = this.getValue();
             });
         }
-
+        var _arrBranch = new Array();
         // Loading AgentType Data
         var AgentTypeDatalist = Common_AjaxGET("/LookUpTables/AgentType");
         if (AgentTypeDatalist.length > 0) {
@@ -329,13 +330,13 @@
                 _arrAgentType = this.getValue();
             });
         }
-
-        var _arrASM = new Array();
-        var _arrSE = new Array();
-        var _arrBranch = new Array();
-        var _arrCityTypes = new Array();
-        var _arrStateTypes = new Array();
         var _arrAgentType = new Array();
+       
+       
+       
+      
+      
+     
 
         //SUBMIT form
         $("#btnSubmit").click(function () {
@@ -372,7 +373,7 @@
             var requestObj = {
 
                 "SubAgentName": $("#txtSubAgentName").val(),
-                //"MA_ID": ASMIndex,
+                "MA_ID": ASMIndex,
                 "SE_ID": SE_ID,
                 "Branch_ID": Branch_ID,
                 "AgentTypeID": AgentTypeID,
@@ -389,10 +390,10 @@
                 "Cont1": $("#txtPhoneNo1").val(),
                 "Cont2": $("#txtPhoneNo2").val(),
                 "Cont_MobileNo": $("#txtMobileNo").val(),
-                "PANNo": $("#txtPANNo"),
-                "BankAccountNo": $("#txtBankAccountNo"),
-                "BankIFSCNo": $("#txtBankIFSCNo"),
-                "StartYear": $("#prodStartDate"),
+                "PANNo": $("#txtPANNo").val(),
+                "BankAccountNo": $("#txtBankAccountNo").val(),
+                "BankIFSCNo": $("#txtBankIFSCNo").val(),
+                "StartYear": $("#prodStartDate").val(),
                 "LoginStatus": $("#LoginStatus").is(":checked"),
                 "Remarks": $("#txtremarks").val(),
                 "Discontinue": $("#prodDiscontinue").is(":checked")

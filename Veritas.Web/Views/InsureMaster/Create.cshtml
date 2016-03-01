@@ -91,28 +91,28 @@
                                 </div>
                             </div>
                         </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right">Start Date</label>
-                                <div class="col-xs-6 col-sm-5">
-                                    <div class="input-group">
-                                        <input type="text" id="prodStartDate" class="form-control" />
-                                        <span class="input-group-addon">
-                                            <i class="ace-icon fa fa-calendar"></i>
-                                        </span>
-                                    </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">Start Date</label>
+                            <div class="col-xs-6 col-sm-5">
+                                <div class="input-group">
+                                    <input type="text" id="prodStartDate" class="form-control" />
+                                    <span class="input-group-addon">
+                                        <i class="ace-icon fa fa-calendar"></i>
+                                    </span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right">End Date</label>
-                                <div class="col-xs-6 col-sm-5">
-                                    <div class="input-group">
-                                        <input type="text" id="prodEndDate" class="form-control" />
-                                        <span class="input-group-addon">
-                                            <i class="ace-icon fa fa-calendar"></i>
-                                        </span>
-                                    </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">End Date</label>
+                            <div class="col-xs-6 col-sm-5">
+                                <div class="input-group">
+                                    <input type="text" id="prodEndDate" class="form-control" />
+                                    <span class="input-group-addon">
+                                        <i class="ace-icon fa fa-calendar"></i>
+                                    </span>
                                 </div>
                             </div>
+                        </div>
                     </form>
                 </div>
 
@@ -244,11 +244,20 @@
                                 <input type="text" id="txtRegPlace" placeholder="Enter Reg Place">
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Reg Date</label>
-                            <div class="col-xs-10 col-sm-2">
-                                <input type="text" id="txtRegDate" placeholder="Enter Reg Date">
+                            <label class="col-sm-3 control-label no-padding-right">Registration Date</label>
+                            <div class="col-xs-6 col-sm-3">
+                                <div class="input-group">
+                                    <input type="text" id="RegDate" class="form-control" />
+                                    <span class="input-group-addon">
+                                        <i class="ace-icon fa fa-calendar"></i>
+                                    </span>
+                                </div>
                             </div>
+                        </div>
+
+                        <div class="form-group">
                             <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Seating Capacity</label>
                             <div class="col-xs-10 col-sm-2">
                                 <input type="text" id="txtSeatingCapicity" placeholder="Enter Seating Capacity">
@@ -290,75 +299,71 @@
                 <div id="PaymentDetails" class="tab-pane">
                     <form class="form-horizontal">
                         <div class="form-group">
-                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">IDV</label>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Payment Type</label>
                             <div class="col-xs-10 col-sm-2">
-                                <input type="text" id="txtIDV" placeholder="Enter IDV">
+                                <input type="text" id="txtPaymentType" placeholder="Enter Payment Type">
                             </div>
                             @*</div>
                                 <div class="form-group">*@
-                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Make</label>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Credit Card Type</label>
                             <div class="col-xs-10 col-sm-2">
-                                <input type="text" id="txtMake" placeholder="Enter Make">
+                                <input type="text" id="txtCreditCardType" placeholder="Enter Credit Card Type">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Model</label>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Cheque No</label>
                             <div class="col-xs-10 col-sm-2">
-                                <input type="text" id="txtModel" placeholder="Enter Model">
+                                <input type="text" id="txtChequeNo" placeholder="Enter Cheque No">
                             </div>
-                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Color</label>
-                            <div class="col-xs-10 col-sm-2">
-                                <input type="text" id="txtColor" placeholder="Enter Color">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Reg No</label>
-                            <div class="col-xs-10 col-sm-2">
-                                <input type="text" id="txtRegNo" placeholder="Enter Reg No">
-                            </div>
-                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Place Of Regtration</label>
-                            <div class="col-xs-10 col-sm-2">
-                                <input type="text" id="txtRegPlace" placeholder="Enter Reg Place">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right">Cheque Date</label>
+                                <div class="col-xs-6 col-sm-3">
+                                    <div class="input-group">
+                                        <input type="text" id="ChequeDate" class="form-control" />
+                                        <span class="input-group-addon">
+                                            <i class="ace-icon fa fa-calendar"></i>
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Reg Date</label>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Bank & Branch	</label>
                             <div class="col-xs-10 col-sm-2">
-                                <input type="text" id="txtRegDate" placeholder="Enter Reg Date">
+                                <input type="text" id="txtBankBranch" placeholder="Enter Bank & Branch">
                             </div>
-                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Seating Capacity</label>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Cheque Amount</label>
                             <div class="col-xs-10 col-sm-2">
-                                <input type="text" id="txtSeatingCapicity" placeholder="Enter Seating Capacity">
+                                <input type="text" id="txtChequeAmount" placeholder="Enter Cheque Amount">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Cubic Capicity</label>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Cash Amount</label>
                             <div class="col-xs-10 col-sm-2">
-                                <input type="text" id="txtStampDuty" placeholder="Enter Stamp Duty">
+                                <input type="text" id="txtCashAmount" placeholder="Enter Cash Amount">
                             </div>
-                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Fuel Type</label>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Total Amount</label>
+                            <div class="col-xs-10 col-sm-2">
+                                <input type="text" id="txtTotalAmount">
+                            </div>
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Diff Amount</label>
                             <div class="col-xs-10 col-sm-2">
                                 <input type="text" id="txtFuelType" placeholder="Enter Fuel Type">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Engine No</label>
-                            <div class="col-xs-10 col-sm-2">
-                                <input type="text" id="txtEngineNo" placeholder="Enter Engine No">
-                            </div>
-                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Chasis No</label>
-                            <div class="col-xs-10 col-sm-2">
-                                <input type="text" id="txtChasisNo" placeholder="Enter Chasis No">
+                            <label class="col-sm-3 control-label no-padding-right">Endorsement Detail</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <textarea class="form-control limited" id="txtEndorsement" maxlength="50"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">MFG Year</label>
-                            <div class="col-xs-10 col-sm-2">
-                                <input type="text" id="txtMFGYear" placeholder="Enter MFG Year">
-                            </div>
-                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Vehicle Weight</label>
-                            <div class="col-xs-10 col-sm-2">
-                                <input type="text" id="txtVehicleWeight" placeholder="Enter Vehicle Weight">
+                            <label class="col-sm-3 control-label no-padding-right">Remarks</label>
+                            <div class="col-xs-10 col-sm-5">
+                                <textarea class="form-control limited" id="txtremarks" maxlength="50"></textarea>
                             </div>
                         </div>
 
@@ -396,27 +401,35 @@
         var statusData = Common_AjaxGET("/LookUpTables/PolicyStatus");
         if (statusData.length > 0) {
 
-            var _elmTxtApprover = $('#ddSelectStatus').magicSuggest({
+            var _elmTxtPolicy = $('#ddSelectStatus').magicSuggest({
                 allowFreeEntries: false,
                 maxSelection: 1,
                 valueField: 'Value',
                 displayField: 'Text',
                 data: statusData
             });
+            $(_elmTxtPolicy).on('selectionchange', function () {
+                _arrPolicy = this.getValue();
+            });
         }
-
+        var _arrPolicy = new Array();
         //Loading Business Data
         var businessstatusData = Common_AjaxGET("/LookUpTables/BusinessStatus");
         if (businessstatusData.length > 0) {
 
-            var _elmTxtApprover = $('#ddSelectBusinessStatus').magicSuggest({
+            var _elmTxtbusiness = $('#ddSelectBusinessStatus').magicSuggest({
                 allowFreeEntries: false,
                 maxSelection: 1,
                 valueField: 'Value',
                 displayField: 'Text',
                 data: businessstatusData
             });
+            $(_elmTxtbusiness).on('selectionchange', function () {
+                _arrbusiness = this.getValue();
+            });
         }
+
+        var _arrbusiness = new Array();
 
         //Loading Client
         var clientData = Common_AjaxGET("/LookUpTables/Client");
@@ -492,6 +505,15 @@
             showOtherMonths: true,
             selectOtherMonths: false
         });
+        $("#RegDate").datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: false
+        });
+        $("#ChequeDate").datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: false
+        });
+
         //Loading Company Data
         var CompaniesDatalist = Common_AjaxGET("/LookUpTables/Companies");
         if (CompaniesDatalist.length > 0) {
@@ -548,7 +570,7 @@
         var _arrMA = new Array();
         var _arrAgency = new Array();
         var _arrSA = new Array();
-        
+
 
         function DiffAmt() {
             var id1 = document.getElementById("ChequeAmt");
